@@ -1,22 +1,26 @@
-import Lenis from 'lenis';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
+// GSAP and Lenis are loaded via CDN in the HTML (globals: gsap, ScrollTrigger, Lenis)
+// This makes the site work both locally (Vite) and on GitHub Pages (static)
+if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+  gsap.registerPlugin(ScrollTrigger);
+}
 
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 // 1. Lenis Smooth Scroll
 let lenis = null;
-if (!prefersReducedMotion) {
+if (!prefersReducedMotion && typeof Lenis !== 'undefined') {
   lenis = new Lenis({
     duration: 1.2,
     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
     smoothWheel: true,
   });
-  lenis.on('scroll', ScrollTrigger.update);
-  gsap.ticker.add((time) => lenis.raf(time * 1000));
-  gsap.ticker.lagSmoothing(0);
+  if (typeof ScrollTrigger !== 'undefined') {
+    lenis.on('scroll', ScrollTrigger.update);
+  }
+  if (typeof gsap !== 'undefined') {
+    gsap.ticker.add((time) => lenis.raf(time * 1000));
+    gsap.ticker.lagSmoothing(0);
+  }
 }
 
 // 2. Canvas Loop
@@ -146,9 +150,33 @@ function initPreloader() {
     return;
   }
 
+  // SAFETY FALLBACK: always dismiss preloader after 3s max
+  const safetyTimer = setTimeout(() => {
+    preloader.classList.add('fade-out');
+    setTimeout(() => { preloader.remove(); revealHero(); }, 700);
+  }, 3000);
+
   if (prefersReducedMotion) {
+    clearTimeout(safetyTimer);
     preloader.style.display = 'none';
     revealHero();
+    return;
+  }
+
+  // If GSAP unavailable, fallback to CSS/manual animation
+  if (typeof gsap === 'undefined') {
+    let v = 0;
+    const interval = setInterval(() => {
+      v = Math.min(100, v + 5);
+      if (bar) bar.style.width = v + '%';
+      if (counter) counter.textContent = v + '%';
+      if (v >= 100) {
+        clearInterval(interval);
+        clearTimeout(safetyTimer);
+        preloader.classList.add('fade-out');
+        setTimeout(() => { preloader.remove(); revealHero(); }, 700);
+      }
+    }, 25);
     return;
   }
 
@@ -163,6 +191,7 @@ function initPreloader() {
       if (counter) counter.textContent = v + '%';
     },
     onComplete: () => {
+      clearTimeout(safetyTimer);
       preloader.classList.add('fade-out');
       setTimeout(() => {
         preloader.remove();
