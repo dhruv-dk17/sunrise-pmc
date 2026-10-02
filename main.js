@@ -548,22 +548,38 @@ function initProjects() {
     modal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
 
-    gsap.fromTo('.modal-dialog',
-      { y: 40, opacity: 0, scale: 0.96 },
-      { y: 0, opacity: 1, scale: 1, duration: 0.45, ease: 'power3.out' }
-    );
+    // Stop Lenis so modal can scroll internally
+    if (lenis) lenis.stop();
+
+    // Reset modal scroll position
+    const dialog = modal.querySelector('.modal-dialog');
+    if (dialog) dialog.scrollTop = 0;
+
+    if (typeof gsap !== 'undefined') {
+      gsap.fromTo('.modal-dialog',
+        { y: 40, opacity: 0, scale: 0.96 },
+        { y: 0, opacity: 1, scale: 1, duration: 0.45, ease: 'power3.out' }
+      );
+    }
   }
 
   function closeModal() {
     if (!modal) return;
-    gsap.to('.modal-dialog', {
-      y: 20, opacity: 0, scale: 0.97, duration: 0.3, ease: 'power2.in',
-      onComplete: () => {
-        modal.classList.remove('active');
-        modal.setAttribute('aria-hidden', 'true');
-        document.body.style.overflow = '';
-      }
-    });
+    const finish = () => {
+      modal.classList.remove('active');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      // Restart Lenis so page scrolls again
+      if (lenis) lenis.start();
+    };
+    if (typeof gsap !== 'undefined') {
+      gsap.to('.modal-dialog', {
+        y: 20, opacity: 0, scale: 0.97, duration: 0.3, ease: 'power2.in',
+        onComplete: finish
+      });
+    } else {
+      finish();
+    }
   }
 
   entries.forEach(entry => entry.addEventListener('click', () => openModal(entry)));
