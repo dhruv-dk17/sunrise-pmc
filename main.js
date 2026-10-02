@@ -510,7 +510,7 @@ function initProjects() {
       '<strong style="font-size:0.9rem;color:var(--accent-gold);">' + scale + '</strong></div>',
       '</div>',
       '<div style="display:flex;gap:14px;flex-wrap:wrap;">',
-      '<a href="/contact.html" class="btn-editorial btn-accent" onclick="document.getElementById(\'modalClose\')?.click();"><span>Inquire Similar Project</span></a>',
+      '<a href="./contact.html" class="btn-editorial btn-accent" onclick="document.getElementById(\'modalClose\')?.click();"><span>Inquire Similar Project</span></a>',
       '<a href="https://wa.me/919586000933?text=Inquiring%20about%20' + encodeURIComponent(title) + '" target="_blank" class="btn-editorial btn-outline"><span>WhatsApp Consultation</span></a>',
       '</div>'
     ].join('');
