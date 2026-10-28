@@ -29,6 +29,14 @@ function sunrise_pmc_enqueue_scripts() {
         '1.0.0'
     );
 
+    // Mobile Responsive Overrides (fixes hero alignment across all devices)
+    wp_enqueue_style(
+        'sunrise-responsive-fix',
+        get_template_directory_uri() . '/assets/responsive-fix.css',
+        array('sunrise-main-style'),
+        '1.0.1'
+    );
+
     // CDN Libraries: GSAP & ScrollTrigger
     wp_enqueue_script(
         'sunrise-gsap',
