@@ -4240,52 +4240,7 @@ button, input, select, textarea {
   margin-top: 4px;
 }
 
-/* Surat Local Hub & PMC Near Me Section */
-.surat-hub-section {
-  padding: clamp(70px, 8vw, 110px) 0;
-  background: var(--bg-canvas);
-  position: relative;
-  border-bottom: 1px solid var(--border-hairline);
-}
 
-.surat-hub-grid {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 48px;
-  align-items: center;
-  margin-top: 40px;
-}
-
-@media (max-width: 900px) {
-  .surat-hub-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.surat-badge-strip {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 24px;
-}
-
-.surat-zone-pill {
-  font-size: 0.72rem;
-  padding: 6px 14px;
-  background: var(--bg-card);
-  border: 1px solid rgba(201, 168, 76, 0.2);
-  color: var(--text-secondary);
-  border-radius: 4px;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.surat-zone-pill::before {
-  content: '●';
-  color: var(--accent-gold);
-  font-size: 0.6rem;
-}
 
 /* ==========================================================================
    MOBILE DISCIPLINES ACCORDION & LAPTOP HERO RESPONSIVE ENGINE

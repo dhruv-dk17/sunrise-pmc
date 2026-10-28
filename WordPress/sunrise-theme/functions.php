@@ -24,7 +24,7 @@ function sunrise_pmc_enqueue_scripts() {
     // Main Compiled Theme Stylesheet
     wp_enqueue_style(
         'sunrise-main-style',
-        get_template_directory_uri() . '/assets/main-WYZNai6A.css',
+        get_template_directory_uri() . '/assets/main-DPfl4YuH.css',
         array(),
         '1.0.0'
     );
@@ -58,7 +58,7 @@ function sunrise_pmc_enqueue_scripts() {
     // Main Compiled Theme Script (ES Module)
     wp_enqueue_script(
         'sunrise-main-script',
-        get_template_directory_uri() . '/assets/main-DWXFqUav.js',
+        get_template_directory_uri() . '/assets/main-Dd6iFky2.js',
         array('sunrise-gsap', 'sunrise-gsap-scrolltrigger', 'sunrise-lenis'),
         '1.0.0',
         true
