@@ -35,6 +35,7 @@ get_header();
   <main id="main">
 
     <!-- 1. HERO SECTION WITH INTERACTIVE CANVAS -->
+    <!-- 1. HERO SECTION (INTERACTIVE CANVAS & EDITORIAL AIR) -->
     <section id="hero" class="hero-section">
       <!-- Full-bleed interactive 30fps Canvas background -->
       <div class="hero-canvas-container" id="canvasContainer">
@@ -53,7 +54,7 @@ get_header();
           
           <div class="hero-eyebrow" id="heroEyebrow">
             <span class="eyebrow-line"></span>
-            <span class="eyebrow-text">FIDUCIARY GOVERNANCE • SURAT & WESTERN INDIA</span>
+            <span class="eyebrow-text">FIDUCIARY GOVERNANCE &bull; SURAT &amp; WESTERN INDIA</span>
           </div>
 
           <h1 class="hero-title" id="heroTitle">
@@ -100,7 +101,7 @@ get_header();
               </svg>
             </div>
             <div class="trust-content">
-              <div class="trust-num">₹1,500+ Cr</div>
+              <div class="trust-num">&#8377;1,500+ Cr</div>
               <div class="trust-label">Managed Capital<br>Portfolio</div>
             </div>
           </div>
@@ -117,7 +118,7 @@ get_header();
           </div>
         </div>
 
-      </div>
+      </div><!-- /.hero-inner -->
     </section>
 
     <!-- Floating Architectural Metrics Banner -->
@@ -259,6 +260,99 @@ get_header();
       </div>
     </section>
 
+        <!-- 2.5 SPECIALIZED HIGHLIGHT: TURNKEY PROJECTS & QS BILLING AUDITS -->
+    <section id="turnkey-qs" class="feature-showcase-section">
+      <!-- Background Vector Doodle -->
+      <div class="pmc-doodle-container" style="top: 20px; right: 40px;" aria-hidden="true">
+        <svg class="pmc-doodle-svg doodle-float-slow" width="140" height="140" viewBox="0 0 100 100">
+          <path d="M50 15L18 32v36L50 85l32-17V32L50 15z"/>
+          <path d="M50 15v70M18 32l32 18 32-18"/>
+          <path d="M18 50l32 18 32-18" stroke-dasharray="2 2"/>
+        </svg>
+      </div>
+
+      <div class="container">
+        <div class="section-intro text-center reveal-item">
+          <div class="section-label center-label">
+            <span class="label-number">02.A</span>
+            <span class="label-text">FLAGSHIP CAPABILITIES</span>
+          </div>
+          <h2 class="editorial-heading">Turnkey Projects &amp; <span class="gold-italic">QS Work for Billings.</span></h2>
+          <p class="intro-subhead">
+            Beyond conventional oversight, SunRise PMC is Western India's trusted authority for comprehensive Turnkey Project Execution and specialized Quantity Surveying (QS) contractor billing verification.
+          </p>
+        </div>
+
+        <div class="showcase-grid-2">
+
+          <!-- Turnkey Projects Card -->
+          <div class="showcase-card reveal-item">
+            <div>
+              <div class="showcase-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                <span>SINGLE-WINDOW EXECUTION</span>
+              </div>
+              <h3 class="showcase-title">Turnkey Projects Management</h3>
+              <p class="showcase-desc">
+                From initial architectural concept to final homeowner handover, our Turnkey Project Delivery model assumes full commercial, civil, and operational responsibility. We manage specialized trade contractors, structural execution, procurement pipelines, and statutory compliances under one unified fiduciary umbrella.
+              </p>
+              <ul class="showcase-specs">
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>
+                  <span>End-to-End Design, Engineering &amp; Build Coordination</span>
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>
+                  <span>Guaranteed Handover Milestones &amp; Penalty Safeguards</span>
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>
+                  <span>Centralized Material Procurement &amp; Batch Quality Audits</span>
+                </li>
+              </ul>
+            </div>
+            <a href="#contact" class="btn-editorial btn-accent">
+              <span>Inquire Turnkey Scope</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            </a>
+          </div>
+
+          <!-- QS Work for Billings Card -->
+          <div class="showcase-card reveal-item">
+            <div>
+              <div class="showcase-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                <span>FORENSIC COST CONTROL</span>
+              </div>
+              <h3 class="showcase-title">QS Work for Billings &amp; Contractor Audit</h3>
+              <p class="showcase-desc">
+                Contractor billing leakages erode 6% to 15% of real estate capital if left unchecked. Our specialized Quantity Surveying (QS) team conducts on-site joint measurements, verifies running account (RA) bills against physical execution, and audits extra-item rates with mathematical precision.
+              </p>
+              <ul class="showcase-specs">
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>
+                  <span>Joint Measurement Sheets (JMS) &amp; Physical Work Takeoffs</span>
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>
+                  <span>Interim RA Bill Scrutiny &amp; Disallowed Item Forensics</span>
+                </li>
+                <li>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6L9 17l-5-5"/></svg>
+                  <span>Steel, Cement &amp; Finishing Material Reconciliation Audits</span>
+                </li>
+              </ul>
+            </div>
+            <a href="#contact" class="btn-editorial btn-outline">
+              <span>Request Billing Audit</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
     <!-- 3. SERVICES (INTERACTIVE ARCHITECTURAL ACCORDION WITH LIVE PREVIEW) -->
     <section id="services" class="services-section">
       <div class="container">
@@ -268,7 +362,7 @@ get_header();
             <span class="label-number">02</span>
             <span class="label-text">CORE DISCIPLINES</span>
           </div>
-          <h2 class="editorial-heading">Eight Specialized Verticals. Complete Governance.</h2>
+          <h2 class="editorial-heading">Core Project Disciplines. <span class="gold-italic">Absolute Construction Certainty.</span></h2>
           <p class="intro-subhead">
             Select or hover over any discipline to inspect our on-site governance scope, deliverables, and methodology.
           </p>
@@ -287,6 +381,20 @@ get_header();
                 <span class="entry-arrow">↗</span>
               </div>
               <p class="entry-brief">Master CPM scheduling, milestone freeze, and early delay warnings.</p>
+              <!-- Mobile Inline Expandable Content -->
+              <div class="entry-mobile-content">
+                <p class="mobile-scope">Master scheduling using Critical Path Method (CPM), baseline freeze, milestone decomposition, and continuous look-ahead tracking.</p>
+                <div class="mobile-deliverables-title">CORE ON-SITE DELIVERABLES</div>
+                <ul class="mobile-deliverables-list">
+                  <li>Master Baseline CPM Scheduling</li>
+                  <li>Weekly Micro-Progress Variance Models</li>
+                  <li>Proactive Delay Recovery Action Plans</li>
+                </ul>
+                <div class="mobile-actions">
+                  <a href="#contact" class="btn-editorial btn-accent">Request Scope Proposal</a>
+                  <a href="https://wa.me/919586000933?text=Inquiring%20about%20Project%20Planning%20&%20Scheduling" target="_blank" rel="noopener noreferrer" class="btn-editorial btn-outline">WhatsApp Consultation</a>
+                </div>
+              </div>
             </div>
 
             <!-- 2. Cost Management -->
@@ -297,6 +405,20 @@ get_header();
                 <span class="entry-arrow">↗</span>
               </div>
               <p class="entry-brief">Detailed budgeting, value engineering, and cash flow governance.</p>
+              <!-- Mobile Inline Expandable Content -->
+              <div class="entry-mobile-content">
+                <p class="mobile-scope">Detailed quantity surveying, initial BOQ rate formulation, cash flow forecasts, value engineering, and variance reconciliation.</p>
+                <div class="mobile-deliverables-title">CORE ON-SITE DELIVERABLES</div>
+                <ul class="mobile-deliverables-list">
+                  <li>Comprehensive BOQ & Rate Analysis</li>
+                  <li>Value Engineering Recommendations</li>
+                  <li>Real-Time Cost Value Reconciliations (CVR)</li>
+                </ul>
+                <div class="mobile-actions">
+                  <a href="#contact" class="btn-editorial btn-accent">Request Scope Proposal</a>
+                  <a href="https://wa.me/919586000933?text=Inquiring%20about%20Cost%20&%20Budget%20Management" target="_blank" rel="noopener noreferrer" class="btn-editorial btn-outline">WhatsApp Consultation</a>
+                </div>
+              </div>
             </div>
 
             <!-- 3. Design Coordination -->
@@ -307,6 +429,20 @@ get_header();
                 <span class="entry-arrow">↗</span>
               </div>
               <p class="entry-brief">Harmonizing architectural, structural, and MEP engineering packages.</p>
+              <!-- Mobile Inline Expandable Content -->
+              <div class="entry-mobile-content">
+                <p class="mobile-scope">Inter-disciplinary clash detection across architectural, structural, MEP, and façade drawings to prevent costly on-site demolition.</p>
+                <div class="mobile-deliverables-title">CORE ON-SITE DELIVERABLES</div>
+                <ul class="mobile-deliverables-list">
+                  <li>Multi-Discipline Clash Detection</li>
+                  <li>RFI Formal Resolution Tracking</li>
+                  <li>Good-For-Construction (GFC) Certification</li>
+                </ul>
+                <div class="mobile-actions">
+                  <a href="#contact" class="btn-editorial btn-accent">Request Scope Proposal</a>
+                  <a href="https://wa.me/919586000933?text=Inquiring%20about%20Design%20Coordination%20&%20BIM" target="_blank" rel="noopener noreferrer" class="btn-editorial btn-outline">WhatsApp Consultation</a>
+                </div>
+              </div>
             </div>
 
             <!-- 4. Construction & Site Management -->
@@ -317,6 +453,20 @@ get_header();
                 <span class="entry-arrow">↗</span>
               </div>
               <p class="entry-brief">On-site resident engineering teams enforcing daily execution benchmarks.</p>
+              <!-- Mobile Inline Expandable Content -->
+              <div class="entry-mobile-content">
+                <p class="mobile-scope">Full-time resident site engineers driving contractor orchestration, daily progress logs, and strict material inventory control.</p>
+                <div class="mobile-deliverables-title">CORE ON-SITE DELIVERABLES</div>
+                <ul class="mobile-deliverables-list">
+                  <li>Full-Time Resident Site Engineers</li>
+                  <li>Contractor Sequencing & Labor Monitoring</li>
+                  <li>Material Wastage & Batch Inventory Audits</li>
+                </ul>
+                <div class="mobile-actions">
+                  <a href="#contact" class="btn-editorial btn-accent">Request Scope Proposal</a>
+                  <a href="https://wa.me/919586000933?text=Inquiring%20about%20Construction%20&%20Site%20Management" target="_blank" rel="noopener noreferrer" class="btn-editorial btn-outline">WhatsApp Consultation</a>
+                </div>
+              </div>
             </div>
 
             <!-- 5. Quality Management -->
@@ -327,6 +477,20 @@ get_header();
                 <span class="entry-arrow">↗</span>
               </div>
               <p class="entry-brief">Rigorous laboratory testing, tolerances audit, and pour certifications.</p>
+              <!-- Mobile Inline Expandable Content -->
+              <div class="entry-mobile-content">
+                <p class="mobile-scope">Project Quality Assurance Manuals (PQAP), third-party lab testing of raw materials, and multi-tier stage pour inspections.</p>
+                <div class="mobile-deliverables-title">CORE ON-SITE DELIVERABLES</div>
+                <ul class="mobile-deliverables-list">
+                  <li>Mandatory Material Lab Certifications</li>
+                  <li>Stage-wise Pour & Formwork Checklists</li>
+                  <li>Zero-Defect Snagging Registers</li>
+                </ul>
+                <div class="mobile-actions">
+                  <a href="#contact" class="btn-editorial btn-accent">Request Scope Proposal</a>
+                  <a href="https://wa.me/919586000933?text=Inquiring%20about%20Quality%20Management%20(QA/QC)" target="_blank" rel="noopener noreferrer" class="btn-editorial btn-outline">WhatsApp Consultation</a>
+                </div>
+              </div>
             </div>
 
             <!-- 6. Safety & Risk -->
@@ -337,6 +501,20 @@ get_header();
                 <span class="entry-arrow">↗</span>
               </div>
               <p class="entry-brief">Zero-harm site governance, hazard mitigation, and safety compliance.</p>
+              <!-- Mobile Inline Expandable Content -->
+              <div class="entry-mobile-content">
+                <p class="mobile-scope">Zero-tolerance Environment, Health & Safety (EHS) policies, periodic hazard identification, and live vulnerability matrices.</p>
+                <div class="mobile-deliverables-title">CORE ON-SITE DELIVERABLES</div>
+                <ul class="mobile-deliverables-list">
+                  <li>Site-Wide EHS Rulebooks & Drills</li>
+                  <li>Hazard Identification & Risk Mitigation (HIRA)</li>
+                  <li>Daily Safety Toolbox Briefings</li>
+                </ul>
+                <div class="mobile-actions">
+                  <a href="#contact" class="btn-editorial btn-accent">Request Scope Proposal</a>
+                  <a href="https://wa.me/919586000933?text=Inquiring%20about%20Safety%20&%20Risk%20Management%20(EHS)" target="_blank" rel="noopener noreferrer" class="btn-editorial btn-outline">WhatsApp Consultation</a>
+                </div>
+              </div>
             </div>
 
             <!-- 7. AMC Management -->
@@ -347,6 +525,20 @@ get_header();
                 <span class="entry-arrow">↗</span>
               </div>
               <p class="entry-brief">Post-occupancy MEP audits, preventive maintenance, and asset durability.</p>
+              <!-- Mobile Inline Expandable Content -->
+              <div class="entry-mobile-content">
+                <p class="mobile-scope">Post-handover lifecycle management, electromechanical maintenance contracts, preventive servicing schedules, and asset longevity.</p>
+                <div class="mobile-deliverables-title">CORE ON-SITE DELIVERABLES</div>
+                <ul class="mobile-deliverables-list">
+                  <li>Electromechanical Facility Audits</li>
+                  <li>Vendor SLA Enforcement & Renewals</li>
+                  <li>Preventive Maintenance Calendar Setup</li>
+                </ul>
+                <div class="mobile-actions">
+                  <a href="#contact" class="btn-editorial btn-accent">Request Scope Proposal</a>
+                  <a href="https://wa.me/919586000933?text=Inquiring%20about%20Annual%20Maintenance%20Contract%20(AMC)" target="_blank" rel="noopener noreferrer" class="btn-editorial btn-outline">WhatsApp Consultation</a>
+                </div>
+              </div>
             </div>
 
             <!-- 8. Commercial & Billing Audit -->
@@ -357,6 +549,20 @@ get_header();
                 <span class="entry-arrow">↗</span>
               </div>
               <p class="entry-brief">Forensic bill verification, joint measurements, and final claims clearance.</p>
+              <!-- Mobile Inline Expandable Content -->
+              <div class="entry-mobile-content">
+                <p class="mobile-scope">Independent contractor bill verification, Joint Measurement Sheets (JMS), reconciliation against physical work, and final settlements.</p>
+                <div class="mobile-deliverables-title">CORE ON-SITE DELIVERABLES</div>
+                <ul class="mobile-deliverables-list">
+                  <li>Interim RA Bill Joint Measurement Audits</li>
+                  <li>Variation & Extra-Item Negotiations</li>
+                  <li>Forensic Final Account Closures</li>
+                </ul>
+                <div class="mobile-actions">
+                  <a href="#contact" class="btn-editorial btn-accent">Request Scope Proposal</a>
+                  <a href="https://wa.me/919586000933?text=Inquiring%20about%20Billing%20&%20Commercial%20Audit" target="_blank" rel="noopener noreferrer" class="btn-editorial btn-outline">WhatsApp Consultation</a>
+                </div>
+              </div>
             </div>
 
           </div>
@@ -531,7 +737,7 @@ get_header();
               <!-- 7. Apple Children Hospital -->
               <div class="carousel-card-3d project-entry" data-index="6" data-category="institutional" data-title="Apple Children Hospital" data-type="Specialized Healthcare" data-scale="Tertiary Pediatric Facility" data-location="Surat" data-img="./public/images/apple-children-hospital.png">
                 <div class="card-3d-media">
-                  <img src="./public/images/apple-children-hospital.png" alt="Apple Children Hospital" loading="lazy">
+                  <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/grand-marina-hospital-CQjmW02d.png" alt="Apple Children Hospital" loading="lazy">
                   <div class="card-3d-gradient"></div>
                   <div class="card-3d-badge">HEALTHCARE FACILITY</div>
                   <div class="card-3d-action-pill"><span>VIEW DOSSIER</span> &#8599;</div>
@@ -814,6 +1020,71 @@ get_header();
       </div>
     </section>
 
+        <!-- 7.5 SURAT REGIONAL PMC HUB (LOCAL SEO & PMC NEAR ME) -->
+    <section id="surat-hub" class="surat-hub-section">
+      <!-- Blueprint Watermark Doodle -->
+      <div class="pmc-doodle-container" style="bottom: 10px; right: 30px;" aria-hidden="true">
+        <svg class="pmc-doodle-svg doodle-float-reverse" width="160" height="160" viewBox="0 0 100 100">
+          <rect x="12" y="42" width="76" height="16" rx="2"/>
+          <path d="M20 42v6M28 42v10M36 42v6M44 42v10M52 42v6M60 42v10M68 42v6M76 42v10"/>
+          <path d="M24 24v18M30 24v18M20 24h14M70 58v18M76 58v18M66 76h14"/>
+        </svg>
+      </div>
+
+      <div class="container">
+        <div class="surat-hub-grid">
+          
+          <div class="reveal-item">
+            <div class="section-label">
+              <span class="label-number">06.A</span>
+              <span class="label-text">SURAT &amp; REGIONAL COVERAGE</span>
+            </div>
+            <h2 class="editorial-heading">
+              Looking for the <span class="gold-italic">Best PMC in Surat</span> or a PMC Near You?
+            </h2>
+            <p class="narrative-lead" style="font-size: 1.1rem; line-height: 1.8;">
+              Headquartered at Ugat Junction, Bhesan Road, SunRise PMC is Surat's homegrown engineering and project management powerhouse. Whether your development is in Pal, Vesu, Adajan, or the Hazira industrial belt, our resident engineers arrive on-site within hours.
+            </p>
+            <p class="narrative-body" style="font-size: 0.92rem; margin-bottom: 24px;">
+              Local real estate conditions in Surat demand intimate knowledge of soil stratigraphy (black cotton soils, pile foundation depths), SMC municipal development bye-laws, and monsoon stormwater management. We bring 18+ years of localized engineering rigor to every square foot.
+            </p>
+
+            <div class="surat-badge-strip">
+              <span class="surat-zone-pill">Ugat Junction &amp; Bhesan Road</span>
+              <span class="surat-zone-pill">Adajan &amp; Pal Enclaves</span>
+              <span class="surat-zone-pill">Vesu &amp; VIP Road Towers</span>
+              <span class="surat-zone-pill">Hazira Industrial SEZ</span>
+              <span class="surat-zone-pill">Katargam Diamond Hub</span>
+              <span class="surat-zone-pill">Varachha &amp; Ring Road</span>
+              <span class="surat-zone-pill">Dumas Luxury Estates</span>
+            </div>
+          </div>
+
+          <div class="showcase-card reveal-item" style="padding: 36px 30px;">
+            <div class="showcase-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              <span>RAPID 2-HOUR SURAT DISPATCH</span>
+            </div>
+            <h3 style="font-family: var(--font-serif-roman); font-size: 1.4rem; color: var(--text-primary); margin-bottom: 12px;">
+              Book an On-Site Constructability Audit
+            </h3>
+            <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px;">
+              Direct consultation with Managing Director Arjun Sharma. We review active contractor bills, inspect site quality, and evaluate CPM schedule slippage without obligation.
+            </p>
+            <div style="display: flex; flex-direction: column; gap: 14px;">
+              <a href="tel:+919586000933" class="btn-editorial btn-accent">
+                <span>Call Surat Desk: +91 95860 00933</span>
+              </a>
+              <a href="https://wa.me/919586000933?text=Hello%20SunRise%20PMC%2C%20I%20need%20a%20site%20audit%20in%20Surat." target="_blank" rel="noopener noreferrer" class="btn-editorial btn-outline">
+                <span>WhatsApp Surat Team Directly</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
     <!-- 8. FREQUENTLY ASKED QUESTIONS (MINIMALIST ACCORDION) -->
     <section id="faq" class="faq-section">
       <div class="container">
@@ -841,7 +1112,7 @@ get_header();
               <button class="faq-trigger" aria-expanded="false">
                 <div class="faq-trigger-left">
                   <span class="faq-badge">01</span>
-                  <span class="faq-question-text">What types of projects does SunRise PMC handle?</span>
+                  <span class="faq-question-text">Who is considered the best PMC in Surat for construction and real estate projects?</span>
                 </div>
                 <span class="trigger-icon-wrap" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
@@ -849,7 +1120,7 @@ get_header();
               </button>
               <div class="faq-content">
                 <div class="faq-answer-inner">
-                  <p>We manage diverse construction portfolios including residential townships, multi-tower high-rises, commercial and diamond processing complexes, 5-star hotels, healthcare hospitals, and institutional educational campuses across Western India.</p>
+                  <p><strong>SunRise PMC</strong> is rated as the premier PMC in Surat, backed by 18+ years of engineering leadership, 20+ delivered landmark projects (such as Hilton Garden Inn, Bharat City, and Ankit Gems), and an audited ₹1,500+ Cr capital portfolio. We deliver end-to-end fiduciary protection, turnkey execution, and specialized QS billing audits.</p>
                 </div>
               </div>
             </div>
@@ -895,7 +1166,7 @@ get_header();
               <button class="faq-trigger" aria-expanded="false">
                 <div class="faq-trigger-left">
                   <span class="faq-badge">04</span>
-                  <span class="faq-question-text">Does SunRise PMC provide dedicated on-site supervision?</span>
+                  <span class="faq-question-text">How do I find a reliable PMC near me in Surat?</span>
                 </div>
                 <span class="trigger-icon-wrap" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
@@ -903,7 +1174,7 @@ get_header();
               </button>
               <div class="faq-content">
                 <div class="faq-answer-inner">
-                  <p>Yes. We deploy full-time, experienced resident site engineers and quality inspectors. On-site supervision covers physical execution oversight, drawing adherence, safety protocol enforcement, contractor labor monitoring, and daily progress reporting.</p>
+                  <p>If you are searching for a verified <strong>PMC near me in Surat</strong>, SunRise PMC is centrally headquartered at Ugat Junction, Bhesan Road (Surat - 395005). We deploy full-time resident engineers across Adajan, Pal, Vesu, Hazira, Katargam, and Varachha within 2 hours, ensuring daily physical site supervision, pour sign-offs, and quality assurance.</p>
                 </div>
               </div>
             </div>
@@ -931,7 +1202,7 @@ get_header();
               <button class="faq-trigger" aria-expanded="false">
                 <div class="faq-trigger-left">
                   <span class="faq-badge">06</span>
-                  <span class="faq-question-text">Does SunRise PMC offer AMC and independent billing audit services?</span>
+                  <span class="faq-question-text">Does SunRise PMC take up Turnkey Projects and QS work for billings?</span>
                 </div>
                 <span class="trigger-icon-wrap" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
@@ -939,7 +1210,7 @@ get_header();
               </button>
               <div class="faq-content">
                 <div class="faq-answer-inner">
-                  <p>Yes. In addition to turnkey PMC, we provide specialized stand-alone services including Annual Maintenance Contract (AMC) supervision for active facilities and Forensic Billing & Commercial Audits for developers seeking independent verification of contractor claims.</p>
+                  <p>Yes! In addition to conventional PMC governance, <strong>SunRise PMC delivers full Turnkey Projects</strong> (from architectural design and vendor contracting to final key handover) and <strong>specialized QS work for billings</strong>. Our Quantity Surveying audits verify Joint Measurement Sheets (JMS), item-rate BOQ formulations, contractor RA bills, and raw material reconciliation to stop capital leakages.</p>
                 </div>
               </div>
             </div>

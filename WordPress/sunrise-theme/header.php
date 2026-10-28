@@ -12,7 +12,7 @@
 
     <?php wp_head(); ?>
 </head>
-<body <?php body_class("light-luxury-theme page-home"); ?>>
+<body <?php body_class("page-home"); ?>>
 
   <!-- Minimalist Custom Luxury Cursor -->
   <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>

@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Standard Sitemaps & AI agent references
+Sitemap: https://sunrisepmc.in/sitemap.xml
+
+# LLM & AI agent discovery
+# Reference: https://llmstxt.org/
+LLM-Full: https://sunrisepmc.in/llms.txt
+

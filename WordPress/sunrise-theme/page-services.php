@@ -34,6 +34,11 @@ get_header();
   <main style="padding-top: 100px;">
     <!-- Page Hero Banner -->
     <section style="background: #0D0F12; color: #FFF; padding: 90px 0 70px; border-bottom: 1px solid rgba(255,255,255,0.08); position: relative; overflow: hidden;">
+            <div class="pmc-doodle-container" style="top: 20px; right: 40px;" aria-hidden="true">
+        <svg class="pmc-doodle-svg doodle-float-slow" width="130" height="130" viewBox="0 0 100 100">
+          <path d="M15 90h70M25 90V30l15-20h5v80M45 10l45 10v4l-45-4M55 16v18M70 19v26M85 22v34M25 45h20M25 60h20M25 75h20M50 90V50h25v40M56 58h5M69 58h5M56 70h5M69 70h5"/>
+        </svg>
+      </div>
       <div class="container" style="position: relative; z-index: 2;">
         <div class="section-label">
           <span class="label-number" style="color: #D4AF37;">02</span>
@@ -52,13 +57,57 @@ get_header();
     </section>
 
     <!-- Services Grid (Authentic 8 Services from SunRise PMC) -->
-    <section style="padding: 90px 0; background: #FFFFFF;">
+    <section style="padding: 90px 0; background: var(--bg-surface); position: relative;">
       <div class="container">
         
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px;">
+          <!-- Flagship Service A: Turnkey Projects -->
+          <div class="project-entry" style="border: 1px solid var(--border-hairline); border-radius: 6px; overflow: hidden; background: var(--bg-card); display: flex; flex-direction: column; box-shadow: var(--card-shadow);">
+            <div style="height: 220px; overflow: hidden; position: relative;">
+              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/Frame-15-DuquAy3n.png" alt="Turnkey Projects Management" style="width: 100%; height: 100%; object-fit: cover;">
+              <span style="position: absolute; top: 16px; left: 16px; background: var(--accent-gold); color: #0A0D14; font-size: 0.7rem; font-weight: 700; padding: 4px 10px; border-radius: 2px;">FLAGSHIP</span>
+              <span style="position: absolute; top: 16px; right: 16px; background: rgba(11,14,20,0.85); color: #FFF; font-size: 0.65rem; padding: 4px 8px; border-radius: 2px; border: 1px solid rgba(201,168,76,0.3);">EPC / TURNKEY</span>
+            </div>
+            <div style="padding: 28px; flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <h3 style="font-family: var(--font-serif-roman); font-size: 1.4rem; margin-bottom: 12px; color: var(--text-primary);">Turnkey Projects Management</h3>
+                <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px;">
+                  Comprehensive concept-to-handover turnkey governance. We assume unified responsibility for architectural coordination, structural execution, trade contractor procurement, and defect-free client possession.
+                </p>
+              </div>
+              <ul style="font-size: 0.82rem; color: var(--text-muted); list-style: disc; padding-left: 20px; line-height: 1.8;">
+                <li>Single-Window Engineering &amp; Commercial Ownership</li>
+                <li>Fast-Track Milestone Schedules with Penalty Protections</li>
+                <li>Centralized Supply Chain &amp; Quality Approvals</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Flagship Service B: QS Work for Billings -->
+          <div class="project-entry" style="border: 1px solid var(--border-hairline); border-radius: 6px; overflow: hidden; background: var(--bg-card); display: flex; flex-direction: column; box-shadow: var(--card-shadow);">
+            <div style="height: 220px; overflow: hidden; position: relative;">
+              <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/cost-management-C7k_YDnX.png" alt="QS Work for Billings & Contractor Audit" style="width: 100%; height: 100%; object-fit: cover;">
+              <span style="position: absolute; top: 16px; left: 16px; background: var(--accent-gold); color: #0A0D14; font-size: 0.7rem; font-weight: 700; padding: 4px 10px; border-radius: 2px;">FLAGSHIP</span>
+              <span style="position: absolute; top: 16px; right: 16px; background: rgba(11,14,20,0.85); color: #FFF; font-size: 0.65rem; padding: 4px 8px; border-radius: 2px; border: 1px solid rgba(201,168,76,0.3);">QS &amp; AUDIT</span>
+            </div>
+            <div style="padding: 28px; flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <h3 style="font-family: var(--font-serif-roman); font-size: 1.4rem; margin-bottom: 12px; color: var(--text-primary);">QS Work for Billings &amp; Contractor Audit</h3>
+                <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 20px;">
+                  Forensic Quantity Surveying and independent contractor billing audits. We execute Joint Measurement Sheets (JMS), verify interim Running Account (RA) bills, and reconcile cement/steel consumption to plug budget leakages.
+                </p>
+              </div>
+              <ul style="font-size: 0.82rem; color: var(--text-muted); list-style: disc; padding-left: 20px; line-height: 1.8;">
+                <li>Joint Measurement Sheet (JMS) Physical Takeoffs</li>
+                <li>Contractor Interim RA Bill Forensic Checking</li>
+                <li>Extra-Item &amp; Rate Analysis Disallowed Item Scrubbing</li>
+              </ul>
+            </div>
+          </div>
+
 
           <!-- Service 1 -->
-          <div class="project-entry" style="border: 1px solid var(--border-hairline); border-radius: 6px; overflow: hidden; background: #FFF; display: flex; flex-direction: column;">
+          <div class="project-entry" style="border: 1px solid var(--border-hairline); border-radius: 6px; overflow: hidden; background: var(--bg-card); display: flex; flex-direction: column;">
             <div style="height: 220px; overflow: hidden; position: relative;">
               <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/image-2-BVCU3VHI.png" alt="Project Planning & Scheduling" style="width: 100%; height: 100%; object-fit: cover;">
               <span style="position: absolute; top: 16px; left: 16px; background: rgba(13,15,18,0.85); color: #D4AF37; font-size: 0.7rem; font-weight: 700; padding: 4px 10px; border-radius: 2px;">01</span>
@@ -79,7 +128,7 @@ get_header();
           </div>
 
           <!-- Service 2 -->
-          <div class="project-entry" style="border: 1px solid var(--border-hairline); border-radius: 6px; overflow: hidden; background: #FFF; display: flex; flex-direction: column;">
+          <div class="project-entry" style="border: 1px solid var(--border-hairline); border-radius: 6px; overflow: hidden; background: var(--bg-card); display: flex; flex-direction: column;">
             <div style="height: 220px; overflow: hidden; position: relative;">
               <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/cost-management-C7k_YDnX.png" alt="Cost Management & Budget Control" style="width: 100%; height: 100%; object-fit: cover;">
               <span style="position: absolute; top: 16px; left: 16px; background: rgba(13,15,18,0.85); color: #D4AF37; font-size: 0.7rem; font-weight: 700; padding: 4px 10px; border-radius: 2px;">02</span>
@@ -100,7 +149,7 @@ get_header();
           </div>
 
           <!-- Service 3 -->
-          <div class="project-entry" style="border: 1px solid var(--border-hairline); border-radius: 6px; overflow: hidden; background: #FFF; display: flex; flex-direction: column;">
+          <div class="project-entry" style="border: 1px solid var(--border-hairline); border-radius: 6px; overflow: hidden; background: var(--bg-card); display: flex; flex-direction: column;">
             <div style="height: 220px; overflow: hidden; position: relative;">
               <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/image-4-1-21l8wlKP.png" alt="Construction & Site Management" style="width: 100%; height: 100%; object-fit: cover;">
               <span style="position: absolute; top: 16px; left: 16px; background: rgba(13,15,18,0.85); color: #D4AF37; font-size: 0.7rem; font-weight: 700; padding: 4px 10px; border-radius: 2px;">03</span>
@@ -121,7 +170,7 @@ get_header();
           </div>
 
           <!-- Service 4 -->
-          <div class="project-entry" style="border: 1px solid var(--border-hairline); border-radius: 6px; overflow: hidden; background: #FFF; display: flex; flex-direction: column;">
+          <div class="project-entry" style="border: 1px solid var(--border-hairline); border-radius: 6px; overflow: hidden; background: var(--bg-card); display: flex; flex-direction: column;">
             <div style="height: 220px; overflow: hidden; position: relative;">
               <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/quality-Cmn2ZSHz.png" alt="Quality Management" style="width: 100%; height: 100%; object-fit: cover;">
               <span style="position: absolute; top: 16px; left: 16px; background: rgba(13,15,18,0.85); color: #D4AF37; font-size: 0.7rem; font-weight: 700; padding: 4px 10px; border-radius: 2px;">04</span>
@@ -142,7 +191,7 @@ get_header();
           </div>
 
           <!-- Service 5 -->
-          <div class="project-entry" style="border: 1px solid var(--border-hairline); border-radius: 6px; overflow: hidden; background: #FFF; display: flex; flex-direction: column;">
+          <div class="project-entry" style="border: 1px solid var(--border-hairline); border-radius: 6px; overflow: hidden; background: var(--bg-card); display: flex; flex-direction: column;">
             <div style="height: 220px; overflow: hidden; position: relative;">
               <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/design-management-DffrCBxQ.png" alt="Design & Coordination Management" style="width: 100%; height: 100%; object-fit: cover;">
               <span style="position: absolute; top: 16px; left: 16px; background: rgba(13,15,18,0.85); color: #D4AF37; font-size: 0.7rem; font-weight: 700; padding: 4px 10px; border-radius: 2px;">05</span>
@@ -163,7 +212,7 @@ get_header();
           </div>
 
           <!-- Service 6 -->
-          <div class="project-entry" style="border: 1px solid var(--border-hairline); border-radius: 6px; overflow: hidden; background: #FFF; display: flex; flex-direction: column;">
+          <div class="project-entry" style="border: 1px solid var(--border-hairline); border-radius: 6px; overflow: hidden; background: var(--bg-card); display: flex; flex-direction: column;">
             <div style="height: 220px; overflow: hidden; position: relative;">
               <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/safety-Mx7pBVUK.png" alt="Safety & Risk Management" style="width: 100%; height: 100%; object-fit: cover;">
               <span style="position: absolute; top: 16px; left: 16px; background: rgba(13,15,18,0.85); color: #D4AF37; font-size: 0.7rem; font-weight: 700; padding: 4px 10px; border-radius: 2px;">06</span>
@@ -184,7 +233,7 @@ get_header();
           </div>
 
           <!-- Service 7 -->
-          <div class="project-entry" style="border: 1px solid var(--border-hairline); border-radius: 6px; overflow: hidden; background: #FFF; display: flex; flex-direction: column;">
+          <div class="project-entry" style="border: 1px solid var(--border-hairline); border-radius: 6px; overflow: hidden; background: var(--bg-card); display: flex; flex-direction: column;">
             <div style="height: 220px; overflow: hidden; position: relative;">
               <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/amc-2-R0D7hDID.png" alt="Annual Maintenance Contract (AMC)" style="width: 100%; height: 100%; object-fit: cover;">
               <span style="position: absolute; top: 16px; left: 16px; background: rgba(13,15,18,0.85); color: #D4AF37; font-size: 0.7rem; font-weight: 700; padding: 4px 10px; border-radius: 2px;">07</span>
@@ -205,7 +254,7 @@ get_header();
           </div>
 
           <!-- Service 8 -->
-          <div class="project-entry" style="border: 1px solid var(--border-hairline); border-radius: 6px; overflow: hidden; background: #FFF; display: flex; flex-direction: column;">
+          <div class="project-entry" style="border: 1px solid var(--border-hairline); border-radius: 6px; overflow: hidden; background: var(--bg-card); display: flex; flex-direction: column;">
             <div style="height: 220px; overflow: hidden; position: relative;">
               <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/image-8-1-DgSzLzGv.png" alt="Billing & Commercial Audit" style="width: 100%; height: 100%; object-fit: cover;">
               <span style="position: absolute; top: 16px; left: 16px; background: rgba(13,15,18,0.85); color: #D4AF37; font-size: 0.7rem; font-weight: 700; padding: 4px 10px; border-radius: 2px;">08</span>

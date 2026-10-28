@@ -448,12 +448,14 @@ function initServicesInteractivity() {
   const scope = document.getElementById('previewScope');
   const deliverables = document.getElementById('previewDeliverables');
 
-  if (!entries.length || !badge) return;
+  if (!entries.length) return;
 
-  function updatePreview(entry) {
+  function updateDesktopPreview(entry) {
+    if (window.innerWidth <= 900) return; // Managed by mobile accordion below
     entries.forEach(e => e.classList.remove('active'));
     entry.classList.add('active');
 
+    if (!badge || !title || !scope || !deliverables) return;
     const sNum = entry.getAttribute('data-service');
     const sTitle = entry.getAttribute('data-title');
     const sScope = entry.getAttribute('data-scope');
@@ -466,16 +468,45 @@ function initServicesInteractivity() {
     scope.textContent = sScope;
     deliverables.innerHTML = '<li>' + d1 + '</li><li>' + d2 + '</li><li>' + d3 + '</li>';
 
-    gsap.fromTo('#servicePreviewPanel',
-      { opacity: 0.7, y: 6, scale: 0.99 },
-      { opacity: 1, y: 0, scale: 1, duration: 0.35, ease: 'power2.out' }
-    );
+    if (typeof gsap !== 'undefined') {
+      gsap.fromTo('#servicePreviewPanel',
+        { opacity: 0.7, y: 6, scale: 0.99 },
+        { opacity: 1, y: 0, scale: 1, duration: 0.35, ease: 'power2.out' }
+      );
+    }
+  }
+
+  function handleEntryClick(entry) {
+    if (window.innerWidth <= 900) {
+      // Mobile accordion toggle
+      const isAlreadyActive = entry.classList.contains('active');
+      entries.forEach(e => e.classList.remove('active'));
+      if (!isAlreadyActive) {
+        entry.classList.add('active');
+        // Smoothly bring the opened entry into comfortable view
+        setTimeout(() => {
+          const rect = entry.getBoundingClientRect();
+          if (rect.top < 80 || rect.bottom > window.innerHeight) {
+            entry.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          }
+        }, 150);
+      }
+    } else {
+      updateDesktopPreview(entry);
+    }
   }
 
   entries.forEach(entry => {
-    entry.addEventListener('click', () => updatePreview(entry));
-    entry.addEventListener('mouseenter', () => updatePreview(entry));
+    entry.addEventListener('click', () => handleEntryClick(entry));
+    entry.addEventListener('mouseenter', () => {
+      if (window.innerWidth > 900) updateDesktopPreview(entry);
+    });
   });
+
+  // Ensure first entry is active on load
+  if (entries.length && !document.querySelector('.service-entry.active')) {
+    entries[0].classList.add('active');
+  }
 }
 
 // Global openModal function for all project cards across all pages
@@ -998,4 +1029,23 @@ document.addEventListener('DOMContentLoaded', () => {
   initForm();
   initYear();
   initTrustCardTilt();
+  initDoodleAnimations();
 });
+
+// 15. Architectural Doodle Motion & Smooth Parallax
+function initDoodleAnimations() {
+  if (prefersReducedMotion || typeof gsap === 'undefined') return;
+  const doodles = document.querySelectorAll('.pmc-doodle-svg');
+  doodles.forEach((doodle, index) => {
+    const isEven = index % 2 === 0;
+    gsap.to(doodle, {
+      y: isEven ? -16 : 16,
+      rotation: isEven ? 4 : -4,
+      duration: 5.5 + (index * 0.7),
+      repeat: -1,
+      yoyo: true,
+      ease: 'sine.inOut'
+    });
+  });
+}
+

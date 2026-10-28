@@ -34,6 +34,12 @@ get_header();
   <main style="padding-top: 100px;">
     <!-- Page Hero Banner -->
     <section style="background: #0D0F12; color: #FFF; padding: 90px 0 70px; border-bottom: 1px solid rgba(255,255,255,0.08); position: relative; overflow: hidden;">
+            <div class="pmc-doodle-container" style="top: 20px; right: 40px;" aria-hidden="true">
+        <svg class="pmc-doodle-svg doodle-float-reverse" width="130" height="130" viewBox="0 0 100 100">
+          <path d="M50 15L18 32v36L50 85l32-17V32L50 15z"/>
+          <path d="M50 15v70M18 32l32 18 32-18"/>
+        </svg>
+      </div>
       <div class="container" style="position: relative; z-index: 2;">
         <div class="section-label">
           <span class="label-number" style="color: #D4AF37;">03</span>
@@ -52,7 +58,7 @@ get_header();
     </section>
 
     <!-- Portfolio Gallery with Real Images -->
-    <section class="projects-section" style="padding: 70px 0 100px; background: #FAFAF7;">
+    <section class="projects-section" style="padding: 70px 0 100px; background: var(--bg-canvas); position: relative;">
       <div class="container">
         
         <!-- Filter Tabs -->

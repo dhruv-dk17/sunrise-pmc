@@ -24,17 +24,9 @@ function sunrise_pmc_enqueue_scripts() {
     // Main Compiled Theme Stylesheet
     wp_enqueue_style(
         'sunrise-main-style',
-        get_template_directory_uri() . '/assets/main-D3rC1b1d.css',
+        get_template_directory_uri() . '/assets/main-WYZNai6A.css',
         array(),
         '1.0.0'
-    );
-
-    // Mobile Responsive Overrides (fixes hero alignment across all devices)
-    wp_enqueue_style(
-        'sunrise-responsive-fix',
-        get_template_directory_uri() . '/assets/responsive-fix.css',
-        array('sunrise-main-style'),
-        '1.0.1'
     );
 
     // CDN Libraries: GSAP & ScrollTrigger
@@ -66,7 +58,7 @@ function sunrise_pmc_enqueue_scripts() {
     // Main Compiled Theme Script (ES Module)
     wp_enqueue_script(
         'sunrise-main-script',
-        get_template_directory_uri() . '/assets/main-lARl-QsZ.js',
+        get_template_directory_uri() . '/assets/main-DWXFqUav.js',
         array('sunrise-gsap', 'sunrise-gsap-scrolltrigger', 'sunrise-lenis'),
         '1.0.0',
         true

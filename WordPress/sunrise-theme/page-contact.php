@@ -35,6 +35,12 @@ get_header();
 
     <!-- Creative Contact Editorial Hero -->
     <section style="background: radial-gradient(ellipse at 80% 20%, #1a1e24 0%, #0d0f12 70%); color: #FFF; padding: clamp(70px, 9vh, 110px) 0; position: relative; overflow: hidden; border-bottom: 1px solid rgba(255,255,255,0.08);">
+            <div class="pmc-doodle-container" style="top: 20px; right: 40px;" aria-hidden="true">
+        <svg class="pmc-doodle-svg doodle-float-slow" width="130" height="130" viewBox="0 0 100 100">
+          <rect x="12" y="42" width="76" height="16" rx="2"/>
+          <path d="M20 42v6M28 42v10M36 42v6M44 42v10M52 42v6M60 42v10M68 42v6M76 42v10"/>
+        </svg>
+      </div>
       <div class="container" style="position: relative; z-index: 2;">
         
         <div class="section-label">
@@ -66,13 +72,13 @@ get_header();
     </section>
 
     <!-- 3 Quick Technical Direct Portals (Zero Emojis, Pure SVG) -->
-    <section style="background: #FFFFFF; border-bottom: 1px solid var(--border-hairline); padding: 48px 0;">
+    <section style="background: var(--bg-surface); border-bottom: 1px solid var(--border-hairline); padding: 48px 0;">
       <div class="container">
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
           
           <!-- Portal 1: Telephone -->
           <a href="tel:+919586000933" class="trust-card reveal-item" style="padding: 24px 28px; background: var(--bg-stone); border: 1px solid var(--border-hairline); border-radius: 8px; transition: all 0.3s ease; display: flex; align-items: center; gap: 20px;">
-            <div style="width: 50px; height: 50px; border-radius: 8px; background: #FFFFFF; border: 1px solid rgba(158,122,42,0.25); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--accent-gold);">
+            <div style="width: 50px; height: 50px; border-radius: 8px; background: var(--bg-card); border: 1px solid rgba(158,122,42,0.25); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--accent-gold);">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
               </svg>
@@ -86,7 +92,7 @@ get_header();
 
           <!-- Portal 2: Official Email -->
           <a href="mailto:contact@sunrisepmc.in" class="trust-card reveal-item" style="padding: 24px 28px; background: var(--bg-stone); border: 1px solid var(--border-hairline); border-radius: 8px; transition: all 0.3s ease; display: flex; align-items: center; gap: 20px;">
-            <div style="width: 50px; height: 50px; border-radius: 8px; background: #FFFFFF; border: 1px solid rgba(158,122,42,0.25); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--accent-gold);">
+            <div style="width: 50px; height: 50px; border-radius: 8px; background: var(--bg-card); border: 1px solid rgba(158,122,42,0.25); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--accent-gold);">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
                 <polyline points="22,6 12,13 2,6"/>
@@ -118,7 +124,7 @@ get_header();
     </section>
 
     <!-- Main Strategic Inquiry Grid -->
-    <section class="contact-section" style="padding: clamp(70px, 9vw, 110px) 0; background: #FFFFFF;">
+    <section class="contact-section" style="padding: clamp(70px, 9vw, 110px) 0; background: var(--bg-card);">
       <div class="container">
         
         <div class="contact-editorial-grid">
@@ -180,7 +186,7 @@ get_header();
 
           <!-- Right: Interactive Consultation Parameters Dossier Form -->
           <div class="contact-form-side reveal-item">
-            <form id="projectInquiryForm" class="editorial-form" action="https://formspree.io/f/xbjvkzrw" method="POST" style="background: #FFFFFF; border: 1px solid var(--border-hairline); border-radius: 8px; padding: clamp(28px, 4vw, 44px); box-shadow: 0 16px 40px rgba(0,0,0,0.04);">
+            <form id="projectInquiryForm" class="editorial-form" action="https://formspree.io/f/xbjvkzrw" method="POST" style="background: var(--bg-card); border: 1px solid var(--border-hairline); border-radius: 8px; padding: clamp(28px, 4vw, 44px); box-shadow: 0 16px 40px rgba(0,0,0,0.04);">
               
               <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 24px; border-bottom: 1px solid var(--border-hairline); padding-bottom: 16px;">
                 <div>
@@ -259,7 +265,7 @@ get_header();
     </section>
 
     <!-- Surat Location Map Embed Block -->
-    <section style="background: #FAFAF7; border-top: 1px solid var(--border-hairline); padding: clamp(60px, 8vw, 90px) 0;">
+    <section style="background: var(--bg-surface); border-top: 1px solid var(--border-hairline); padding: clamp(60px, 8vw, 90px) 0;">
       <div class="container text-center">
         <div class="section-label center-label">
           <span class="label-number">02</span>

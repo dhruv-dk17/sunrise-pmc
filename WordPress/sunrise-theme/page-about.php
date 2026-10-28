@@ -35,6 +35,12 @@ get_header();
 
     <!-- Creative Editorial Hero Banner with Blueprint Grids -->
     <section class="about-hero-creative" style="background: radial-gradient(ellipse at 80% 20%, #1a1e24 0%, #0d0f12 70%); color: #FFF; padding: clamp(70px, 9vh, 110px) 0; position: relative; overflow: hidden; border-bottom: 1px solid rgba(255,255,255,0.08);">
+            <div class="pmc-doodle-container" style="top: 20px; right: 40px;" aria-hidden="true">
+        <svg class="pmc-doodle-svg doodle-float-slow" width="130" height="130" viewBox="0 0 100 100">
+          <circle cx="50" cy="18" r="6"/>
+          <path d="M46 23L22 84M54 23l24 61M30 62h40M47 12V6M53 12V6M15 90h70"/>
+        </svg>
+      </div>
       <div class="container" style="position: relative; z-index: 2;">
         
         <div class="section-label">
@@ -69,7 +75,7 @@ get_header();
     </section>
 
     <!-- Key Metrics Ribbon with GSAP Live Counters -->
-    <section class="hero-metrics-strip" style="background: #FFFFFF; border-bottom: 1px solid var(--border-hairline); padding: 40px 0;">
+    <section class="hero-metrics-strip" style="background: var(--bg-surface); border-bottom: 1px solid var(--border-hairline); padding: 40px 0;">
       <div class="container metrics-flex">
         <div class="metric-block">
           <div class="metric-num"><span class="count-up" data-target="250">0</span><span class="gold-plus">+</span></div>
@@ -100,7 +106,7 @@ get_header();
           
           <!-- Left: Uncropped framed image with coordinates caption -->
           <div class="about-media-col reveal-item">
-            <div class="media-aspect-frame" style="border-radius: 8px; border: 1px solid var(--border-hairline); padding: 12px; background: #FFFFFF; box-shadow: 0 16px 40px rgba(0,0,0,0.06);">
+            <div class="media-aspect-frame" style="border-radius: 8px; border: 1px solid var(--border-hairline); padding: 12px; background: var(--bg-card); box-shadow: var(--card-shadow); border-color: var(--border-hairline);">
               <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/SunRise-PMC-3-1-CQOhqJb-.png" alt="SunRise PMC Architectural Supervision" class="about-img" style="width: 100%; height: auto; object-fit: contain; border-radius: 4px; display: block;" loading="lazy">
               <div class="media-coordinates" style="margin-top: 12px; background: var(--bg-stone); border-radius: 4px; padding: 10px 16px; display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 0.68rem; letter-spacing: 0.12em; color: var(--text-secondary); border: 1px solid var(--border-hairline);">
                 <span>LAT 21&deg;10'12&quot; N</span>
@@ -111,7 +117,7 @@ get_header();
               </div>
             </div>
             
-            <div class="founder-card-strip" style="margin-top: 24px; background: #FFFFFF; border: 1px solid var(--border-hairline); border-left: 3px solid var(--accent-gold); border-radius: 6px; padding: 24px; box-shadow: 0 8px 24px rgba(0,0,0,0.03);">
+            <div class="founder-card-strip" style="margin-top: 24px; background: var(--bg-card); border: 1px solid var(--border-hairline); border-left: 3px solid var(--accent-gold); border-radius: 6px; padding: 24px; box-shadow: var(--card-shadow);">
               <div class="founder-identity">
                 <span class="founder-title" style="font-size: 0.65rem; letter-spacing: 0.18em; color: var(--accent-gold); font-weight: 700;">MANAGING DIRECTOR</span>
                 <h3 class="founder-name" style="font-family: var(--font-serif-roman); font-size: 1.45rem; margin: 4px 0 8px; color: var(--text-primary);">Arjun Sharma</h3>
@@ -178,7 +184,7 @@ get_header();
     </section>
 
     <!-- Creative Fiduciary Pillars (Bespoke SVG Luxury Line Icons - Zero Emojis) -->
-    <section style="background: #FAFAF7; padding: clamp(70px, 9vw, 110px) 0; border-top: 1px solid var(--border-hairline); border-bottom: 1px solid var(--border-hairline);">
+    <section style="background: var(--bg-canvas); padding: clamp(70px, 9vw, 110px) 0; border-top: 1px solid var(--border-hairline); border-bottom: 1px solid var(--border-hairline);">
       <div class="container">
         
         <div class="section-intro text-center reveal-item">
@@ -195,7 +201,7 @@ get_header();
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 24px; margin-top: 48px;">
           
           <!-- Pillar 1: Fiduciary Scale -->
-          <div class="trust-card reveal-item" style="flex-direction: column; align-items: flex-start; padding: 32px 28px; background: #FFFFFF; border-radius: 8px; border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 8px 30px rgba(0,0,0,0.03);">
+          <div class="trust-card reveal-item" style="flex-direction: column; align-items: flex-start; padding: 32px 28px; background: var(--bg-card); border-radius: 8px; border: 1px solid var(--border-hairline); box-shadow: var(--card-shadow);">
             <div class="trust-icon" style="width: 48px; height: 48px; margin-bottom: 16px; background: rgba(158,122,42,0.08); border-radius: 8px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(158,122,42,0.2);">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#9E7A2A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M12 3v18M3 7l9-4 9 4M6 10l-3 7h6l-3-7zm12 0l-3 7h6l-3-7zM2 21h20"/>
@@ -208,7 +214,7 @@ get_header();
           </div>
 
           <!-- Pillar 2: CPM Chronometer -->
-          <div class="trust-card reveal-item" style="flex-direction: column; align-items: flex-start; padding: 32px 28px; background: #FFFFFF; border-radius: 8px; border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 8px 30px rgba(0,0,0,0.03);">
+          <div class="trust-card reveal-item" style="flex-direction: column; align-items: flex-start; padding: 32px 28px; background: var(--bg-card); border-radius: 8px; border: 1px solid var(--border-hairline); box-shadow: var(--card-shadow);">
             <div class="trust-icon" style="width: 48px; height: 48px; margin-bottom: 16px; background: rgba(158,122,42,0.08); border-radius: 8px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(158,122,42,0.2);">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#9E7A2A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="13" r="8"/>
@@ -222,7 +228,7 @@ get_header();
           </div>
 
           <!-- Pillar 3: Fiduciary Shield -->
-          <div class="trust-card reveal-item" style="flex-direction: column; align-items: flex-start; padding: 32px 28px; background: #FFFFFF; border-radius: 8px; border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 8px 30px rgba(0,0,0,0.03);">
+          <div class="trust-card reveal-item" style="flex-direction: column; align-items: flex-start; padding: 32px 28px; background: var(--bg-card); border-radius: 8px; border: 1px solid var(--border-hairline); box-shadow: var(--card-shadow);">
             <div class="trust-icon" style="width: 48px; height: 48px; margin-bottom: 16px; background: rgba(158,122,42,0.08); border-radius: 8px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(158,122,42,0.2);">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#9E7A2A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
@@ -236,7 +242,7 @@ get_header();
           </div>
 
           <!-- Pillar 4: Regional Authority Compass -->
-          <div class="trust-card reveal-item" style="flex-direction: column; align-items: flex-start; padding: 32px 28px; background: #FFFFFF; border-radius: 8px; border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 8px 30px rgba(0,0,0,0.03);">
+          <div class="trust-card reveal-item" style="flex-direction: column; align-items: flex-start; padding: 32px 28px; background: var(--bg-card); border-radius: 8px; border: 1px solid var(--border-hairline); box-shadow: var(--card-shadow);">
             <div class="trust-icon" style="width: 48px; height: 48px; margin-bottom: 16px; background: rgba(158,122,42,0.08); border-radius: 8px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(158,122,42,0.2);">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#9E7A2A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="12" r="9"/>
@@ -254,7 +260,7 @@ get_header();
     </section>
 
     <!-- Creative 18-Year Evolution Timeline (Storytelling) -->
-    <section style="background: #FFFFFF; padding: clamp(70px, 9vw, 110px) 0;">
+    <section style="background: var(--bg-surface); padding: clamp(70px, 9vw, 110px) 0; position: relative;">
       <div class="container">
         
         <div class="section-intro text-center reveal-item">
@@ -270,73 +276,73 @@ get_header();
 
         <div style="max-width: 960px; margin: 48px auto 0; position: relative;">
           <!-- Timeline spine -->
-          <div style="position: absolute; top: 0; bottom: 0; left: clamp(16px, 4vw, 24px); width: 2px; background: linear-gradient(to bottom, var(--accent-gold), rgba(158,122,42,0.1));"></div>
+          <div class="timeline-spine"></div>
 
-          <!-- Event 1 -->
-          <div class="reveal-item" style="display: flex; gap: clamp(20px, 4vw, 36px); margin-bottom: 40px; position: relative;">
-            <div style="width: clamp(34px, 5vw, 50px); height: clamp(34px, 5vw, 50px); border-radius: 50%; background: #0D0F12; border: 2px solid var(--accent-gold); display: flex; align-items: center; justify-content: center; flex-shrink: 0; z-index: 2;">
-              <span style="font-size: 0.7rem; font-weight: 700; color: #D4AF37;">'08</span>
+          <!-- Event 1: 2008 -->
+          <div class="reveal-item timeline-milestone">
+            <div class="milestone-node">
+              <span class="milestone-year">'08</span>
             </div>
-            <div style="background: var(--bg-stone); border: 1px solid var(--border-hairline); border-radius: 6px; padding: 24px; flex: 1;">
-              <span style="font-size: 0.68rem; letter-spacing: 0.15em; color: var(--accent-gold); font-weight: 700;">2008 &bull; INCEPTION IN SURAT</span>
-              <h4 style="font-family: var(--font-serif-roman); font-size: 1.25rem; margin: 6px 0 8px; color: var(--text-primary);">Founding the Independent Practice</h4>
-              <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.65;">
-                SunRise PMC was founded with a singular conviction: to introduce structured engineering governance and honest fiduciary oversight to Surat's burgeoning real estate market.
+            <div class="milestone-card">
+              <span class="milestone-tag">2008 &bull; INCEPTION IN SURAT</span>
+              <h4 class="milestone-title">Founding the Independent Practice</h4>
+              <p class="milestone-desc">
+                SunRise PMC was founded with a singular conviction: to introduce structured engineering governance, Bill of Quantities (BOQ) precision, and honest fiduciary oversight to Surat's burgeoning real estate market.
               </p>
             </div>
           </div>
 
-          <!-- Event 2 -->
-          <div class="reveal-item" style="display: flex; gap: clamp(20px, 4vw, 36px); margin-bottom: 40px; position: relative;">
-            <div style="width: clamp(34px, 5vw, 50px); height: clamp(34px, 5vw, 50px); border-radius: 50%; background: #0D0F12; border: 2px solid var(--accent-gold); display: flex; align-items: center; justify-content: center; flex-shrink: 0; z-index: 2;">
-              <span style="font-size: 0.7rem; font-weight: 700; color: #D4AF37;">'14</span>
+          <!-- Event 2: 2014 -->
+          <div class="reveal-item timeline-milestone">
+            <div class="milestone-node">
+              <span class="milestone-year">'14</span>
             </div>
-            <div style="background: var(--bg-stone); border: 1px solid var(--border-hairline); border-radius: 6px; padding: 24px; flex: 1;">
-              <span style="font-size: 0.68rem; letter-spacing: 0.15em; color: var(--accent-gold); font-weight: 700;">2014 &bull; INDUSTRIAL &amp; SEZ EXPANSION</span>
-              <h4 style="font-family: var(--font-serif-roman); font-size: 1.25rem; margin: 6px 0 8px; color: var(--text-primary);">Diamond Processing &amp; High-Tech Complexes</h4>
-              <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.65;">
+            <div class="milestone-card">
+              <span class="milestone-tag">2014 &bull; INDUSTRIAL &amp; SEZ EXPANSION</span>
+              <h4 class="milestone-title">Diamond Processing &amp; High-Tech Complexes</h4>
+              <p class="milestone-desc">
                 Appointed for turnkey PMC across Surat's iconic diamond industrial complexes, including Ankit Gems, Ashwin Diamond, Charu Jewels, and Mohit Diamond, delivering vibration-damped cleanroom construction.
               </p>
             </div>
           </div>
 
-          <!-- Event 3 -->
-          <div class="reveal-item" style="display: flex; gap: clamp(20px, 4vw, 36px); margin-bottom: 40px; position: relative;">
-            <div style="width: clamp(34px, 5vw, 50px); height: clamp(34px, 5vw, 50px); border-radius: 50%; background: #0D0F12; border: 2px solid var(--accent-gold); display: flex; align-items: center; justify-content: center; flex-shrink: 0; z-index: 2;">
-              <span style="font-size: 0.7rem; font-weight: 700; color: #D4AF37;">'19</span>
+          <!-- Event 3: 2019 -->
+          <div class="reveal-item timeline-milestone">
+            <div class="milestone-node">
+              <span class="milestone-year">'19</span>
             </div>
-            <div style="background: var(--bg-stone); border: 1px solid var(--border-hairline); border-radius: 6px; padding: 24px; flex: 1;">
-              <span style="font-size: 0.68rem; letter-spacing: 0.15em; color: var(--accent-gold); font-weight: 700;">2019 &bull; LUXURY HOSPITALITY LEADERSHIP</span>
-              <h4 style="font-family: var(--font-serif-roman); font-size: 1.25rem; margin: 6px 0 8px; color: var(--text-primary);">5-Star Hotels &amp; Destination Resorts</h4>
-              <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.65;">
+            <div class="milestone-card">
+              <span class="milestone-tag">2019 &bull; LUXURY HOSPITALITY LEADERSHIP</span>
+              <h4 class="milestone-title">5-Star Hotels &amp; Destination Resorts</h4>
+              <p class="milestone-desc">
                 Orchestrated the construction and commissioning of Hilton Garden Inn Surat (220 Keys), Vivanta Hotel, and Treat Hotels &amp; Resorts, meeting stringent global hospitality brand standards.
               </p>
             </div>
           </div>
 
-          <!-- Event 4 -->
-          <div class="reveal-item" style="display: flex; gap: clamp(20px, 4vw, 36px); margin-bottom: 40px; position: relative;">
-            <div style="width: clamp(34px, 5vw, 50px); height: clamp(34px, 5vw, 50px); border-radius: 50%; background: #0D0F12; border: 2px solid var(--accent-gold); display: flex; align-items: center; justify-content: center; flex-shrink: 0; z-index: 2;">
-              <span style="font-size: 0.7rem; font-weight: 700; color: #D4AF37;">'23</span>
+          <!-- Event 4: 2023 -->
+          <div class="reveal-item timeline-milestone">
+            <div class="milestone-node">
+              <span class="milestone-year">'23</span>
             </div>
-            <div style="background: var(--bg-stone); border: 1px solid var(--border-hairline); border-radius: 6px; padding: 24px; flex: 1;">
-              <span style="font-size: 0.68rem; letter-spacing: 0.15em; color: var(--accent-gold); font-weight: 700;">2023 &bull; TOWNSHIP &amp; HEALTHCARE BENCHMARKS</span>
-              <h4 style="font-family: var(--font-serif-roman); font-size: 1.25rem; margin: 6px 0 8px; color: var(--text-primary);">Bharat City (2.4M Sq.Ft.) &amp; Specialized Hospitals</h4>
-              <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.65;">
+            <div class="milestone-card">
+              <span class="milestone-tag">2023 &bull; TOWNSHIP &amp; HEALTHCARE BENCHMARKS</span>
+              <h4 class="milestone-title">Bharat City (2.4M Sq.Ft.) &amp; Specialized Hospitals</h4>
+              <p class="milestone-desc">
                 Overseeing multi-tower residential enclaves such as Bharat City, Bhawans Ultima, White Wings Torrance, alongside Om Hospital and Grand Marina Hospital.
               </p>
             </div>
           </div>
 
-          <!-- Event 5 -->
-          <div class="reveal-item" style="display: flex; gap: clamp(20px, 4vw, 36px); position: relative;">
-            <div style="width: clamp(34px, 5vw, 50px); height: clamp(34px, 5vw, 50px); border-radius: 50%; background: var(--accent-gold); border: 2px solid #FFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0; z-index: 2; box-shadow: 0 0 16px rgba(158,122,42,0.6);">
-              <span style="font-size: 0.7rem; font-weight: 700; color: #FFF;">'26</span>
+          <!-- Event 5: 2026 -->
+          <div class="reveal-item timeline-milestone">
+            <div class="milestone-node">
+              <span class="milestone-year">'26</span>
             </div>
-            <div style="background: #FFFFFF; border: 1px solid var(--accent-gold); border-radius: 6px; padding: 24px; flex: 1; box-shadow: 0 10px 30px rgba(158,122,42,0.08);">
-              <span style="font-size: 0.68rem; letter-spacing: 0.15em; color: var(--accent-gold); font-weight: 700;">2026 &bull; DIGITAL SITE GOVERNANCE &amp; BEYOND</span>
-              <h4 style="font-family: var(--font-serif-roman); font-size: 1.25rem; margin: 6px 0 8px; color: var(--text-primary);">&yen;1,500+ Cr Active Portfolio &amp; Forensic Audits</h4>
-              <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.65;">
+            <div class="milestone-card">
+              <span class="milestone-tag">2026 &bull; DIGITAL SITE GOVERNANCE &amp; BEYOND</span>
+              <h4 class="milestone-title">&#8377;1,500+ Cr Active Portfolio &amp; Forensic Audits</h4>
+              <p class="milestone-desc">
                 Deploying digital QA/QC audits, clash detection, and forensic billing verification across Western India with 20+ landmark developments actively supervised.
               </p>
             </div>
