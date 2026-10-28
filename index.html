@@ -91,11 +91,8 @@
   <header class="site-header" id="siteHeader">
     <div class="header-container">
       <a href="#hero" class="brand-link" aria-label="SunRise PMC Home">
-        <img src="./public/images/SunRise-Logo-1-300x212.png" alt="SunRise PMC Brand Logo" class="brand-logo" width="115" height="80">
-        <div class="brand-headings">
-          <span class="brand-name">SUNRISE PMC</span>
-          <span class="brand-tag">PROJECT MANAGEMENT CONSULTANCY</span>
-        </div>
+        <img src="./public/images/SunRise-Logo-1-300x212.png" alt="SunRise PMC Brand Logo" class="brand-logo" width="200" height="141">
+        
       </a>
 
       <nav class="desktop-nav" aria-label="Main Navigation">
@@ -134,7 +131,7 @@
         <li><a href="./index.html" class="mobile-nav-item"><span>00</span> Home</a></li>
         <li><a href="./about.html" class="mobile-nav-item"><span>01</span> About the Practice</a></li>
         <li><a href="./services.html" class="mobile-nav-item"><span>02</span> Core Disciplines (8)</a></li>
-        <li><a href="./projects.html" class="mobile-nav-item"><span>03</span> 20 Landmark Projects</a></li>
+        <li><a href="./projects.html" class="mobile-nav-item"><span>03</span> Landmark Portfolio</a></li>
         <li><a href="#calculator" class="mobile-nav-item"><span>04</span> Scope Estimator</a></li>
         <li><a href="./contact.html" class="mobile-nav-item"><span>05</span> Contact & Surat Desk</a></li>
       </ul>
@@ -182,7 +179,7 @@
 
           <div class="hero-actions" id="heroActions">
             <a href="#projects" class="btn-editorial btn-accent">
-              <span>Explore 20 Landmarks</span>
+              <span>Explore Portfolio</span>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
             <a href="#calculator" class="btn-editorial btn-outline">
@@ -503,8 +500,8 @@
       </div>
     </section>
 
-    <!-- 4. PROJECTS PORTFOLIO (ALL 20 LANDMARKS — OPEN AIR GALLERY) -->
-    <section id="projects" class="projects-section">
+        <!-- 4. PROJECTS PORTFOLIO (3D AWARDS-WINNING LANDMARKS CAROUSEL) -->
+    <section id="projects" class="projects-section projects-carousel-section" data-lenis-prevent>
       <div class="container">
         
         <div class="portfolio-header reveal-item">
@@ -513,303 +510,242 @@
               <span class="label-number">03</span>
               <span class="label-text">LANDMARK RECORD</span>
             </div>
-            <h2 class="editorial-heading">Twenty Completed & Active Landmarks.</h2>
+            <h2 class="editorial-heading">Completed &amp; Active Landmark Portfolio.</h2>
             <p class="intro-subhead" style="margin-left: 0; text-align: left;">
               Residential high-rises, commercial and diamond processing complexes, 5-star hospitality, and specialized healthcare institutions across Western India.
             </p>
           </div>
 
-          <!-- Filter Navigation Tabs -->
+          <!-- Sector Filter Tabs -->
           <div class="portfolio-filters" role="tablist">
-            <button class="filter-tab active" data-filter="all">All Projects (20)</button>
-            <button class="filter-tab" data-filter="residential">Residential</button>
-            <button class="filter-tab" data-filter="commercial">Commercial & Gems</button>
+            <button class="filter-tab active" data-filter="all">All Landmarks</button>
             <button class="filter-tab" data-filter="hospitality">Hospitality</button>
-            <button class="filter-tab" data-filter="institutional">Institutional & Healthcare</button>
+            <button class="filter-tab" data-filter="residential">Residential</button>
+            <button class="filter-tab" data-filter="commercial">Commercial &amp; Gems</button>
+            <button class="filter-tab" data-filter="institutional">Healthcare</button>
           </div>
         </div>
 
-        <!-- Open Air Projects Showcase -->
-        <div class="projects-gallery" id="projectsGallery">
+        <!-- 3D Award-Winning Stage -->
+        <div class="carousel-3d-wrapper" id="carousel3DWrapper">
+          <div class="carousel-3d-stage" id="carousel3DStage">
+            <div class="carousel-3d-track" id="carousel3DTrack">
 
-          <!-- 1. Bharat City -->
-          <div class="project-entry reveal-item" data-category="residential" data-title="Bharat City" data-type="Residential Township" data-scale="2,400,000 Sq.Ft." data-location="Surat, Gujarat" data-img="./public/images/Frame-15.png">
-            <div class="entry-img-wrap">
-              <img src="./public/images/Frame-15.png" alt="Bharat City Project" loading="lazy">
-              <div class="entry-tag">RESIDENTIAL TOWNSHIP</div>
-              <div class="entry-hover-action"><span>VIEW DOSSIER</span> ↗</div>
-            </div>
-            <div class="entry-info">
-              <div class="entry-loc">SURAT, GUJARAT</div>
-              <h3 class="entry-heading">Bharat City</h3>
-              <p class="entry-desc">Mega residential high-rise township with extensive social infrastructure and podium engineering.</p>
+              <!-- 1. Hilton Garden Inn -->
+              <div class="carousel-card-3d project-entry" data-index="0" data-category="hospitality" data-title="Hilton Garden Inn" data-type="5-Star Hospitality" data-scale="220 Luxury Keys" data-location="Surat, Gujarat" data-img="./public/images/hilton-garden-inn.png">
+                <div class="card-3d-media">
+                  <img src="./public/images/hilton-garden-inn.png" alt="Hilton Garden Inn" loading="eager">
+                  <div class="card-3d-gradient"></div>
+                  <div class="card-3d-badge">5-STAR HOSPITALITY</div>
+                  <div class="card-3d-action-pill"><span>VIEW DOSSIER</span> &#8599;</div>
+                </div>
+                <div class="card-3d-body">
+                  <div class="card-3d-meta">
+                    <span class="card-3d-loc">SURAT, GUJARAT</span>
+                    <span class="card-3d-scale">220 Luxury Keys</span>
+                  </div>
+                  <h3 class="card-3d-title">Hilton Garden Inn</h3>
+                  <p class="card-3d-desc entry-desc">International brand standard compliance, acoustic isolation, and intricate MEP execution.</p>
+                </div>
+              </div>
+
+              <!-- 2. Bharat City -->
+              <div class="carousel-card-3d project-entry" data-index="1" data-category="residential" data-title="Bharat City" data-type="Residential Township" data-scale="2,400,000 Sq.Ft." data-location="Surat, Gujarat" data-img="./public/images/Frame-15.png">
+                <div class="card-3d-media">
+                  <img src="./public/images/Frame-15.png" alt="Bharat City" loading="eager">
+                  <div class="card-3d-gradient"></div>
+                  <div class="card-3d-badge">RESIDENTIAL TOWNSHIP</div>
+                  <div class="card-3d-action-pill"><span>VIEW DOSSIER</span> &#8599;</div>
+                </div>
+                <div class="card-3d-body">
+                  <div class="card-3d-meta">
+                    <span class="card-3d-loc">SURAT, GUJARAT</span>
+                    <span class="card-3d-scale">2,400,000 Sq.Ft.</span>
+                  </div>
+                  <h3 class="card-3d-title">Bharat City</h3>
+                  <p class="card-3d-desc entry-desc">Mega residential high-rise township with extensive social infrastructure and podium engineering.</p>
+                </div>
+              </div>
+
+              <!-- 3. Vivanta Hotel -->
+              <div class="carousel-card-3d project-entry" data-index="2" data-category="hospitality" data-title="Vivanta Hotel" data-type="Luxury Hotel" data-scale="Premium Keys &amp; Suites" data-location="Gujarat" data-img="./public/images/vivantahotel.png">
+                <div class="card-3d-media">
+                  <img src="./public/images/vivantahotel.png" alt="Vivanta Hotel" loading="lazy">
+                  <div class="card-3d-gradient"></div>
+                  <div class="card-3d-badge">LUXURY HOSPITALITY</div>
+                  <div class="card-3d-action-pill"><span>VIEW DOSSIER</span> &#8599;</div>
+                </div>
+                <div class="card-3d-body">
+                  <div class="card-3d-meta">
+                    <span class="card-3d-loc">GUJARAT</span>
+                    <span class="card-3d-scale">Premium Suites</span>
+                  </div>
+                  <h3 class="card-3d-title">Vivanta Hotel</h3>
+                  <p class="card-3d-desc entry-desc">High-specification finishing, acoustic testing, and fast-track structural commissioning.</p>
+                </div>
+              </div>
+
+              <!-- 4. Charu Jewels -->
+              <div class="carousel-card-3d project-entry" data-index="3" data-category="commercial" data-title="Charu Jewels" data-type="Luxury Commercial Landmark" data-scale="Bespoke Commercial" data-location="Surat" data-img="./public/images/Frame-47-1-1.png">
+                <div class="card-3d-media">
+                  <img src="./public/images/Frame-47-1-1.png" alt="Charu Jewels" loading="lazy">
+                  <div class="card-3d-gradient"></div>
+                  <div class="card-3d-badge">LUXURY COMMERCIAL</div>
+                  <div class="card-3d-action-pill"><span>VIEW DOSSIER</span> &#8599;</div>
+                </div>
+                <div class="card-3d-body">
+                  <div class="card-3d-meta">
+                    <span class="card-3d-loc">SURAT, GUJARAT</span>
+                    <span class="card-3d-scale">Flagship Commercial</span>
+                  </div>
+                  <h3 class="card-3d-title">Charu Jewels</h3>
+                  <p class="card-3d-desc entry-desc">Architectural glass façade, reinforced security vaulting, and precision MEP integration.</p>
+                </div>
+              </div>
+
+              <!-- 5. Bhawans Ultima -->
+              <div class="carousel-card-3d project-entry" data-index="4" data-category="residential" data-title="Bhawans Ultima" data-type="Premium High-Rise Enclave" data-scale="Multi-Tower Complex" data-location="Surat" data-img="./public/images/Frame-16.png">
+                <div class="card-3d-media">
+                  <img src="./public/images/Frame-16.png" alt="Bhawans Ultima" loading="lazy">
+                  <div class="card-3d-gradient"></div>
+                  <div class="card-3d-badge">HIGH-RISE TOWERS</div>
+                  <div class="card-3d-action-pill"><span>VIEW DOSSIER</span> &#8599;</div>
+                </div>
+                <div class="card-3d-body">
+                  <div class="card-3d-meta">
+                    <span class="card-3d-loc">SURAT, GUJARAT</span>
+                    <span class="card-3d-scale">Multi-Tower Complex</span>
+                  </div>
+                  <h3 class="card-3d-title">Bhawans Ultima</h3>
+                  <p class="card-3d-desc entry-desc">Multi-tower residential enclave delivering turnkey PMC from deep piling to homeowner handover.</p>
+                </div>
+              </div>
+
+              <!-- 6. Ankit Gems Hub -->
+              <div class="carousel-card-3d project-entry" data-index="5" data-category="commercial" data-title="Ankit Gems" data-type="Diamond Manufacturing Complex" data-scale="Specialized Industrial Hub" data-location="Surat SEZ" data-img="./public/images/Frame-20.png">
+                <div class="card-3d-media">
+                  <img src="./public/images/Frame-20.png" alt="Ankit Gems" loading="lazy">
+                  <div class="card-3d-gradient"></div>
+                  <div class="card-3d-badge">DIAMOND &amp; INDUSTRIAL</div>
+                  <div class="card-3d-action-pill"><span>VIEW DOSSIER</span> &#8599;</div>
+                </div>
+                <div class="card-3d-body">
+                  <div class="card-3d-meta">
+                    <span class="card-3d-loc">SURAT SEZ</span>
+                    <span class="card-3d-scale">Specialized Industrial</span>
+                  </div>
+                  <h3 class="card-3d-title">Ankit Gems Hub</h3>
+                  <p class="card-3d-desc entry-desc">Heavy vibration-damped industrial slabs and high-security cleanroom facilities.</p>
+                </div>
+              </div>
+
+              <!-- 7. Apple Children Hospital -->
+              <div class="carousel-card-3d project-entry" data-index="6" data-category="institutional" data-title="Apple Children Hospital" data-type="Specialized Healthcare" data-scale="Tertiary Pediatric Facility" data-location="Surat" data-img="./public/images/apple-children-hospital.png">
+                <div class="card-3d-media">
+                  <img src="./public/images/apple-children-hospital.png" alt="Apple Children Hospital" loading="lazy">
+                  <div class="card-3d-gradient"></div>
+                  <div class="card-3d-badge">HEALTHCARE FACILITY</div>
+                  <div class="card-3d-action-pill"><span>VIEW DOSSIER</span> &#8599;</div>
+                </div>
+                <div class="card-3d-body">
+                  <div class="card-3d-meta">
+                    <span class="card-3d-loc">SURAT, GUJARAT</span>
+                    <span class="card-3d-scale">Pediatric Care Center</span>
+                  </div>
+                  <h3 class="card-3d-title">Apple Children Hospital</h3>
+                  <p class="card-3d-desc entry-desc">Specialized medical gas distribution, negative-pressure isolation wards, and uninterruptible power.</p>
+                </div>
+              </div>
+
+              <!-- 8. Mohit Diamond -->
+              <div class="carousel-card-3d project-entry" data-index="7" data-category="commercial" data-title="Mohit Diamond" data-type="Industrial Diamond Facility" data-scale="Industrial Facility" data-location="Surat" data-img="./public/images/Frame-46.png">
+                <div class="card-3d-media">
+                  <img src="./public/images/Frame-46.png" alt="Mohit Diamond" loading="lazy">
+                  <div class="card-3d-gradient"></div>
+                  <div class="card-3d-badge">INDUSTRIAL FACILITY</div>
+                  <div class="card-3d-action-pill"><span>VIEW DOSSIER</span> &#8599;</div>
+                </div>
+                <div class="card-3d-body">
+                  <div class="card-3d-meta">
+                    <span class="card-3d-loc">SURAT, GUJARAT</span>
+                    <span class="card-3d-scale">High-Tech Processing</span>
+                  </div>
+                  <h3 class="card-3d-title">Mohit Diamond</h3>
+                  <p class="card-3d-desc entry-desc">Precision optical cutting facility with customized cleanroom airflow and vibration mitigation.</p>
+                </div>
+              </div>
+
+              <!-- 9. White Wings Torrance -->
+              <div class="carousel-card-3d project-entry" data-index="8" data-category="residential" data-title="White Wings Torrance" data-type="Signature Luxury Towers" data-scale="Gated High-Rise" data-location="Surat" data-img="./public/images/Frame-18.png">
+                <div class="card-3d-media">
+                  <img src="./public/images/Frame-18.png" alt="White Wings Torrance" loading="lazy">
+                  <div class="card-3d-gradient"></div>
+                  <div class="card-3d-badge">LUXURY RESIDENTIAL</div>
+                  <div class="card-3d-action-pill"><span>VIEW DOSSIER</span> &#8599;</div>
+                </div>
+                <div class="card-3d-body">
+                  <div class="card-3d-meta">
+                    <span class="card-3d-loc">SURAT, GUJARAT</span>
+                    <span class="card-3d-scale">Signature Enclave</span>
+                  </div>
+                  <h3 class="card-3d-title">White Wings Torrance</h3>
+                  <p class="card-3d-desc entry-desc">Curvilinear balconies, advanced formwork shuttering, and high-velocity wind load resistance.</p>
+                </div>
+              </div>
+
+              <!-- 10. Ginger Hotel -->
+              <div class="carousel-card-3d project-entry" data-index="9" data-category="hospitality" data-title="Ginger Hotel" data-type="Business Hospitality" data-scale="150 Keys" data-location="Surat, Gujarat" data-img="./public/images/Ginger-hotel.png">
+                <div class="card-3d-media">
+                  <img src="./public/images/Ginger-hotel.png" alt="Ginger Hotel" loading="lazy">
+                  <div class="card-3d-gradient"></div>
+                  <div class="card-3d-badge">BUSINESS HOSPITALITY</div>
+                  <div class="card-3d-action-pill"><span>VIEW DOSSIER</span> &#8599;</div>
+                </div>
+                <div class="card-3d-body">
+                  <div class="card-3d-meta">
+                    <span class="card-3d-loc">SURAT, GUJARAT</span>
+                    <span class="card-3d-scale">150 Keys</span>
+                  </div>
+                  <h3 class="card-3d-title">Ginger Hotel</h3>
+                  <p class="card-3d-desc entry-desc">Standardized hospitality delivery with optimized structural and MEP lifecycle costs.</p>
+                </div>
+              </div>
+
             </div>
           </div>
 
-          <!-- 2. Hilton Garden Inn -->
-          <div class="project-entry reveal-item" data-category="hospitality" data-title="Hilton Garden Inn" data-type="5-Star Hospitality" data-scale="220 Luxury Keys" data-location="Surat, Gujarat" data-img="./public/images/hilton-garden-inn.png">
-            <div class="entry-img-wrap">
-              <img src="./public/images/hilton-garden-inn.png" alt="Hilton Garden Inn" loading="lazy">
-              <div class="entry-tag">LUXURY HOSPITALITY</div>
-              <div class="entry-hover-action"><span>VIEW DOSSIER</span> ↗</div>
+          <!-- Carousel Controls -->
+          <div class="carousel-3d-controls">
+            <button class="carousel-btn prev-btn" id="carouselPrevBtn" aria-label="Previous Landmark Project">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            </button>
+            
+            <div class="carousel-progress-wrap">
+              <div class="carousel-counter">
+                <span class="current-index" id="carouselCurrentNum">01</span>
+                <span class="counter-sep">/</span>
+                <span class="total-index" id="carouselTotalNum">10</span>
+              </div>
+              <div class="carousel-progress-track">
+                <div class="carousel-progress-bar" id="carouselProgressBar"></div>
+              </div>
             </div>
-            <div class="entry-info">
-              <div class="entry-loc">SURAT, GUJARAT</div>
-              <h3 class="entry-heading">Hilton Garden Inn</h3>
-              <p class="entry-desc">International brand standard compliance, acoustic isolation, and intricate MEP execution.</p>
-            </div>
+
+            <button class="carousel-btn next-btn" id="carouselNextBtn" aria-label="Next Landmark Project">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
           </div>
 
-          <!-- 3. Vivanta Hotel -->
-          <div class="project-entry reveal-item" data-category="hospitality" data-title="Vivanta Hotel" data-type="Luxury Hotel" data-scale="Premium Keys & Suites" data-location="Gujarat" data-img="./public/images/vivantahotel.png">
-            <div class="entry-img-wrap">
-              <img src="./public/images/vivantahotel.png" alt="Vivanta Hotel" loading="lazy">
-              <div class="entry-tag">PREMIUM HOSPITALITY</div>
-              <div class="entry-hover-action"><span>VIEW DOSSIER</span> ↗</div>
+          <!-- Archive Callout Banner -->
+          <div class="carousel-archive-callout">
+            <div class="callout-text">
+              <span>Verified Architectural Track Record</span>
+              <strong>Seeking comprehensive project dossiers and engineering details?</strong>
             </div>
-            <div class="entry-info">
-              <div class="entry-loc">GUJARAT</div>
-              <h3 class="entry-heading">Vivanta Hotel</h3>
-              <p class="entry-desc">High-specification finishing, acoustic testing, and fast-track structural commissioning.</p>
-            </div>
-          </div>
-
-          <!-- 4. Ginger Hotel -->
-          <div class="project-entry reveal-item" data-category="hospitality" data-title="Ginger Hotel" data-type="Business Hospitality" data-scale="150 Keys" data-location="Surat, Gujarat" data-img="./public/images/Ginger-hotel.png">
-            <div class="entry-img-wrap">
-              <img src="./public/images/Ginger-hotel.png" alt="Ginger Hotel" loading="lazy">
-              <div class="entry-tag">BUSINESS HOSPITALITY</div>
-              <div class="entry-hover-action"><span>VIEW DOSSIER</span> ↗</div>
-            </div>
-            <div class="entry-info">
-              <div class="entry-loc">SURAT</div>
-              <h3 class="entry-heading">Ginger Hotel</h3>
-              <p class="entry-desc">Standardized hospitality delivery with optimized structural and MEP lifecycle costs.</p>
-            </div>
-          </div>
-
-          <!-- 5. Ankit Gems -->
-          <div class="project-entry reveal-item" data-category="commercial" data-title="Ankit Gems" data-type="Diamond Manufacturing Complex" data-scale="Specialized Industrial Hub" data-location="Surat SEZ" data-img="./public/images/Frame-20.png">
-            <div class="entry-img-wrap">
-              <img src="./public/images/Frame-20.png" alt="Ankit Gems" loading="lazy">
-              <div class="entry-tag">DIAMOND & INDUSTRIAL</div>
-              <div class="entry-hover-action"><span>VIEW DOSSIER</span> ↗</div>
-            </div>
-            <div class="entry-info">
-              <div class="entry-loc">SURAT SEZ</div>
-              <h3 class="entry-heading">Ankit Gems Hub</h3>
-              <p class="entry-desc">Heavy vibration-damped industrial slabs and high-security cleanroom facilities.</p>
-            </div>
-          </div>
-
-          <!-- 6. Ashwin Diamond -->
-          <div class="project-entry reveal-item" data-category="commercial" data-title="Ashwin Diamond" data-type="Commercial Diamond Facility" data-scale="High-Tech Facility" data-location="Surat" data-img="./public/images/Frame-45.png">
-            <div class="entry-img-wrap">
-              <img src="./public/images/Frame-45.png" alt="Ashwin Diamond" loading="lazy">
-              <div class="entry-tag">COMMERCIAL FACILITY</div>
-              <div class="entry-hover-action"><span>VIEW DOSSIER</span> ↗</div>
-            </div>
-            <div class="entry-info">
-              <div class="entry-loc">SURAT, GUJARAT</div>
-              <h3 class="entry-heading">Ashwin Diamond</h3>
-              <p class="entry-desc">State-of-the-art diamond processing center with high HVAC load management and glazed façade.</p>
-            </div>
-          </div>
-
-          <!-- 7. Charu Jewels -->
-          <div class="project-entry reveal-item" data-category="commercial" data-title="Charu Jewels" data-type="Luxury Commercial Landmark" data-scale="Bespoke Commercial" data-location="Surat" data-img="./public/images/Frame-47-1-1.png">
-            <div class="entry-img-wrap">
-              <img src="./public/images/Frame-47-1-1.png" alt="Charu Jewels" loading="lazy">
-              <div class="entry-tag">LUXURY COMMERCIAL</div>
-              <div class="entry-hover-action"><span>VIEW DOSSIER</span> ↗</div>
-            </div>
-            <div class="entry-info">
-              <div class="entry-loc">SURAT, GUJARAT</div>
-              <h3 class="entry-heading">Charu Jewels</h3>
-              <p class="entry-desc">Architectural glass façade, reinforced security vaulting, and precision MEP integration.</p>
-            </div>
-          </div>
-
-          <!-- 8. Mohit Diamond -->
-          <div class="project-entry reveal-item" data-category="commercial" data-title="Mohit Diamond" data-type="Industrial Diamond Facility" data-scale="Industrial Facility" data-location="Surat" data-img="./public/images/Frame-46.png">
-            <div class="entry-img-wrap">
-              <img src="./public/images/Frame-46.png" alt="Mohit Diamond" loading="lazy">
-              <div class="entry-tag">INDUSTRIAL</div>
-              <div class="entry-hover-action"><span>VIEW DOSSIER</span> ↗</div>
-            </div>
-            <div class="entry-info">
-              <div class="entry-loc">SURAT</div>
-              <h3 class="entry-heading">Mohit Diamond</h3>
-              <p class="entry-desc">Industrial processing infrastructure completed with zero recorded safety incidents.</p>
-            </div>
-          </div>
-
-          <!-- 9. Vidyamandir Skill Centre -->
-          <div class="project-entry reveal-item" data-category="institutional" data-title="Vidyamandir Skill Centre" data-type="Educational Campus" data-scale="Campus Infrastructure" data-location="Gujarat" data-img="./public/images/vidyamandir-skill-center.png">
-            <div class="entry-img-wrap">
-              <img src="./public/images/vidyamandir-skill-center.png" alt="Vidyamandir Skill Centre" loading="lazy">
-              <div class="entry-tag">INSTITUTIONAL CAMPUS</div>
-              <div class="entry-hover-action"><span>VIEW DOSSIER</span> ↗</div>
-            </div>
-            <div class="entry-info">
-              <div class="entry-loc">PALANPUR / SURAT</div>
-              <h3 class="entry-heading">Vidyamandir Skill Centre</h3>
-              <p class="entry-desc">Expansive acoustic auditorium halls, workshops, and sustainable campus execution.</p>
-            </div>
-          </div>
-
-          <!-- 10. Jainam House -->
-          <div class="project-entry reveal-item" data-category="residential" data-title="Jainam House" data-type="Private Luxury Residence" data-scale="Bespoke Estate" data-location="Surat" data-img="./public/images/Frame-19.png">
-            <div class="entry-img-wrap">
-              <img src="./public/images/Frame-19.png" alt="Jainam House" loading="lazy">
-              <div class="entry-tag">BESPOKE RESIDENCE</div>
-              <div class="entry-hover-action"><span>VIEW DOSSIER</span> ↗</div>
-            </div>
-            <div class="entry-info">
-              <div class="entry-loc">SURAT, GUJARAT</div>
-              <h3 class="entry-heading">Jainam House</h3>
-              <p class="entry-desc">Ultra-luxury private villa featuring bespoke imported stone, automation, and landscape courtyards.</p>
-            </div>
-          </div>
-
-          <!-- 11. Bhawans Ultima -->
-          <div class="project-entry reveal-item" data-category="residential" data-title="Bhawans Ultima" data-type="Premium High-Rise Enclave" data-scale="Multi-Tower Complex" data-location="Surat" data-img="./public/images/Frame-16.png">
-            <div class="entry-img-wrap">
-              <img src="./public/images/Frame-16.png" alt="Bhawans Ultima" loading="lazy">
-              <div class="entry-tag">PREMIUM HIGH-RISE</div>
-              <div class="entry-hover-action"><span>VIEW DOSSIER</span> ↗</div>
-            </div>
-            <div class="entry-info">
-              <div class="entry-loc">SURAT, GUJARAT</div>
-              <h3 class="entry-heading">Bhawans Ultima</h3>
-              <p class="entry-desc">Multi-tower residential enclave delivering turnkey PMC from deep piling to homeowner handover.</p>
-            </div>
-          </div>
-
-          <!-- 12. White Wings Torrance -->
-          <div class="project-entry reveal-item" data-category="residential" data-title="White Wings Torrance" data-type="Signature Luxury Towers" data-scale="Gated High-Rise" data-location="Surat" data-img="./public/images/Frame-18.png">
-            <div class="entry-img-wrap">
-              <img src="./public/images/Frame-18.png" alt="White Wings Torrance" loading="lazy">
-              <div class="entry-tag">SIGNATURE HIGH-RISE</div>
-              <div class="entry-hover-action"><span>VIEW DOSSIER</span> ↗</div>
-            </div>
-            <div class="entry-info">
-              <div class="entry-loc">SURAT, GUJARAT</div>
-              <h3 class="entry-heading">White Wings Torrance</h3>
-              <p class="entry-desc">Signature luxury towers with infinity amenities and complex cantilevered architectural formwork.</p>
-            </div>
-          </div>
-
-          <!-- 13. Svasti Residence -->
-          <div class="project-entry reveal-item" data-category="residential" data-title="Svasti Residence" data-type="Contemporary Private Villa" data-scale="Luxury Residence" data-location="Surat" data-img="./public/images/svasti.png">
-            <div class="entry-img-wrap">
-              <img src="./public/images/svasti.png" alt="Svasti Residence" loading="lazy">
-              <div class="entry-tag">CONTEMPORARY RESIDENCE</div>
-              <div class="entry-hover-action"><span>VIEW DOSSIER</span> ↗</div>
-            </div>
-            <div class="entry-info">
-              <div class="entry-loc">SURAT, GUJARAT</div>
-              <h3 class="entry-heading">Svasti Residence</h3>
-              <p class="entry-desc">Exposed architectural concrete, cantilevered steel frames, and minimalist water reflection planes.</p>
-            </div>
-          </div>
-
-          <!-- 14. Mr. Dalmia House -->
-          <div class="project-entry reveal-item" data-category="residential" data-title="Mr. Dalmia House" data-type="Private Luxury Mansion" data-scale="Private Estate" data-location="Gujarat" data-img="./public/images/dalmia.png">
-            <div class="entry-img-wrap">
-              <img src="./public/images/dalmia.png" alt="Mr. Dalmia House" loading="lazy">
-              <div class="entry-tag">PRIVATE MANSION</div>
-              <div class="entry-hover-action"><span>VIEW DOSSIER</span> ↗</div>
-            </div>
-            <div class="entry-info">
-              <div class="entry-loc">GUJARAT</div>
-              <h3 class="entry-heading">Mr. Dalmia House</h3>
-              <p class="entry-desc">Exclusive estate mansion with specialized climate envelopes and precision Italian joinery.</p>
-            </div>
-          </div>
-
-          <!-- 15. Treat Hotels & Resorts -->
-          <div class="project-entry reveal-item" data-category="hospitality" data-title="Treat Hotels & Resorts" data-type="Luxury Destination Resort" data-scale="18-Acre Development" data-location="Western Region" data-img="./public/images/treat-resort.png">
-            <div class="entry-img-wrap">
-              <img src="./public/images/treat-resort.png" alt="Treat Hotels & Resorts" loading="lazy">
-              <div class="entry-tag">DESTINATION RESORT</div>
-              <div class="entry-hover-action"><span>VIEW DOSSIER</span> ↗</div>
-            </div>
-            <div class="entry-info">
-              <div class="entry-loc">WESTERN REGION</div>
-              <h3 class="entry-heading">Treat Hotels & Resorts</h3>
-              <p class="entry-desc">Integrated hospitality estate featuring luxury villas, banquet facilities, and extensive recreational zones.</p>
-            </div>
-          </div>
-
-          <!-- 16. Amrit Cement Club House -->
-          <div class="project-entry reveal-item" data-category="institutional" data-title="Amrit Cement Club House" data-type="Corporate Recreational Facility" data-scale="Large Span Trusses" data-location="Township" data-img="./public/images/amrit-cement.png">
-            <div class="entry-img-wrap">
-              <img src="./public/images/amrit-cement.png" alt="Amrit Cement Club House" loading="lazy">
-              <div class="entry-tag">CORPORATE RECREATION</div>
-              <div class="entry-hover-action"><span>VIEW DOSSIER</span> ↗</div>
-            </div>
-            <div class="entry-info">
-              <div class="entry-loc">INDUSTRIAL TOWNSHIP</div>
-              <h3 class="entry-heading">Amrit Cement Club House</h3>
-              <p class="entry-desc">Large-span structural steel framing, indoor sports courts, and acoustic entertainment halls.</p>
-            </div>
-          </div>
-
-          <!-- 17. Om Hospital -->
-          <div class="project-entry reveal-item" data-category="institutional" data-title="Om Hospital" data-type="Multi-Specialty Hospital" data-scale="120 Beds" data-location="Surat" data-img="./public/images/om-hospitall.png">
-            <div class="entry-img-wrap">
-              <img src="./public/images/om-hospitall.png" alt="Om Hospital" loading="lazy">
-              <div class="entry-tag">HEALTHCARE FACILITY</div>
-              <div class="entry-hover-action"><span>VIEW DOSSIER</span> ↗</div>
-            </div>
-            <div class="entry-info">
-              <div class="entry-loc">SURAT, GUJARAT</div>
-              <h3 class="entry-heading">Om Hospital</h3>
-              <p class="entry-desc">Medical gas piping networks, laminar airflow operation theatres, and uninterrupted power grids.</p>
-            </div>
-          </div>
-
-          <!-- 18. Grand Marina Hospital -->
-          <div class="project-entry reveal-item" data-category="institutional" data-title="Grand Marina Hospital" data-type="Tertiary Care Hospital" data-scale="200 Beds" data-location="Gujarat" data-img="./public/images/grand-marina-hospital.png">
-            <div class="entry-img-wrap">
-              <img src="./public/images/grand-marina-hospital.png" alt="Grand Marina Hospital" loading="lazy">
-              <div class="entry-tag">TERTIARY HEALTHCARE</div>
-              <div class="entry-hover-action"><span>VIEW DOSSIER</span> ↗</div>
-            </div>
-            <div class="entry-info">
-              <div class="entry-loc">GUJARAT</div>
-              <h3 class="entry-heading">Grand Marina Hospital</h3>
-              <p class="entry-desc">Advanced seismic dampers, radiology lead shielding, and intensive care air handling units.</p>
-            </div>
-          </div>
-
-          <!-- 19. K7 International School -->
-          <div class="project-entry reveal-item" data-category="institutional" data-title="K7 International School" data-type="Educational Campus" data-scale="K-12 Campus" data-location="Surat" data-img="./public/images/k7-school.png">
-            <div class="entry-img-wrap">
-              <img src="./public/images/k7-school.png" alt="K7 International School" loading="lazy">
-              <div class="entry-tag">EDUCATIONAL CAMPUS</div>
-              <div class="entry-hover-action"><span>VIEW DOSSIER</span> ↗</div>
-            </div>
-            <div class="entry-info">
-              <div class="entry-loc">SURAT, GUJARAT</div>
-              <h3 class="entry-heading">K7 International School</h3>
-              <p class="entry-desc">Modern educational architecture with child-safe material protocols, sports pavilions, and smart labs.</p>
-            </div>
-          </div>
-
-          <!-- 20. Blue Ski -->
-          <div class="project-entry reveal-item" data-category="institutional" data-title="Blue Ski" data-type="Recreational Facility" data-scale="Specialized Venue" data-location="Gujarat" data-img="./public/images/blue-sky.png">
-            <div class="entry-img-wrap">
-              <img src="./public/images/blue-sky.png" alt="Blue Ski" loading="lazy">
-              <div class="entry-tag">RECREATIONAL VENUE</div>
-              <div class="entry-hover-action"><span>VIEW DOSSIER</span> ↗</div>
-            </div>
-            <div class="entry-info">
-              <div class="entry-loc">GUJARAT</div>
-              <h3 class="entry-heading">Blue Ski</h3>
-              <p class="entry-desc">Climate-controlled recreational facility with specialized thermal envelope insulation and structural spans.</p>
-            </div>
+            <a href="./projects.html" class="btn-editorial btn-accent">
+              <span>Explore Full Portfolio Archive</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            </a>
           </div>
 
         </div>
@@ -1265,7 +1201,7 @@
             <li><a href="#projects">Ankit Gems Complex</a></li>
             <li><a href="#projects">Vidyamandir Skill Centre</a></li>
             <li><a href="#projects">Om Hospital</a></li>
-            <li><a href="#projects">All 20 Projects &rarr;</a></li>
+            <li><a href="#projects">Landmark Portfolio &rarr;</a></li>
           </ul>
         </div>
 
@@ -1295,11 +1231,11 @@
   </footer>
 
   <!-- Project Detail Slide-Out Modal -->
-  <div id="projectModal" class="project-modal" aria-hidden="true" role="dialog">
+  <div id="projectModal" class="project-modal" data-lenis-prevent aria-hidden="true" role="dialog">
     <div class="modal-scrim" id="modalScrim"></div>
-    <div class="modal-dialog">
-      <button class="modal-close" id="modalClose">&times;</button>
-      <div class="modal-content-slot" id="modalSlot">
+    <div class="modal-dialog" data-lenis-prevent>
+      <button class="modal-close" id="modalClose" aria-label="Close dialog">&times;</button>
+      <div class="modal-content-slot" id="modalSlot" data-lenis-prevent>
         <!-- Injected dynamically -->
       </div>
     </div>
@@ -1318,6 +1254,6 @@
   </a>
 
   <!-- Vite entry script -->
-  <script src="./main.js"></script>
+  <script type="module" src="./main.js"></script>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Projects Portfolio — SunRise PMC | All 20 Landmarks In Surat & Western India</title>
+  <title>Projects Portfolio — SunRise PMC | Landmark Developments In Surat & Western India</title>
   <meta name="description" content="Explore SunRise PMC's verified landmark portfolio: Bharat City, Hilton Garden Inn, Vivanta, Ankit Gems, Mohit Diamond, Bhawans Ultima, Charu Jewels, and more.">
   <link rel="icon" type="image/png" sizes="32x32" href="./public/images/cropped-favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,11 +24,8 @@
   <header class="site-header scrolled" id="siteHeader">
     <div class="header-container">
       <a href="./index.html" class="brand-link" aria-label="SunRise PMC Home">
-        <img src="./public/images/SunRise-Logo-1-300x212.png" alt="SunRise PMC Brand Logo" class="brand-logo" width="115" height="80">
-        <div class="brand-headings">
-          <span class="brand-name">SUNRISE PMC</span>
-          <span class="brand-tag">PROJECT MANAGEMENT CONSULTANCY</span>
-        </div>
+        <img src="./public/images/SunRise-Logo-1-300x212.png" alt="SunRise PMC Brand Logo" class="brand-logo" width="200" height="141">
+        
       </a>
 
       <nav class="desktop-nav" aria-label="Main Navigation">
@@ -85,7 +82,7 @@
           <span class="label-text" style="color: rgba(255,255,255,0.6);">PROJECT PORTFOLIO</span>
         </div>
         <h1 class="editorial-heading" style="color: #FFFFFF; font-size: clamp(2.5rem, 5vw, 4.2rem); margin-bottom: 20px;">
-          Twenty Completed & Active <span class="gold-italic">Landmarks</span>
+          Completed & Active <span class="gold-italic">Landmarks</span>
         </h1>
         <p style="font-size: 1.15rem; color: rgba(255,255,255,0.8); max-width: 760px; line-height: 1.8;">
           SunRise PMC has successfully supported projects across different scales and sectors, ensuring strong control over time, cost, quality, and safety throughout the project lifecycle.
@@ -102,7 +99,7 @@
         
         <!-- Filter Tabs -->
         <div class="portfolio-filters" role="tablist" style="margin-bottom: 48px; justify-content: flex-start;">
-          <button class="filter-tab active" data-filter="all">All Projects (20)</button>
+          <button class="filter-tab active" data-filter="all">All Projects</button>
           <button class="filter-tab" data-filter="residential">Residential</button>
           <button class="filter-tab" data-filter="commercial">Commercial & Diamond</button>
           <button class="filter-tab" data-filter="hospitality">Hospitality</button>
@@ -398,11 +395,11 @@
     </section>
 
     <!-- Modal for Project Details -->
-    <div id="projectModal" class="project-modal" aria-hidden="true" role="dialog">
+    <div id="projectModal" class="project-modal" data-lenis-prevent aria-hidden="true" role="dialog">
       <div class="modal-scrim" id="modalScrim"></div>
-      <div class="modal-dialog">
-        <button class="modal-close" id="modalClose">&times;</button>
-        <div class="modal-content-slot" id="modalSlot"></div>
+      <div class="modal-dialog" data-lenis-prevent>
+        <button class="modal-close" id="modalClose" aria-label="Close dialog">&times;</button>
+        <div class="modal-content-slot" id="modalSlot" data-lenis-prevent></div>
       </div>
     </div>
   </main>
@@ -423,7 +420,7 @@
             <li><a href="./index.html">Home</a></li>
             <li><a href="./about.html">About the Practice</a></li>
             <li><a href="./services.html">Eight Core Disciplines</a></li>
-            <li><a href="./projects.html">20 Landmark Projects</a></li>
+            <li><a href="./projects.html">Landmark Portfolio</a></li>
             <li><a href="./contact.html">Contact Us</a></li>
           </ul>
         </div>
@@ -445,6 +442,6 @@
     </div>
   </footer>
 
-  <script src="./main.js"></script>
+  <script type="module" src="./main.js"></script>
 </body>
 </html>

@@ -17,15 +17,15 @@
   <meta property="og:image" content="/images/SunRise-PMC-3-1.png">
 
   <!-- Favicons -->
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/cropped-favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/images/cropped-favicon-192x192.png">
-  <link rel="apple-touch-icon" href="/images/cropped-favicon-180x180.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/cropped-favicon-32x32-BuygBU8a.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/cropped-favicon-192x192-DixKEApM.png">
+  <link rel="apple-touch-icon" href="/assets/cropped-favicon-180x180-B1rq083I.png">
 
   <!-- Google Fonts: Cinzel, Cormorant Garamond, Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+
 
   <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
@@ -55,10 +55,14 @@
     "description": "SunRise PMC is Surat's premier construction project management consultancy, providing end-to-end planning, cost management, design coordination, site supervision, and quality assurance."
   }
   </script>
-  <script type="module" crossorigin src="/assets/index-DDcA5_Qi.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-BgRNNB9R.css">
+  <!-- CDN: GSAP + ScrollTrigger + Lenis for GitHub Pages compatibility -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script type="module" crossorigin src="/assets/main-lARl-QsZ.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-D3rC1b1d.css">
 </head>
-<body class="light-luxury-theme">
+<body class="light-luxury-theme page-home">
 
   <!-- Minimalist Custom Luxury Cursor -->
   <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
@@ -88,26 +92,23 @@
   <header class="site-header" id="siteHeader">
     <div class="header-container">
       <a href="#hero" class="brand-link" aria-label="SunRise PMC Home">
-        <img src="/images/SunRise-Logo-1-300x212.png" alt="SunRise PMC Brand Logo" class="brand-logo" width="115" height="80">
-        <div class="brand-headings">
-          <span class="brand-name">SUNRISE PMC</span>
-          <span class="brand-tag">PROJECT MANAGEMENT CONSULTANCY</span>
-        </div>
+        <img src="/assets/SunRise-Logo-1-300x212-xARNgl63.png" alt="SunRise PMC Brand Logo" class="brand-logo" width="200" height="141">
+        
       </a>
 
       <nav class="desktop-nav" aria-label="Main Navigation">
         <ul class="nav-menu">
-          <li><a href="#about" class="nav-link"><span>01</span> About</a></li>
-          <li><a href="#services" class="nav-link"><span>02</span> Services</a></li>
-          <li><a href="#projects" class="nav-link"><span>03</span> Portfolio</a></li>
-          <li><a href="#calculator" class="nav-link"><span>04</span> Estimator</a></li>
-          <li><a href="#clients" class="nav-link"><span>05</span> Partners</a></li>
-          <li><a href="#faq" class="nav-link"><span>06</span> FAQ</a></li>
+          <li><a href="./index.html" class="nav-link active">Home</a></li>
+          <li><a href="./about.html" class="nav-link">About</a></li>
+          <li><a href="./services.html" class="nav-link">Services</a></li>
+          <li><a href="./projects.html" class="nav-link">Projects</a></li>
+          <li><a href="#calculator" class="nav-link">Estimator</a></li>
+          <li><a href="./contact.html" class="nav-link">Contact</a></li>
         </ul>
       </nav>
 
       <div class="header-actions">
-        <a href="#contact" class="btn-editorial btn-accent">
+        <a href="./contact.html" class="btn-editorial btn-accent">
           <span>Inquire Project</span>
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
         </a>
@@ -128,15 +129,12 @@
         <button class="mobile-close" id="mobileClose">&times;</button>
       </div>
       <ul class="mobile-nav-list">
-        <li><a href="#hero" class="mobile-nav-item"><span>00</span> Overview</a></li>
-        <li><a href="#about" class="mobile-nav-item"><span>01</span> The Practice</a></li>
-        <li><a href="#services" class="mobile-nav-item"><span>02</span> Disciplines (8)</a></li>
-        <li><a href="#projects" class="mobile-nav-item"><span>03</span> Landmark Portfolio (20)</a></li>
+        <li><a href="./index.html" class="mobile-nav-item"><span>00</span> Home</a></li>
+        <li><a href="./about.html" class="mobile-nav-item"><span>01</span> About the Practice</a></li>
+        <li><a href="./services.html" class="mobile-nav-item"><span>02</span> Core Disciplines (8)</a></li>
+        <li><a href="./projects.html" class="mobile-nav-item"><span>03</span> Landmark Portfolio</a></li>
         <li><a href="#calculator" class="mobile-nav-item"><span>04</span> Scope Estimator</a></li>
-        <li><a href="#clients" class="mobile-nav-item"><span>05</span> Institutional Trust</a></li>
-        <li><a href="#methodology" class="mobile-nav-item"><span>06</span> 4-Phase Protocol</a></li>
-        <li><a href="#faq" class="mobile-nav-item"><span>07</span> Clarifications</a></li>
-        <li><a href="#contact" class="mobile-nav-item"><span>08</span> Direct Inquiries</a></li>
+        <li><a href="./contact.html" class="mobile-nav-item"><span>05</span> Contact & Surat Desk</a></li>
       </ul>
       <div class="mobile-contact-bar">
         <div class="mobile-contact-label">DIRECT PMC HOTLINE</div>
@@ -156,26 +154,33 @@
         <div class="hero-canvas-scrim"></div>
       </div>
 
+      <!-- Hidden canvas controls (functional but not visible) -->
+      <input type="range" id="frameSlider" min="1" max="300" value="1" aria-label="Interactive timeline scrubber" style="display:none">
+      <button id="togglePlayBtn" aria-label="Toggle playback" style="display:none"><span id="playIcon">⏸</span></button>
+      <span id="canvasModeLabel" style="display:none">LIVE CINEMATIC LOOP</span>
+      <span id="frameCounter" style="display:none">001</span>
+
       <div class="hero-inner container">
         <div class="hero-editorial-block">
           
-          <div class="hero-eyebrow reveal-item">
+          <div class="hero-eyebrow" id="heroEyebrow">
             <span class="eyebrow-line"></span>
             <span class="eyebrow-text">FIDUCIARY GOVERNANCE • SURAT & WESTERN INDIA</span>
           </div>
 
-          <h1 class="hero-title reveal-item">
-            Building Certainty.<br>
-            <span class="hero-italic">Delivering Excellence.</span>
+          <h1 class="hero-title" id="heroTitle">
+            <span class="hero-line" data-line="1">Building</span>
+            <span class="hero-line hero-line-accent" data-line="2">Certainty.</span>
+            <span class="hero-line hero-line-serif" data-line="3">Delivering <em>Excellence.</em></span>
           </h1>
 
-          <p class="hero-paragraph reveal-item">
+          <p class="hero-paragraph" id="heroPara">
             A specialized project management consultancy harmonizing architectural ambition with uncompromising commercial discipline. We oversee every square foot from groundbreaking to lifelong facility performance.
           </p>
 
-          <div class="hero-actions reveal-item">
+          <div class="hero-actions" id="heroActions">
             <a href="#projects" class="btn-editorial btn-accent">
-              <span>Explore 20 Landmarks</span>
+              <span>Explore Portfolio</span>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
             <a href="#calculator" class="btn-editorial btn-outline">
@@ -186,55 +191,101 @@
 
         </div>
 
-        <!-- Interactive Canvas Control Pod -->
-        <div class="canvas-control-pod reveal-item" id="canvasControls">
-          <div class="pod-header">
-            <div class="pod-status">
-              <span class="status-indicator"></span>
-              <span id="canvasModeLabel">LIVE CINEMATIC LOOP (30 FPS)</span>
+        <!-- Right: Floating Trust Cards -->
+        <div class="hero-trust-stack" id="heroTrustStack">
+          <div class="trust-card trust-card-1">
+            <div class="trust-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 21h18M4 18h16M4 10l8-6 8 6M6 10v8M10 10v8M14 10v8M18 10v8"/>
+              </svg>
             </div>
-            <div class="pod-frame-counter">
-              <span id="frameCounter">001</span> <span class="counter-total">/ 300 FRAMES</span>
+            <div class="trust-content">
+              <div class="trust-num">20+</div>
+              <div class="trust-label">Landmark Projects<br>Delivered</div>
             </div>
           </div>
-          <div class="pod-slider-wrap">
-            <input type="range" id="frameSlider" min="1" max="300" value="1" aria-label="Interactive timeline scrubber">
+          <div class="trust-card trust-card-2">
+            <div class="trust-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 21h18L3 3v18z"/>
+                <path d="M7 17l2-2M11 17l2-2M15 17l2-2M7 13l2-2"/>
+              </svg>
+            </div>
+            <div class="trust-content">
+              <div class="trust-num">₹1,500+ Cr</div>
+              <div class="trust-label">Managed Capital<br>Portfolio</div>
+            </div>
           </div>
-          <div class="pod-footer">
-            <button id="togglePlayBtn" class="pod-btn" aria-label="Toggle playback">
-              <span id="playIcon">⏸ PAUSE LOOP</span>
-            </button>
-            <span class="pod-hint">DRAG SCRUBBER TO INSPECT CONSTRUCTION FRAMES</span>
+          <div class="trust-card trust-card-3">
+            <div class="trust-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 21h18M6 21V5l14-2v4L9 9v12M9 5h11M14 4v3"/>
+              </svg>
+            </div>
+            <div class="trust-content">
+              <div class="trust-num">18+ Yrs</div>
+              <div class="trust-label">Engineering<br>Leadership</div>
+            </div>
           </div>
         </div>
 
-      </div>
-
-      <!-- Floating Architectural Metrics Banner -->
-      <div class="hero-metrics-strip reveal-item">
-        <div class="container metrics-flex">
-          <div class="metric-block">
-            <div class="metric-num"><span class="count-up" data-target="18">0</span><span class="gold-plus">+</span></div>
-            <div class="metric-desc">Years Engineering Leadership</div>
-          </div>
-          <div class="metric-sep"></div>
-          <div class="metric-block">
-            <div class="metric-num"><span class="count-up" data-target="20">0</span><span class="gold-plus">+</span></div>
-            <div class="metric-desc">Landmark Projects Delivered</div>
-          </div>
-          <div class="metric-sep"></div>
-          <div class="metric-block">
-            <div class="metric-num">₹<span class="count-up" data-target="1500">0</span><span class="gold-plus">+</span> Cr</div>
-            <div class="metric-desc">Managed Capital Portfolio</div>
-          </div>
-          <div class="metric-sep"></div>
-          <div class="metric-block">
-            <div class="metric-num"><span class="count-up" data-target="100">0</span><span class="gold-plus">%</span></div>
-            <div class="metric-desc">Safety & Quality Audits Certified</div>
-          </div>
-        </div>
       </div>
     </section>
+
+    <!-- Floating Architectural Metrics Banner -->
+    <div class="hero-metrics-strip" id="heroMetrics">
+      <div class="container metrics-flex">
+        <div class="metric-block">
+          <div class="metric-num"><span class="count-up" data-target="18">0</span><span class="gold-plus">+</span></div>
+          <div class="metric-desc">Years Engineering Leadership</div>
+        </div>
+        <div class="metric-sep"></div>
+        <div class="metric-block">
+          <div class="metric-num"><span class="count-up" data-target="20">0</span><span class="gold-plus">+</span></div>
+          <div class="metric-desc">Landmark Projects Delivered</div>
+        </div>
+        <div class="metric-sep"></div>
+        <div class="metric-block">
+          <div class="metric-num">₹<span class="count-up" data-target="1500">0</span><span class="gold-plus">+</span> Cr</div>
+          <div class="metric-desc">Managed Capital Portfolio</div>
+        </div>
+        <div class="metric-sep"></div>
+        <div class="metric-block">
+          <div class="metric-num"><span class="count-up" data-target="100">0</span><span class="gold-plus">%</span></div>
+          <div class="metric-desc">Safety & Quality Audits Certified</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STORY BAR: The narrative bridge between hero and about -->
+    <div class="story-marquee-bar">
+      <div class="story-marquee-inner">
+        <span>FORENSIC BUDGET CONTROL</span>
+        <span class="story-dot">◆</span>
+        <span>CPM SCHEDULING RIGOR</span>
+        <span class="story-dot">◆</span>
+        <span>ZERO-DEFECT QUALITY</span>
+        <span class="story-dot">◆</span>
+        <span>RESIDENT SITE ENGINEERS</span>
+        <span class="story-dot">◆</span>
+        <span>FIDUCIARY PROTECTION</span>
+        <span class="story-dot">◆</span>
+        <span>18+ YEARS EXCELLENCE</span>
+        <span class="story-dot">◆</span>
+        <span>FORENSIC BUDGET CONTROL</span>
+        <span class="story-dot">◆</span>
+        <span>CPM SCHEDULING RIGOR</span>
+        <span class="story-dot">◆</span>
+        <span>ZERO-DEFECT QUALITY</span>
+        <span class="story-dot">◆</span>
+        <span>RESIDENT SITE ENGINEERS</span>
+        <span class="story-dot">◆</span>
+        <span>FIDUCIARY PROTECTION</span>
+        <span class="story-dot">◆</span>
+        <span>18+ YEARS EXCELLENCE</span>
+        <span class="story-dot">◆</span>
+      </div>
+    </div>
 
     <!-- 2. THE PRACTICE (ABOUT & PHILOSOPHY) -->
     <section id="about" class="about-section">
@@ -245,7 +296,7 @@
           <!-- Left Column: Architectural Photo with coordinates -->
           <div class="about-media-col reveal-item">
             <div class="media-aspect-frame">
-              <img src="/images/SunRise-PMC-3-1.png" alt="SunRise PMC Architectural Supervision" class="about-img" loading="lazy">
+              <img src="/assets/SunRise-PMC-3-1-CQOhqJb-.png" alt="SunRise PMC Architectural Supervision" class="about-img" loading="lazy">
               <div class="media-coordinates">
                 <span>LAT 21°10'12" N</span>
                 <span class="coord-dot">•</span>
@@ -341,7 +392,7 @@
           <div class="services-list" id="servicesList">
             
             <!-- 1. Planning -->
-            <div class="service-entry active" data-service="1" data-title="Project Planning & Scheduling" data-img="/images/design-management.png" data-scope="Master scheduling using Critical Path Method (CPM), baseline freeze, milestone decomposition, and continuous look-ahead tracking." data-d1="Master Baseline CPM Scheduling" data-d2="Weekly Micro-Progress Variance Models" data-d3="Proactive Delay Recovery Action Plans">
+            <div class="service-entry active" data-service="1" data-title="Project Planning & Scheduling" data-img="./public/images/design-management.png" data-scope="Master scheduling using Critical Path Method (CPM), baseline freeze, milestone decomposition, and continuous look-ahead tracking." data-d1="Master Baseline CPM Scheduling" data-d2="Weekly Micro-Progress Variance Models" data-d3="Proactive Delay Recovery Action Plans">
               <div class="entry-header">
                 <span class="entry-num">01</span>
                 <h3 class="entry-name">Project Planning & Scheduling</h3>
@@ -351,7 +402,7 @@
             </div>
 
             <!-- 2. Cost Management -->
-            <div class="service-entry" data-service="2" data-title="Cost & Budget Management" data-img="/images/cost-management.png" data-scope="Detailed quantity surveying, initial BOQ rate formulation, cash flow forecasts, value engineering, and variance reconciliation." data-d1="Comprehensive BOQ & Rate Analysis" data-d2="Value Engineering Recommendations" data-d3="Real-Time Cost Value Reconciliations (CVR)">
+            <div class="service-entry" data-service="2" data-title="Cost & Budget Management" data-img="./public/images/cost-management.png" data-scope="Detailed quantity surveying, initial BOQ rate formulation, cash flow forecasts, value engineering, and variance reconciliation." data-d1="Comprehensive BOQ & Rate Analysis" data-d2="Value Engineering Recommendations" data-d3="Real-Time Cost Value Reconciliations (CVR)">
               <div class="entry-header">
                 <span class="entry-num">02</span>
                 <h3 class="entry-name">Cost & Budget Management</h3>
@@ -361,7 +412,7 @@
             </div>
 
             <!-- 3. Design Coordination -->
-            <div class="service-entry" data-service="3" data-title="Design Coordination & BIM" data-img="/images/design-management.png" data-scope="Inter-disciplinary clash detection across architectural, structural, MEP, and façade drawings to prevent costly on-site demolition." data-d1="Multi-Discipline Clash Detection" data-d2="RFI Formal Resolution Tracking" data-d3="Good-For-Construction (GFC) Certification">
+            <div class="service-entry" data-service="3" data-title="Design Coordination & BIM" data-img="./public/images/design-management.png" data-scope="Inter-disciplinary clash detection across architectural, structural, MEP, and façade drawings to prevent costly on-site demolition." data-d1="Multi-Discipline Clash Detection" data-d2="RFI Formal Resolution Tracking" data-d3="Good-For-Construction (GFC) Certification">
               <div class="entry-header">
                 <span class="entry-num">03</span>
                 <h3 class="entry-name">Design Coordination</h3>
@@ -371,7 +422,7 @@
             </div>
 
             <!-- 4. Construction & Site Management -->
-            <div class="service-entry" data-service="4" data-title="Construction & Site Management" data-img="/images/Frame-16.png" data-scope="Full-time resident site engineers driving contractor orchestration, daily progress logs, and strict material inventory control." data-d1="Full-Time Resident Site Engineers" data-d2="Contractor Sequencing & Labor Monitoring" data-d3="Material Wastage & Batch Inventory Audits">
+            <div class="service-entry" data-service="4" data-title="Construction & Site Management" data-img="./public/images/Frame-16.png" data-scope="Full-time resident site engineers driving contractor orchestration, daily progress logs, and strict material inventory control." data-d1="Full-Time Resident Site Engineers" data-d2="Contractor Sequencing & Labor Monitoring" data-d3="Material Wastage & Batch Inventory Audits">
               <div class="entry-header">
                 <span class="entry-num">04</span>
                 <h3 class="entry-name">Construction & Site Management</h3>
@@ -381,7 +432,7 @@
             </div>
 
             <!-- 5. Quality Management -->
-            <div class="service-entry" data-service="5" data-title="Quality Management (QA/QC)" data-img="/images/quality.png" data-scope="Project Quality Assurance Manuals (PQAP), third-party lab testing of raw materials, and multi-tier stage pour inspections." data-d1="Mandatory Material Lab Certifications" data-d2="Stage-wise Pour & Formwork Checklists" data-d3="Zero-Defect Snagging Registers">
+            <div class="service-entry" data-service="5" data-title="Quality Management (QA/QC)" data-img="./public/images/quality.png" data-scope="Project Quality Assurance Manuals (PQAP), third-party lab testing of raw materials, and multi-tier stage pour inspections." data-d1="Mandatory Material Lab Certifications" data-d2="Stage-wise Pour & Formwork Checklists" data-d3="Zero-Defect Snagging Registers">
               <div class="entry-header">
                 <span class="entry-num">05</span>
                 <h3 class="entry-name">Quality Management (QA/QC)</h3>
@@ -391,7 +442,7 @@
             </div>
 
             <!-- 6. Safety & Risk -->
-            <div class="service-entry" data-service="6" data-title="Safety & Risk Management (EHS)" data-img="/images/safety.png" data-scope="Zero-tolerance Environment, Health & Safety (EHS) policies, periodic hazard identification, and live vulnerability matrices." data-d1="Site-Wide EHS Rulebooks & Drills" data-d2="Hazard Identification & Risk Mitigation (HIRA)" data-d3="Daily Safety Toolbox Briefings">
+            <div class="service-entry" data-service="6" data-title="Safety & Risk Management (EHS)" data-img="./public/images/safety.png" data-scope="Zero-tolerance Environment, Health & Safety (EHS) policies, periodic hazard identification, and live vulnerability matrices." data-d1="Site-Wide EHS Rulebooks & Drills" data-d2="Hazard Identification & Risk Mitigation (HIRA)" data-d3="Daily Safety Toolbox Briefings">
               <div class="entry-header">
                 <span class="entry-num">06</span>
                 <h3 class="entry-name">Safety & Risk Management</h3>
@@ -401,7 +452,7 @@
             </div>
 
             <!-- 7. AMC Management -->
-            <div class="service-entry" data-service="7" data-title="Annual Maintenance Contract (AMC)" data-img="/images/amc-2.png" data-scope="Post-handover lifecycle management, electromechanical maintenance contracts, preventive servicing schedules, and asset longevity." data-d1="Electromechanical Facility Audits" data-d2="Vendor SLA Enforcement & Renewals" data-d3="Preventive Maintenance Calendar Setup">
+            <div class="service-entry" data-service="7" data-title="Annual Maintenance Contract (AMC)" data-img="./public/images/amc-2.png" data-scope="Post-handover lifecycle management, electromechanical maintenance contracts, preventive servicing schedules, and asset longevity." data-d1="Electromechanical Facility Audits" data-d2="Vendor SLA Enforcement & Renewals" data-d3="Preventive Maintenance Calendar Setup">
               <div class="entry-header">
                 <span class="entry-num">07</span>
                 <h3 class="entry-name">Annual Maintenance Contract (AMC)</h3>
@@ -411,7 +462,7 @@
             </div>
 
             <!-- 8. Commercial & Billing Audit -->
-            <div class="service-entry" data-service="8" data-title="Billing & Commercial Audit" data-img="/images/cost-management.png" data-scope="Independent contractor bill verification, Joint Measurement Sheets (JMS), reconciliation against physical work, and final settlements." data-d1="Interim RA Bill Joint Measurement Audits" data-d2="Variation & Extra-Item Negotiations" data-d3="Forensic Final Account Closures">
+            <div class="service-entry" data-service="8" data-title="Billing & Commercial Audit" data-img="./public/images/cost-management.png" data-scope="Independent contractor bill verification, Joint Measurement Sheets (JMS), reconciliation against physical work, and final settlements." data-d1="Interim RA Bill Joint Measurement Audits" data-d2="Variation & Extra-Item Negotiations" data-d3="Forensic Final Account Closures">
               <div class="entry-header">
                 <span class="entry-num">08</span>
                 <h3 class="entry-name">Billing & Commercial Audit</h3>
@@ -450,8 +501,8 @@
       </div>
     </section>
 
-    <!-- 4. PROJECTS PORTFOLIO (ALL 20 LANDMARKS — OPEN AIR GALLERY) -->
-    <section id="projects" class="projects-section">
+        <!-- 4. PROJECTS PORTFOLIO (3D AWARDS-WINNING LANDMARKS CAROUSEL) -->
+    <section id="projects" class="projects-section projects-carousel-section" data-lenis-prevent>
       <div class="container">
         
         <div class="portfolio-header reveal-item">
@@ -460,303 +511,242 @@
               <span class="label-number">03</span>
               <span class="label-text">LANDMARK RECORD</span>
             </div>
-            <h2 class="editorial-heading">Twenty Completed & Active Landmarks.</h2>
+            <h2 class="editorial-heading">Completed &amp; Active Landmark Portfolio.</h2>
             <p class="intro-subhead" style="margin-left: 0; text-align: left;">
               Residential high-rises, commercial and diamond processing complexes, 5-star hospitality, and specialized healthcare institutions across Western India.
             </p>
           </div>
 
-          <!-- Filter Navigation Tabs -->
+          <!-- Sector Filter Tabs -->
           <div class="portfolio-filters" role="tablist">
-            <button class="filter-tab active" data-filter="all">All Projects (20)</button>
-            <button class="filter-tab" data-filter="residential">Residential</button>
-            <button class="filter-tab" data-filter="commercial">Commercial & Gems</button>
+            <button class="filter-tab active" data-filter="all">All Landmarks</button>
             <button class="filter-tab" data-filter="hospitality">Hospitality</button>
-            <button class="filter-tab" data-filter="institutional">Institutional & Healthcare</button>
+            <button class="filter-tab" data-filter="residential">Residential</button>
+            <button class="filter-tab" data-filter="commercial">Commercial &amp; Gems</button>
+            <button class="filter-tab" data-filter="institutional">Healthcare</button>
           </div>
         </div>
 
-        <!-- Open Air Projects Showcase -->
-        <div class="projects-gallery" id="projectsGallery">
+        <!-- 3D Award-Winning Stage -->
+        <div class="carousel-3d-wrapper" id="carousel3DWrapper">
+          <div class="carousel-3d-stage" id="carousel3DStage">
+            <div class="carousel-3d-track" id="carousel3DTrack">
 
-          <!-- 1. Bharat City -->
-          <div class="project-entry reveal-item" data-category="residential" data-title="Bharat City" data-type="Residential Township" data-scale="2,400,000 Sq.Ft." data-location="Surat, Gujarat" data-img="/images/bharat.png">
-            <div class="entry-img-wrap">
-              <img src="/images/bharat.png" alt="Bharat City Project" loading="lazy">
-              <div class="entry-tag">RESIDENTIAL TOWNSHIP</div>
-              <div class="entry-hover-action"><span>VIEW DOSSIER</span> ↗</div>
-            </div>
-            <div class="entry-info">
-              <div class="entry-loc">SURAT, GUJARAT</div>
-              <h3 class="entry-heading">Bharat City</h3>
-              <p class="entry-desc">Mega residential high-rise township with extensive social infrastructure and podium engineering.</p>
+              <!-- 1. Hilton Garden Inn -->
+              <div class="carousel-card-3d project-entry" data-index="0" data-category="hospitality" data-title="Hilton Garden Inn" data-type="5-Star Hospitality" data-scale="220 Luxury Keys" data-location="Surat, Gujarat" data-img="./public/images/hilton-garden-inn.png">
+                <div class="card-3d-media">
+                  <img src="/assets/hilton-garden-inn-CSYm6uYZ.png" alt="Hilton Garden Inn" loading="eager">
+                  <div class="card-3d-gradient"></div>
+                  <div class="card-3d-badge">5-STAR HOSPITALITY</div>
+                  <div class="card-3d-action-pill"><span>VIEW DOSSIER</span> &#8599;</div>
+                </div>
+                <div class="card-3d-body">
+                  <div class="card-3d-meta">
+                    <span class="card-3d-loc">SURAT, GUJARAT</span>
+                    <span class="card-3d-scale">220 Luxury Keys</span>
+                  </div>
+                  <h3 class="card-3d-title">Hilton Garden Inn</h3>
+                  <p class="card-3d-desc entry-desc">International brand standard compliance, acoustic isolation, and intricate MEP execution.</p>
+                </div>
+              </div>
+
+              <!-- 2. Bharat City -->
+              <div class="carousel-card-3d project-entry" data-index="1" data-category="residential" data-title="Bharat City" data-type="Residential Township" data-scale="2,400,000 Sq.Ft." data-location="Surat, Gujarat" data-img="./public/images/Frame-15.png">
+                <div class="card-3d-media">
+                  <img src="/assets/Frame-15-DuquAy3n.png" alt="Bharat City" loading="eager">
+                  <div class="card-3d-gradient"></div>
+                  <div class="card-3d-badge">RESIDENTIAL TOWNSHIP</div>
+                  <div class="card-3d-action-pill"><span>VIEW DOSSIER</span> &#8599;</div>
+                </div>
+                <div class="card-3d-body">
+                  <div class="card-3d-meta">
+                    <span class="card-3d-loc">SURAT, GUJARAT</span>
+                    <span class="card-3d-scale">2,400,000 Sq.Ft.</span>
+                  </div>
+                  <h3 class="card-3d-title">Bharat City</h3>
+                  <p class="card-3d-desc entry-desc">Mega residential high-rise township with extensive social infrastructure and podium engineering.</p>
+                </div>
+              </div>
+
+              <!-- 3. Vivanta Hotel -->
+              <div class="carousel-card-3d project-entry" data-index="2" data-category="hospitality" data-title="Vivanta Hotel" data-type="Luxury Hotel" data-scale="Premium Keys &amp; Suites" data-location="Gujarat" data-img="./public/images/vivantahotel.png">
+                <div class="card-3d-media">
+                  <img src="/assets/vivantahotel-C4y0-sb6.png" alt="Vivanta Hotel" loading="lazy">
+                  <div class="card-3d-gradient"></div>
+                  <div class="card-3d-badge">LUXURY HOSPITALITY</div>
+                  <div class="card-3d-action-pill"><span>VIEW DOSSIER</span> &#8599;</div>
+                </div>
+                <div class="card-3d-body">
+                  <div class="card-3d-meta">
+                    <span class="card-3d-loc">GUJARAT</span>
+                    <span class="card-3d-scale">Premium Suites</span>
+                  </div>
+                  <h3 class="card-3d-title">Vivanta Hotel</h3>
+                  <p class="card-3d-desc entry-desc">High-specification finishing, acoustic testing, and fast-track structural commissioning.</p>
+                </div>
+              </div>
+
+              <!-- 4. Charu Jewels -->
+              <div class="carousel-card-3d project-entry" data-index="3" data-category="commercial" data-title="Charu Jewels" data-type="Luxury Commercial Landmark" data-scale="Bespoke Commercial" data-location="Surat" data-img="./public/images/Frame-47-1-1.png">
+                <div class="card-3d-media">
+                  <img src="/assets/Frame-47-1-1-DZYVyxY4.png" alt="Charu Jewels" loading="lazy">
+                  <div class="card-3d-gradient"></div>
+                  <div class="card-3d-badge">LUXURY COMMERCIAL</div>
+                  <div class="card-3d-action-pill"><span>VIEW DOSSIER</span> &#8599;</div>
+                </div>
+                <div class="card-3d-body">
+                  <div class="card-3d-meta">
+                    <span class="card-3d-loc">SURAT, GUJARAT</span>
+                    <span class="card-3d-scale">Flagship Commercial</span>
+                  </div>
+                  <h3 class="card-3d-title">Charu Jewels</h3>
+                  <p class="card-3d-desc entry-desc">Architectural glass façade, reinforced security vaulting, and precision MEP integration.</p>
+                </div>
+              </div>
+
+              <!-- 5. Bhawans Ultima -->
+              <div class="carousel-card-3d project-entry" data-index="4" data-category="residential" data-title="Bhawans Ultima" data-type="Premium High-Rise Enclave" data-scale="Multi-Tower Complex" data-location="Surat" data-img="./public/images/Frame-16.png">
+                <div class="card-3d-media">
+                  <img src="/assets/Frame-16-5VywjR-Q.png" alt="Bhawans Ultima" loading="lazy">
+                  <div class="card-3d-gradient"></div>
+                  <div class="card-3d-badge">HIGH-RISE TOWERS</div>
+                  <div class="card-3d-action-pill"><span>VIEW DOSSIER</span> &#8599;</div>
+                </div>
+                <div class="card-3d-body">
+                  <div class="card-3d-meta">
+                    <span class="card-3d-loc">SURAT, GUJARAT</span>
+                    <span class="card-3d-scale">Multi-Tower Complex</span>
+                  </div>
+                  <h3 class="card-3d-title">Bhawans Ultima</h3>
+                  <p class="card-3d-desc entry-desc">Multi-tower residential enclave delivering turnkey PMC from deep piling to homeowner handover.</p>
+                </div>
+              </div>
+
+              <!-- 6. Ankit Gems Hub -->
+              <div class="carousel-card-3d project-entry" data-index="5" data-category="commercial" data-title="Ankit Gems" data-type="Diamond Manufacturing Complex" data-scale="Specialized Industrial Hub" data-location="Surat SEZ" data-img="./public/images/Frame-20.png">
+                <div class="card-3d-media">
+                  <img src="/assets/Frame-20-BmiOIiuX.png" alt="Ankit Gems" loading="lazy">
+                  <div class="card-3d-gradient"></div>
+                  <div class="card-3d-badge">DIAMOND &amp; INDUSTRIAL</div>
+                  <div class="card-3d-action-pill"><span>VIEW DOSSIER</span> &#8599;</div>
+                </div>
+                <div class="card-3d-body">
+                  <div class="card-3d-meta">
+                    <span class="card-3d-loc">SURAT SEZ</span>
+                    <span class="card-3d-scale">Specialized Industrial</span>
+                  </div>
+                  <h3 class="card-3d-title">Ankit Gems Hub</h3>
+                  <p class="card-3d-desc entry-desc">Heavy vibration-damped industrial slabs and high-security cleanroom facilities.</p>
+                </div>
+              </div>
+
+              <!-- 7. Apple Children Hospital -->
+              <div class="carousel-card-3d project-entry" data-index="6" data-category="institutional" data-title="Apple Children Hospital" data-type="Specialized Healthcare" data-scale="Tertiary Pediatric Facility" data-location="Surat" data-img="./public/images/apple-children-hospital.png">
+                <div class="card-3d-media">
+                  <img src="./public/images/apple-children-hospital.png" alt="Apple Children Hospital" loading="lazy">
+                  <div class="card-3d-gradient"></div>
+                  <div class="card-3d-badge">HEALTHCARE FACILITY</div>
+                  <div class="card-3d-action-pill"><span>VIEW DOSSIER</span> &#8599;</div>
+                </div>
+                <div class="card-3d-body">
+                  <div class="card-3d-meta">
+                    <span class="card-3d-loc">SURAT, GUJARAT</span>
+                    <span class="card-3d-scale">Pediatric Care Center</span>
+                  </div>
+                  <h3 class="card-3d-title">Apple Children Hospital</h3>
+                  <p class="card-3d-desc entry-desc">Specialized medical gas distribution, negative-pressure isolation wards, and uninterruptible power.</p>
+                </div>
+              </div>
+
+              <!-- 8. Mohit Diamond -->
+              <div class="carousel-card-3d project-entry" data-index="7" data-category="commercial" data-title="Mohit Diamond" data-type="Industrial Diamond Facility" data-scale="Industrial Facility" data-location="Surat" data-img="./public/images/Frame-46.png">
+                <div class="card-3d-media">
+                  <img src="/assets/Frame-46-WnR6efRJ.png" alt="Mohit Diamond" loading="lazy">
+                  <div class="card-3d-gradient"></div>
+                  <div class="card-3d-badge">INDUSTRIAL FACILITY</div>
+                  <div class="card-3d-action-pill"><span>VIEW DOSSIER</span> &#8599;</div>
+                </div>
+                <div class="card-3d-body">
+                  <div class="card-3d-meta">
+                    <span class="card-3d-loc">SURAT, GUJARAT</span>
+                    <span class="card-3d-scale">High-Tech Processing</span>
+                  </div>
+                  <h3 class="card-3d-title">Mohit Diamond</h3>
+                  <p class="card-3d-desc entry-desc">Precision optical cutting facility with customized cleanroom airflow and vibration mitigation.</p>
+                </div>
+              </div>
+
+              <!-- 9. White Wings Torrance -->
+              <div class="carousel-card-3d project-entry" data-index="8" data-category="residential" data-title="White Wings Torrance" data-type="Signature Luxury Towers" data-scale="Gated High-Rise" data-location="Surat" data-img="./public/images/Frame-18.png">
+                <div class="card-3d-media">
+                  <img src="/assets/Frame-18-DzJijzYY.png" alt="White Wings Torrance" loading="lazy">
+                  <div class="card-3d-gradient"></div>
+                  <div class="card-3d-badge">LUXURY RESIDENTIAL</div>
+                  <div class="card-3d-action-pill"><span>VIEW DOSSIER</span> &#8599;</div>
+                </div>
+                <div class="card-3d-body">
+                  <div class="card-3d-meta">
+                    <span class="card-3d-loc">SURAT, GUJARAT</span>
+                    <span class="card-3d-scale">Signature Enclave</span>
+                  </div>
+                  <h3 class="card-3d-title">White Wings Torrance</h3>
+                  <p class="card-3d-desc entry-desc">Curvilinear balconies, advanced formwork shuttering, and high-velocity wind load resistance.</p>
+                </div>
+              </div>
+
+              <!-- 10. Ginger Hotel -->
+              <div class="carousel-card-3d project-entry" data-index="9" data-category="hospitality" data-title="Ginger Hotel" data-type="Business Hospitality" data-scale="150 Keys" data-location="Surat, Gujarat" data-img="./public/images/Ginger-hotel.png">
+                <div class="card-3d-media">
+                  <img src="/assets/Ginger-hotel-BxGIpSzh.png" alt="Ginger Hotel" loading="lazy">
+                  <div class="card-3d-gradient"></div>
+                  <div class="card-3d-badge">BUSINESS HOSPITALITY</div>
+                  <div class="card-3d-action-pill"><span>VIEW DOSSIER</span> &#8599;</div>
+                </div>
+                <div class="card-3d-body">
+                  <div class="card-3d-meta">
+                    <span class="card-3d-loc">SURAT, GUJARAT</span>
+                    <span class="card-3d-scale">150 Keys</span>
+                  </div>
+                  <h3 class="card-3d-title">Ginger Hotel</h3>
+                  <p class="card-3d-desc entry-desc">Standardized hospitality delivery with optimized structural and MEP lifecycle costs.</p>
+                </div>
+              </div>
+
             </div>
           </div>
 
-          <!-- 2. Hilton Garden Inn -->
-          <div class="project-entry reveal-item" data-category="hospitality" data-title="Hilton Garden Inn" data-type="5-Star Hospitality" data-scale="220 Luxury Keys" data-location="Surat, Gujarat" data-img="/images/hilton-garden-inn-1.png">
-            <div class="entry-img-wrap">
-              <img src="/images/hilton-garden-inn-1.png" alt="Hilton Garden Inn" loading="lazy">
-              <div class="entry-tag">LUXURY HOSPITALITY</div>
-              <div class="entry-hover-action"><span>VIEW DOSSIER</span> ↗</div>
+          <!-- Carousel Controls -->
+          <div class="carousel-3d-controls">
+            <button class="carousel-btn prev-btn" id="carouselPrevBtn" aria-label="Previous Landmark Project">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            </button>
+            
+            <div class="carousel-progress-wrap">
+              <div class="carousel-counter">
+                <span class="current-index" id="carouselCurrentNum">01</span>
+                <span class="counter-sep">/</span>
+                <span class="total-index" id="carouselTotalNum">10</span>
+              </div>
+              <div class="carousel-progress-track">
+                <div class="carousel-progress-bar" id="carouselProgressBar"></div>
+              </div>
             </div>
-            <div class="entry-info">
-              <div class="entry-loc">SURAT, GUJARAT</div>
-              <h3 class="entry-heading">Hilton Garden Inn</h3>
-              <p class="entry-desc">International brand standard compliance, acoustic isolation, and intricate MEP execution.</p>
-            </div>
+
+            <button class="carousel-btn next-btn" id="carouselNextBtn" aria-label="Next Landmark Project">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
           </div>
 
-          <!-- 3. Vivanta Hotel -->
-          <div class="project-entry reveal-item" data-category="hospitality" data-title="Vivanta Hotel" data-type="Luxury Hotel" data-scale="Premium Keys & Suites" data-location="Gujarat" data-img="/images/vivanta.png">
-            <div class="entry-img-wrap">
-              <img src="/images/vivanta.png" alt="Vivanta Hotel" loading="lazy">
-              <div class="entry-tag">PREMIUM HOSPITALITY</div>
-              <div class="entry-hover-action"><span>VIEW DOSSIER</span> ↗</div>
+          <!-- Archive Callout Banner -->
+          <div class="carousel-archive-callout">
+            <div class="callout-text">
+              <span>Verified Architectural Track Record</span>
+              <strong>Seeking comprehensive project dossiers and engineering details?</strong>
             </div>
-            <div class="entry-info">
-              <div class="entry-loc">GUJARAT</div>
-              <h3 class="entry-heading">Vivanta Hotel</h3>
-              <p class="entry-desc">High-specification finishing, acoustic testing, and fast-track structural commissioning.</p>
-            </div>
-          </div>
-
-          <!-- 4. Ginger Hotel -->
-          <div class="project-entry reveal-item" data-category="hospitality" data-title="Ginger Hotel" data-type="Business Hospitality" data-scale="150 Keys" data-location="Surat, Gujarat" data-img="/images/ginger.png">
-            <div class="entry-img-wrap">
-              <img src="/images/ginger.png" alt="Ginger Hotel" loading="lazy">
-              <div class="entry-tag">BUSINESS HOSPITALITY</div>
-              <div class="entry-hover-action"><span>VIEW DOSSIER</span> ↗</div>
-            </div>
-            <div class="entry-info">
-              <div class="entry-loc">SURAT</div>
-              <h3 class="entry-heading">Ginger Hotel</h3>
-              <p class="entry-desc">Standardized hospitality delivery with optimized structural and MEP lifecycle costs.</p>
-            </div>
-          </div>
-
-          <!-- 5. Ankit Gems -->
-          <div class="project-entry reveal-item" data-category="commercial" data-title="Ankit Gems" data-type="Diamond Manufacturing Complex" data-scale="Specialized Industrial Hub" data-location="Surat SEZ" data-img="/images/ankit-gems-2.png">
-            <div class="entry-img-wrap">
-              <img src="/images/ankit-gems-2.png" alt="Ankit Gems" loading="lazy">
-              <div class="entry-tag">DIAMOND & INDUSTRIAL</div>
-              <div class="entry-hover-action"><span>VIEW DOSSIER</span> ↗</div>
-            </div>
-            <div class="entry-info">
-              <div class="entry-loc">SURAT SEZ</div>
-              <h3 class="entry-heading">Ankit Gems Hub</h3>
-              <p class="entry-desc">Heavy vibration-damped industrial slabs and high-security cleanroom facilities.</p>
-            </div>
-          </div>
-
-          <!-- 6. Ashwin Diamond -->
-          <div class="project-entry reveal-item" data-category="commercial" data-title="Ashwin Diamond" data-type="Commercial Diamond Facility" data-scale="High-Tech Facility" data-location="Surat" data-img="/images/aswin.png">
-            <div class="entry-img-wrap">
-              <img src="/images/aswin.png" alt="Ashwin Diamond" loading="lazy">
-              <div class="entry-tag">COMMERCIAL FACILITY</div>
-              <div class="entry-hover-action"><span>VIEW DOSSIER</span> ↗</div>
-            </div>
-            <div class="entry-info">
-              <div class="entry-loc">SURAT, GUJARAT</div>
-              <h3 class="entry-heading">Ashwin Diamond</h3>
-              <p class="entry-desc">State-of-the-art diamond processing center with high HVAC load management and glazed façade.</p>
-            </div>
-          </div>
-
-          <!-- 7. Charu Jewels -->
-          <div class="project-entry reveal-item" data-category="commercial" data-title="Charu Jewels" data-type="Luxury Commercial Landmark" data-scale="Bespoke Commercial" data-location="Surat" data-img="/images/charu-scaled.png">
-            <div class="entry-img-wrap">
-              <img src="/images/charu-scaled.png" alt="Charu Jewels" loading="lazy">
-              <div class="entry-tag">LUXURY COMMERCIAL</div>
-              <div class="entry-hover-action"><span>VIEW DOSSIER</span> ↗</div>
-            </div>
-            <div class="entry-info">
-              <div class="entry-loc">SURAT, GUJARAT</div>
-              <h3 class="entry-heading">Charu Jewels</h3>
-              <p class="entry-desc">Architectural glass façade, reinforced security vaulting, and precision MEP integration.</p>
-            </div>
-          </div>
-
-          <!-- 8. Mohit Diamond -->
-          <div class="project-entry reveal-item" data-category="commercial" data-title="Mohit Diamond" data-type="Industrial Diamond Facility" data-scale="Industrial Facility" data-location="Surat" data-img="/images/Frame-20.png">
-            <div class="entry-img-wrap">
-              <img src="/images/Frame-20.png" alt="Mohit Diamond" loading="lazy">
-              <div class="entry-tag">INDUSTRIAL</div>
-              <div class="entry-hover-action"><span>VIEW DOSSIER</span> ↗</div>
-            </div>
-            <div class="entry-info">
-              <div class="entry-loc">SURAT</div>
-              <h3 class="entry-heading">Mohit Diamond</h3>
-              <p class="entry-desc">Industrial processing infrastructure completed with zero recorded safety incidents.</p>
-            </div>
-          </div>
-
-          <!-- 9. Vidyamandir Skill Centre -->
-          <div class="project-entry reveal-item" data-category="institutional" data-title="Vidyamandir Skill Centre" data-type="Educational Campus" data-scale="Campus Infrastructure" data-location="Gujarat" data-img="/images/vidyamandir.png">
-            <div class="entry-img-wrap">
-              <img src="/images/vidyamandir.png" alt="Vidyamandir Skill Centre" loading="lazy">
-              <div class="entry-tag">INSTITUTIONAL CAMPUS</div>
-              <div class="entry-hover-action"><span>VIEW DOSSIER</span> ↗</div>
-            </div>
-            <div class="entry-info">
-              <div class="entry-loc">PALANPUR / SURAT</div>
-              <h3 class="entry-heading">Vidyamandir Skill Centre</h3>
-              <p class="entry-desc">Expansive acoustic auditorium halls, workshops, and sustainable campus execution.</p>
-            </div>
-          </div>
-
-          <!-- 10. Jainam House -->
-          <div class="project-entry reveal-item" data-category="residential" data-title="Jainam House" data-type="Private Luxury Residence" data-scale="Bespoke Estate" data-location="Surat" data-img="/images/jainam.png">
-            <div class="entry-img-wrap">
-              <img src="/images/jainam.png" alt="Jainam House" loading="lazy">
-              <div class="entry-tag">BESPOKE RESIDENCE</div>
-              <div class="entry-hover-action"><span>VIEW DOSSIER</span> ↗</div>
-            </div>
-            <div class="entry-info">
-              <div class="entry-loc">SURAT, GUJARAT</div>
-              <h3 class="entry-heading">Jainam House</h3>
-              <p class="entry-desc">Ultra-luxury private villa featuring bespoke imported stone, automation, and landscape courtyards.</p>
-            </div>
-          </div>
-
-          <!-- 11. Bhawans Ultima -->
-          <div class="project-entry reveal-item" data-category="residential" data-title="Bhawans Ultima" data-type="Premium High-Rise Enclave" data-scale="Multi-Tower Complex" data-location="Surat" data-img="/images/image-2.png">
-            <div class="entry-img-wrap">
-              <img src="/images/image-2.png" alt="Bhawans Ultima" loading="lazy">
-              <div class="entry-tag">PREMIUM HIGH-RISE</div>
-              <div class="entry-hover-action"><span>VIEW DOSSIER</span> ↗</div>
-            </div>
-            <div class="entry-info">
-              <div class="entry-loc">SURAT, GUJARAT</div>
-              <h3 class="entry-heading">Bhawans Ultima</h3>
-              <p class="entry-desc">Multi-tower residential enclave delivering turnkey PMC from deep piling to homeowner handover.</p>
-            </div>
-          </div>
-
-          <!-- 12. White Wings Torrance -->
-          <div class="project-entry reveal-item" data-category="residential" data-title="White Wings Torrance" data-type="Signature Luxury Towers" data-scale="Gated High-Rise" data-location="Surat" data-img="/images/image-39.png">
-            <div class="entry-img-wrap">
-              <img src="/images/image-39.png" alt="White Wings Torrance" loading="lazy">
-              <div class="entry-tag">SIGNATURE HIGH-RISE</div>
-              <div class="entry-hover-action"><span>VIEW DOSSIER</span> ↗</div>
-            </div>
-            <div class="entry-info">
-              <div class="entry-loc">SURAT, GUJARAT</div>
-              <h3 class="entry-heading">White Wings Torrance</h3>
-              <p class="entry-desc">Signature luxury towers with infinity amenities and complex cantilevered architectural formwork.</p>
-            </div>
-          </div>
-
-          <!-- 13. Svasti Residence -->
-          <div class="project-entry reveal-item" data-category="residential" data-title="Svasti Residence" data-type="Contemporary Private Villa" data-scale="Luxury Residence" data-location="Surat" data-img="/images/martin-rincon-_DahUzA7xoM-unsplash.jpg">
-            <div class="entry-img-wrap">
-              <img src="/images/martin-rincon-_DahUzA7xoM-unsplash.jpg" alt="Svasti Residence" loading="lazy">
-              <div class="entry-tag">CONTEMPORARY RESIDENCE</div>
-              <div class="entry-hover-action"><span>VIEW DOSSIER</span> ↗</div>
-            </div>
-            <div class="entry-info">
-              <div class="entry-loc">SURAT, GUJARAT</div>
-              <h3 class="entry-heading">Svasti Residence</h3>
-              <p class="entry-desc">Exposed architectural concrete, cantilevered steel frames, and minimalist water reflection planes.</p>
-            </div>
-          </div>
-
-          <!-- 14. Mr. Dalmia House -->
-          <div class="project-entry reveal-item" data-category="residential" data-title="Mr. Dalmia House" data-type="Private Luxury Mansion" data-scale="Private Estate" data-location="Gujarat" data-img="/images/image-8-1.png">
-            <div class="entry-img-wrap">
-              <img src="/images/image-8-1.png" alt="Mr. Dalmia House" loading="lazy">
-              <div class="entry-tag">PRIVATE MANSION</div>
-              <div class="entry-hover-action"><span>VIEW DOSSIER</span> ↗</div>
-            </div>
-            <div class="entry-info">
-              <div class="entry-loc">GUJARAT</div>
-              <h3 class="entry-heading">Mr. Dalmia House</h3>
-              <p class="entry-desc">Exclusive estate mansion with specialized climate envelopes and precision Italian joinery.</p>
-            </div>
-          </div>
-
-          <!-- 15. Treat Hotels & Resorts -->
-          <div class="project-entry reveal-item" data-category="hospitality" data-title="Treat Hotels & Resorts" data-type="Luxury Destination Resort" data-scale="18-Acre Development" data-location="Western Region" data-img="/images/image-4-1.png">
-            <div class="entry-img-wrap">
-              <img src="/images/image-4-1.png" alt="Treat Hotels & Resorts" loading="lazy">
-              <div class="entry-tag">DESTINATION RESORT</div>
-              <div class="entry-hover-action"><span>VIEW DOSSIER</span> ↗</div>
-            </div>
-            <div class="entry-info">
-              <div class="entry-loc">WESTERN REGION</div>
-              <h3 class="entry-heading">Treat Hotels & Resorts</h3>
-              <p class="entry-desc">Integrated hospitality estate featuring luxury villas, banquet facilities, and extensive recreational zones.</p>
-            </div>
-          </div>
-
-          <!-- 16. Amrit Cement Club House -->
-          <div class="project-entry reveal-item" data-category="institutional" data-title="Amrit Cement Club House" data-type="Corporate Recreational Facility" data-scale="Large Span Trusses" data-location="Township" data-img="/images/image-10.png">
-            <div class="entry-img-wrap">
-              <img src="/images/image-10.png" alt="Amrit Cement Club House" loading="lazy">
-              <div class="entry-tag">CORPORATE RECREATION</div>
-              <div class="entry-hover-action"><span>VIEW DOSSIER</span> ↗</div>
-            </div>
-            <div class="entry-info">
-              <div class="entry-loc">INDUSTRIAL TOWNSHIP</div>
-              <h3 class="entry-heading">Amrit Cement Club House</h3>
-              <p class="entry-desc">Large-span structural steel framing, indoor sports courts, and acoustic entertainment halls.</p>
-            </div>
-          </div>
-
-          <!-- 17. Om Hospital -->
-          <div class="project-entry reveal-item" data-category="institutional" data-title="Om Hospital" data-type="Multi-Specialty Hospital" data-scale="120 Beds" data-location="Surat" data-img="/images/image-11-1.png">
-            <div class="entry-img-wrap">
-              <img src="/images/image-11-1.png" alt="Om Hospital" loading="lazy">
-              <div class="entry-tag">HEALTHCARE FACILITY</div>
-              <div class="entry-hover-action"><span>VIEW DOSSIER</span> ↗</div>
-            </div>
-            <div class="entry-info">
-              <div class="entry-loc">SURAT, GUJARAT</div>
-              <h3 class="entry-heading">Om Hospital</h3>
-              <p class="entry-desc">Medical gas piping networks, laminar airflow operation theatres, and uninterrupted power grids.</p>
-            </div>
-          </div>
-
-          <!-- 18. Grand Marina Hospital -->
-          <div class="project-entry reveal-item" data-category="institutional" data-title="Grand Marina Hospital" data-type="Tertiary Care Hospital" data-scale="200 Beds" data-location="Gujarat" data-img="/images/image-36.png">
-            <div class="entry-img-wrap">
-              <img src="/images/image-36.png" alt="Grand Marina Hospital" loading="lazy">
-              <div class="entry-tag">TERTIARY HEALTHCARE</div>
-              <div class="entry-hover-action"><span>VIEW DOSSIER</span> ↗</div>
-            </div>
-            <div class="entry-info">
-              <div class="entry-loc">GUJARAT</div>
-              <h3 class="entry-heading">Grand Marina Hospital</h3>
-              <p class="entry-desc">Advanced seismic dampers, radiology lead shielding, and intensive care air handling units.</p>
-            </div>
-          </div>
-
-          <!-- 19. K7 International School -->
-          <div class="project-entry reveal-item" data-category="institutional" data-title="K7 International School" data-type="Educational Campus" data-scale="K-12 Campus" data-location="Surat" data-img="/images/Frame-16.png">
-            <div class="entry-img-wrap">
-              <img src="/images/Frame-16.png" alt="K7 International School" loading="lazy">
-              <div class="entry-tag">EDUCATIONAL CAMPUS</div>
-              <div class="entry-hover-action"><span>VIEW DOSSIER</span> ↗</div>
-            </div>
-            <div class="entry-info">
-              <div class="entry-loc">SURAT, GUJARAT</div>
-              <h3 class="entry-heading">K7 International School</h3>
-              <p class="entry-desc">Modern educational architecture with child-safe material protocols, sports pavilions, and smart labs.</p>
-            </div>
-          </div>
-
-          <!-- 20. Blue Ski -->
-          <div class="project-entry reveal-item" data-category="institutional" data-title="Blue Ski" data-type="Recreational Facility" data-scale="Specialized Venue" data-location="Gujarat" data-img="/images/image-37.png">
-            <div class="entry-img-wrap">
-              <img src="/images/image-37.png" alt="Blue Ski" loading="lazy">
-              <div class="entry-tag">RECREATIONAL VENUE</div>
-              <div class="entry-hover-action"><span>VIEW DOSSIER</span> ↗</div>
-            </div>
-            <div class="entry-info">
-              <div class="entry-loc">GUJARAT</div>
-              <h3 class="entry-heading">Blue Ski</h3>
-              <p class="entry-desc">Climate-controlled recreational facility with specialized thermal envelope insulation and structural spans.</p>
-            </div>
+            <a href="./projects.html" class="btn-editorial btn-accent">
+              <span>Explore Full Portfolio Archive</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            </a>
           </div>
 
         </div>
@@ -854,32 +844,32 @@
         <div class="marquee-strip reveal-item">
           <div class="marquee-track" id="marqueeTrack">
             <!-- Set 1 -->
-            <div class="marquee-item"><img src="/images/hilton-garden-inn-1.png" alt="Hilton"></div>
-            <div class="marquee-item"><img src="/images/vivanta.png" alt="Vivanta"></div>
-            <div class="marquee-item"><img src="/images/ginger.png" alt="Ginger"></div>
-            <div class="marquee-item"><img src="/images/ongc.png" alt="ONGC"></div>
-            <div class="marquee-item"><img src="/images/isro.png" alt="ISRO"></div>
-            <div class="marquee-item"><img src="/images/iit-madras.png" alt="IIT Madras"></div>
-            <div class="marquee-item"><img src="/images/bharat.png" alt="Bharat City"></div>
-            <div class="marquee-item"><img src="/images/ankit-gems-2.png" alt="Ankit Gems"></div>
-            <div class="marquee-item"><img src="/images/aswin.png" alt="Ashwin Diamond"></div>
-            <div class="marquee-item"><img src="/images/charu-scaled.png" alt="Charu Jewels"></div>
-            <div class="marquee-item"><img src="/images/jainam.png" alt="Jainam"></div>
-            <div class="marquee-item"><img src="/images/vidyamandir.png" alt="Vidyamandir"></div>
+            <div class="marquee-item"><img src="/assets/hilton-garden-inn-CSYm6uYZ.png" alt="Hilton"></div>
+            <div class="marquee-item"><img src="data:image/png;base64,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" alt="Vivanta"></div>
+            <div class="marquee-item"><img src="/assets/ginger-D0WCzC4j.png" alt="Ginger"></div>
+            <div class="marquee-item"><img src="/assets/ongc-Duno_EZ6.png" alt="ONGC"></div>
+            <div class="marquee-item"><img src="data:image/png;base64,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" alt="ISRO"></div>
+            <div class="marquee-item"><img src="/assets/iit-madras-DeeOyXom.png" alt="IIT Madras"></div>
+            <div class="marquee-item"><img src="/assets/bharat-Bhc7x8uM.png" alt="Bharat City"></div>
+            <div class="marquee-item"><img src="/assets/ankit-gems-2-BZDph0nt.png" alt="Ankit Gems"></div>
+            <div class="marquee-item"><img src="/assets/aswin-B-hbd3kd.png" alt="Ashwin Diamond"></div>
+            <div class="marquee-item"><img src="/assets/charu-scaled-mmuFVNSs.png" alt="Charu Jewels"></div>
+            <div class="marquee-item"><img src="/assets/jainam-IAAMk-V1.png" alt="Jainam"></div>
+            <div class="marquee-item"><img src="/assets/vidyamandir-BwgSzU6J.png" alt="Vidyamandir"></div>
 
             <!-- Set 2 (for infinite loop) -->
-            <div class="marquee-item"><img src="/images/hilton-garden-inn-1.png" alt="Hilton"></div>
-            <div class="marquee-item"><img src="/images/vivanta.png" alt="Vivanta"></div>
-            <div class="marquee-item"><img src="/images/ginger.png" alt="Ginger"></div>
-            <div class="marquee-item"><img src="/images/ongc.png" alt="ONGC"></div>
-            <div class="marquee-item"><img src="/images/isro.png" alt="ISRO"></div>
-            <div class="marquee-item"><img src="/images/iit-madras.png" alt="IIT Madras"></div>
-            <div class="marquee-item"><img src="/images/bharat.png" alt="Bharat City"></div>
-            <div class="marquee-item"><img src="/images/ankit-gems-2.png" alt="Ankit Gems"></div>
-            <div class="marquee-item"><img src="/images/aswin.png" alt="Ashwin Diamond"></div>
-            <div class="marquee-item"><img src="/images/charu-scaled.png" alt="Charu Jewels"></div>
-            <div class="marquee-item"><img src="/images/jainam.png" alt="Jainam"></div>
-            <div class="marquee-item"><img src="/images/vidyamandir.png" alt="Vidyamandir"></div>
+            <div class="marquee-item"><img src="/assets/hilton-garden-inn-CSYm6uYZ.png" alt="Hilton"></div>
+            <div class="marquee-item"><img src="data:image/png;base64,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" alt="Vivanta"></div>
+            <div class="marquee-item"><img src="/assets/ginger-D0WCzC4j.png" alt="Ginger"></div>
+            <div class="marquee-item"><img src="/assets/ongc-Duno_EZ6.png" alt="ONGC"></div>
+            <div class="marquee-item"><img src="data:image/png;base64,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" alt="ISRO"></div>
+            <div class="marquee-item"><img src="/assets/iit-madras-DeeOyXom.png" alt="IIT Madras"></div>
+            <div class="marquee-item"><img src="/assets/bharat-Bhc7x8uM.png" alt="Bharat City"></div>
+            <div class="marquee-item"><img src="/assets/ankit-gems-2-BZDph0nt.png" alt="Ankit Gems"></div>
+            <div class="marquee-item"><img src="/assets/aswin-B-hbd3kd.png" alt="Ashwin Diamond"></div>
+            <div class="marquee-item"><img src="/assets/charu-scaled-mmuFVNSs.png" alt="Charu Jewels"></div>
+            <div class="marquee-item"><img src="/assets/jainam-IAAMk-V1.png" alt="Jainam"></div>
+            <div class="marquee-item"><img src="/assets/vidyamandir-BwgSzU6J.png" alt="Vidyamandir"></div>
           </div>
         </div>
 
@@ -958,63 +948,111 @@
 
           <div class="faq-accordion-col reveal-item">
             
+            <!-- FAQ 1 -->
             <div class="faq-item">
               <button class="faq-trigger" aria-expanded="false">
-                <span>What types of projects does SunRise PMC handle?</span>
-                <span class="trigger-icon">+</span>
+                <div class="faq-trigger-left">
+                  <span class="faq-badge">01</span>
+                  <span class="faq-question-text">What types of projects does SunRise PMC handle?</span>
+                </div>
+                <span class="trigger-icon-wrap" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+                </span>
               </button>
               <div class="faq-content">
-                <p>We manage diverse construction portfolios including residential townships, multi-tower high-rises, commercial and diamond processing complexes, 5-star hotels, healthcare hospitals, and institutional educational campuses across Western India.</p>
+                <div class="faq-answer-inner">
+                  <p>We manage diverse construction portfolios including residential townships, multi-tower high-rises, commercial and diamond processing complexes, 5-star hotels, healthcare hospitals, and institutional educational campuses across Western India.</p>
+                </div>
               </div>
             </div>
 
+            <!-- FAQ 2 -->
             <div class="faq-item">
               <button class="faq-trigger" aria-expanded="false">
-                <span>How does SunRise PMC prepare and monitor project schedules?</span>
-                <span class="trigger-icon">+</span>
+                <div class="faq-trigger-left">
+                  <span class="faq-badge">02</span>
+                  <span class="faq-question-text">How does SunRise PMC prepare and monitor project schedules?</span>
+                </div>
+                <span class="trigger-icon-wrap" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+                </span>
               </button>
               <div class="faq-content">
-                <p>We prepare master and micro schedules using Critical Path Method (CPM) and milestone-based planning. Progress is continuously checked against an approved baseline with regular variance analysis, look-ahead schedules, and proactive recovery planning to prevent project creep.</p>
+                <div class="faq-answer-inner">
+                  <p>We prepare master and micro schedules using Critical Path Method (CPM) and milestone-based planning. Progress is continuously checked against an approved baseline with regular variance analysis, look-ahead schedules, and proactive recovery planning to prevent project creep.</p>
+                </div>
               </div>
             </div>
 
+            <!-- FAQ 3 -->
             <div class="faq-item">
               <button class="faq-trigger" aria-expanded="false">
-                <span>How does SunRise PMC help control project costs and prevent overruns?</span>
-                <span class="trigger-icon">+</span>
+                <div class="faq-trigger-left">
+                  <span class="faq-badge">03</span>
+                  <span class="faq-question-text">How does SunRise PMC help control project costs and prevent overruns?</span>
+                </div>
+                <span class="trigger-icon-wrap" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+                </span>
               </button>
               <div class="faq-content">
-                <p>We institute rigorous budgeting right from quantity takeoffs, enforce transparent rate analysis, conduct joint measurement audits before contractor bill certification, manage variations with contract rigor, and provide monthly cost-value reconciliations to executive leadership.</p>
+                <div class="faq-answer-inner">
+                  <p>We institute rigorous budgeting right from quantity takeoffs, enforce transparent rate analysis, conduct joint measurement audits before contractor bill certification, manage variations with contract rigor, and provide monthly cost-value reconciliations to executive leadership.</p>
+                </div>
               </div>
             </div>
 
+            <!-- FAQ 4 -->
             <div class="faq-item">
               <button class="faq-trigger" aria-expanded="false">
-                <span>Does SunRise PMC provide dedicated on-site supervision?</span>
-                <span class="trigger-icon">+</span>
+                <div class="faq-trigger-left">
+                  <span class="faq-badge">04</span>
+                  <span class="faq-question-text">Does SunRise PMC provide dedicated on-site supervision?</span>
+                </div>
+                <span class="trigger-icon-wrap" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+                </span>
               </button>
               <div class="faq-content">
-                <p>Yes. We deploy full-time, experienced resident site engineers and quality inspectors. On-site supervision covers physical execution oversight, drawing adherence, safety protocol enforcement, contractor labor monitoring, and daily progress reporting.</p>
+                <div class="faq-answer-inner">
+                  <p>Yes. We deploy full-time, experienced resident site engineers and quality inspectors. On-site supervision covers physical execution oversight, drawing adherence, safety protocol enforcement, contractor labor monitoring, and daily progress reporting.</p>
+                </div>
               </div>
             </div>
 
+            <!-- FAQ 5 -->
             <div class="faq-item">
               <button class="faq-trigger" aria-expanded="false">
-                <span>How does SunRise PMC ensure project quality?</span>
-                <span class="trigger-icon">+</span>
+                <div class="faq-trigger-left">
+                  <span class="faq-badge">05</span>
+                  <span class="faq-question-text">How does SunRise PMC ensure project quality?</span>
+                </div>
+                <span class="trigger-icon-wrap" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+                </span>
               </button>
               <div class="faq-content">
-                <p>We enforce a strict Project Quality Assurance Plan (PQAP). This includes mandatory third-party lab testing of raw materials (cement, rebar, aggregates), stage-wise pour checklists, finishing tolerances inspections, and comprehensive zero-defect snagging audits before handover.</p>
+                <div class="faq-answer-inner">
+                  <p>We enforce a strict Project Quality Assurance Plan (PQAP). This includes mandatory third-party lab testing of raw materials (cement, rebar, aggregates), stage-wise pour checklists, finishing tolerances inspections, and comprehensive zero-defect snagging audits before handover.</p>
+                </div>
               </div>
             </div>
 
+            <!-- FAQ 6 -->
             <div class="faq-item">
               <button class="faq-trigger" aria-expanded="false">
-                <span>Does SunRise PMC offer AMC and independent billing audit services?</span>
-                <span class="trigger-icon">+</span>
+                <div class="faq-trigger-left">
+                  <span class="faq-badge">06</span>
+                  <span class="faq-question-text">Does SunRise PMC offer AMC and independent billing audit services?</span>
+                </div>
+                <span class="trigger-icon-wrap" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+                </span>
               </button>
               <div class="faq-content">
-                <p>Yes. In addition to turnkey PMC, we provide specialized stand-alone services including Annual Maintenance Contract (AMC) supervision for active facilities and Forensic Billing & Commercial Audits for developers seeking independent verification of contractor claims.</p>
+                <div class="faq-answer-inner">
+                  <p>Yes. In addition to turnkey PMC, we provide specialized stand-alone services including Annual Maintenance Contract (AMC) supervision for active facilities and Forensic Billing & Commercial Audits for developers seeking independent verification of contractor claims.</p>
+                </div>
               </div>
             </div>
 
@@ -1132,7 +1170,7 @@
       <div class="footer-grid">
         
         <div class="footer-col-main">
-          <img src="/images/SunRise-Logo-1-300x212.png" alt="SunRise PMC" class="footer-logo" width="120" height="85">
+          <img src="/assets/SunRise-Logo-1-300x212-xARNgl63.png" alt="SunRise PMC" class="footer-logo" width="120" height="85">
           <p class="footer-tagline">
             SunRise PMC operates as an independent fiduciary construction project management consultancy. Delivering 20+ landmark developments across residential, commercial, hospitality, and healthcare sectors.
           </p>
@@ -1164,7 +1202,7 @@
             <li><a href="#projects">Ankit Gems Complex</a></li>
             <li><a href="#projects">Vidyamandir Skill Centre</a></li>
             <li><a href="#projects">Om Hospital</a></li>
-            <li><a href="#projects">All 20 Projects &rarr;</a></li>
+            <li><a href="#projects">Landmark Portfolio &rarr;</a></li>
           </ul>
         </div>
 
@@ -1194,11 +1232,11 @@
   </footer>
 
   <!-- Project Detail Slide-Out Modal -->
-  <div id="projectModal" class="project-modal" aria-hidden="true" role="dialog">
+  <div id="projectModal" class="project-modal" data-lenis-prevent aria-hidden="true" role="dialog">
     <div class="modal-scrim" id="modalScrim"></div>
-    <div class="modal-dialog">
-      <button class="modal-close" id="modalClose">&times;</button>
-      <div class="modal-content-slot" id="modalSlot">
+    <div class="modal-dialog" data-lenis-prevent>
+      <button class="modal-close" id="modalClose" aria-label="Close dialog">&times;</button>
+      <div class="modal-content-slot" id="modalSlot" data-lenis-prevent>
         <!-- Injected dynamically -->
       </div>
     </div>
@@ -1216,6 +1254,6 @@
     <span class="whatsapp-label">Direct Director Consultation</span>
   </a>
 
-  <!-- Vite entry script -->
+  <!-- Vite entry script -->
 </body>
 </html>

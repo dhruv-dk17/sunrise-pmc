@@ -478,15 +478,121 @@ function initServicesInteractivity() {
   });
 }
 
-// 8. Projects Filter + Modal
+// Global openModal function for all project cards across all pages
+let openProjectModal = null;
+
+// 8. Projects Filter + Robust Modal Scroll
 function initProjects() {
-  const tabs = document.querySelectorAll('.filter-tab');
-  const entries = document.querySelectorAll('.project-entry');
+  const tabs = document.querySelectorAll('.projects-gallery-section .filter-tab, .projects-section:not(.projects-carousel-section) .filter-tab');
+  const entries = document.querySelectorAll('.projects-gallery .project-entry');
   const modal = document.getElementById('projectModal');
   const scrim = document.getElementById('modalScrim');
   const close = document.getElementById('modalClose');
   const slot = document.getElementById('modalSlot');
+  const dialog = modal ? modal.querySelector('.modal-dialog') : null;
 
+  // Bind direct wheel & touch handling on modal dialog to guarantee internal scrolling
+  if (dialog && !dialog._scrollListenersAttached) {
+    dialog._scrollListenersAttached = true;
+    dialog.setAttribute('data-lenis-prevent', '');
+    if (modal) modal.setAttribute('data-lenis-prevent', '');
+    if (slot) slot.setAttribute('data-lenis-prevent', '');
+
+    dialog.addEventListener('wheel', (e) => {
+      e.stopPropagation();
+      const maxScroll = dialog.scrollHeight - dialog.clientHeight;
+      if (maxScroll > 0) {
+        dialog.scrollTop += e.deltaY;
+        // Prevent background bounce when scrolling inside bounds
+        if ((e.deltaY > 0 && dialog.scrollTop < maxScroll) || (e.deltaY < 0 && dialog.scrollTop > 0)) {
+          e.preventDefault();
+        }
+      }
+    }, { passive: false });
+
+    dialog.addEventListener('touchmove', (e) => {
+      e.stopPropagation();
+    }, { passive: true });
+  }
+
+  function openModal(entry) {
+    if (!modal || !slot) return;
+    const title = entry.getAttribute('data-title') || '';
+    const type = entry.getAttribute('data-type') || '';
+    const scale = entry.getAttribute('data-scale') || '';
+    const loc = entry.getAttribute('data-location') || '';
+    const img = entry.getAttribute('data-img') || '';
+    const desc = (entry.querySelector('.entry-desc') || {}).textContent || '';
+
+    slot.innerHTML = [
+      '<div style="height:320px;overflow:hidden;margin-bottom:28px;border-radius:4px;position:relative;background:var(--bg-stone);">',
+      '<img src="' + img + '" alt="' + title + '" style="width:100%;height:100%;object-fit:cover;transition:transform 0.6s ease;" onmouseover="this.style.transform=\'scale(1.04)\'" onmouseout="this.style.transform=\'scale(1)\'">',
+      '<div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(0,0,0,0.45));pointer-events:none;"></div>',
+      '<div style="position:absolute;bottom:16px;left:16px;font-size:0.65rem;letter-spacing:0.18em;color:#fff;font-weight:700;background:rgba(158,122,42,0.92);padding:5px 12px;border-radius:2px;box-shadow:0 2px 10px rgba(0,0,0,0.25);">' + type + '</div>',
+      '</div>',
+      '<div style="font-size:0.72rem;letter-spacing:0.18em;color:var(--accent-gold);font-weight:700;margin-bottom:8px;text-transform:uppercase;">' + loc + '</div>',
+      '<h3 style="font-family:var(--font-serif-roman);font-size:2.2rem;color:var(--text-primary);margin-bottom:14px;line-height:1.15;">' + title + '</h3>',
+      '<p style="font-size:1rem;color:var(--text-secondary);line-height:1.8;margin-bottom:28px;">' + desc + '</p>',
+      '<div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:32px;background:var(--bg-stone);padding:22px;border:1px solid var(--border-hairline);border-radius:4px;">',
+      '<div><span style="font-size:0.64rem;color:var(--text-muted);letter-spacing:0.14em;display:block;margin-bottom:6px;text-transform:uppercase;font-weight:700;">Engagement Mandate</span>',
+      '<strong style="font-size:0.95rem;color:var(--text-primary);display:block;">Turnkey PMC &amp; Technical Governance</strong></div>',
+      '<div><span style="font-size:0.64rem;color:var(--text-muted);letter-spacing:0.14em;display:block;margin-bottom:6px;text-transform:uppercase;font-weight:700;">Development Scale</span>',
+      '<strong style="font-size:0.95rem;color:var(--accent-gold);display:block;">' + scale + '</strong></div>',
+      '</div>',
+      '<div style="display:flex;gap:14px;flex-wrap:wrap;padding-bottom:12px;">',
+      '<a href="./contact.html" class="btn-editorial btn-accent" onclick="document.getElementById(\'modalClose\')?.click();"><span>Inquire Similar Project</span></a>',
+      '<a href="https://wa.me/919586000933?text=Inquiring%20about%20' + encodeURIComponent(title) + '" target="_blank" class="btn-editorial btn-outline"><span>WhatsApp Consultation</span></a>',
+      '</div>'
+    ].join('');
+
+    modal.classList.add('active');
+    modal.setAttribute('aria-hidden', 'false');
+    document.documentElement.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden';
+
+    // Stop Lenis smoothly so modal internal scroll is 100% active
+    if (lenis) lenis.stop();
+
+    // Reset modal scroll position
+    if (dialog) dialog.scrollTop = 0;
+
+    if (typeof gsap !== 'undefined') {
+      gsap.fromTo('.modal-dialog',
+        { y: 35, opacity: 0, scale: 0.96 },
+        { y: 0, opacity: 1, scale: 1, duration: 0.4, ease: 'power3.out' }
+      );
+    }
+  }
+
+  openProjectModal = openModal;
+
+  function closeModal() {
+    if (!modal) return;
+    const finish = () => {
+      modal.classList.remove('active');
+      modal.setAttribute('aria-hidden', 'true');
+      document.documentElement.style.overflow = '';
+      document.body.style.overflow = '';
+      // Restart Lenis so page scrolls again smoothly
+      if (lenis) {
+        lenis.start();
+        lenis.resize();
+      }
+      if (typeof ScrollTrigger !== 'undefined') {
+        ScrollTrigger.refresh();
+      }
+    };
+    if (typeof gsap !== 'undefined') {
+      gsap.to('.modal-dialog', {
+        y: 20, opacity: 0, scale: 0.97, duration: 0.25, ease: 'power2.in',
+        onComplete: finish
+      });
+    } else {
+      finish();
+    }
+  }
+
+  // Gallery tabs filtering (used on projects.html)
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
       tabs.forEach(t => t.classList.remove('active'));
@@ -504,83 +610,17 @@ function initProjects() {
         }
       });
 
-      gsap.fromTo(visible,
-        { opacity: 0, y: 20 },
-        { opacity: 1, y: 0, duration: 0.4, stagger: 0.05, ease: 'power2.out' }
-      );
+      if (typeof gsap !== 'undefined') {
+        gsap.fromTo(visible,
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, duration: 0.4, stagger: 0.05, ease: 'power2.out' }
+        );
+      }
 
       if (lenis) lenis.resize();
-      ScrollTrigger.refresh();
+      if (typeof ScrollTrigger !== 'undefined') ScrollTrigger.refresh();
     });
   });
-
-  function openModal(entry) {
-    if (!modal || !slot) return;
-    const title = entry.getAttribute('data-title') || '';
-    const type = entry.getAttribute('data-type') || '';
-    const scale = entry.getAttribute('data-scale') || '';
-    const loc = entry.getAttribute('data-location') || '';
-    const img = entry.getAttribute('data-img') || '';
-    const desc = (entry.querySelector('.entry-desc') || {}).textContent || '';
-
-    slot.innerHTML = [
-      '<div style="height:300px;overflow:hidden;margin-bottom:28px;border-radius:4px;position:relative;">',
-      '<img src="' + img + '" alt="' + title + '" style="width:100%;height:100%;object-fit:cover;transition:transform 0.6s ease;" onmouseover="this.style.transform=\'scale(1.04)\'" onmouseout="this.style.transform=\'scale(1)\'">',
-      '<div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 50%,rgba(0,0,0,0.35));pointer-events:none;"></div>',
-      '<div style="position:absolute;bottom:16px;left:16px;font-size:0.6rem;letter-spacing:0.18em;color:#fff;font-weight:700;background:rgba(158,122,42,0.9);padding:4px 10px;border-radius:2px;">' + type + '</div>',
-      '</div>',
-      '<div style="font-size:0.68rem;letter-spacing:0.16em;color:var(--accent-gold);font-weight:700;margin-bottom:8px;">' + loc + '</div>',
-      '<h3 style="font-family:var(--font-serif-roman);font-size:2rem;color:var(--text-primary);margin-bottom:14px;line-height:1.1;">' + title + '</h3>',
-      '<p style="font-size:0.95rem;color:var(--text-secondary);line-height:1.8;margin-bottom:28px;">' + desc + '</p>',
-      '<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:30px;background:var(--bg-stone);padding:20px;border:1px solid var(--border-hairline);border-radius:4px;">',
-      '<div><span style="font-size:0.62rem;color:var(--text-muted);letter-spacing:0.12em;display:block;margin-bottom:4px;text-transform:uppercase;">Engagement</span>',
-      '<strong style="font-size:0.9rem;color:var(--text-primary);">Turnkey PMC &amp; Forensic Audit</strong></div>',
-      '<div><span style="font-size:0.62rem;color:var(--text-muted);letter-spacing:0.12em;display:block;margin-bottom:4px;text-transform:uppercase;">Project Scale</span>',
-      '<strong style="font-size:0.9rem;color:var(--accent-gold);">' + scale + '</strong></div>',
-      '</div>',
-      '<div style="display:flex;gap:14px;flex-wrap:wrap;">',
-      '<a href="./contact.html" class="btn-editorial btn-accent" onclick="document.getElementById(\'modalClose\')?.click();"><span>Inquire Similar Project</span></a>',
-      '<a href="https://wa.me/919586000933?text=Inquiring%20about%20' + encodeURIComponent(title) + '" target="_blank" class="btn-editorial btn-outline"><span>WhatsApp Consultation</span></a>',
-      '</div>'
-    ].join('');
-
-    modal.classList.add('active');
-    modal.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-
-    // Stop Lenis so modal can scroll internally
-    if (lenis) lenis.stop();
-
-    // Reset modal scroll position
-    const dialog = modal.querySelector('.modal-dialog');
-    if (dialog) dialog.scrollTop = 0;
-
-    if (typeof gsap !== 'undefined') {
-      gsap.fromTo('.modal-dialog',
-        { y: 40, opacity: 0, scale: 0.96 },
-        { y: 0, opacity: 1, scale: 1, duration: 0.45, ease: 'power3.out' }
-      );
-    }
-  }
-
-  function closeModal() {
-    if (!modal) return;
-    const finish = () => {
-      modal.classList.remove('active');
-      modal.setAttribute('aria-hidden', 'true');
-      document.body.style.overflow = '';
-      // Restart Lenis so page scrolls again
-      if (lenis) lenis.start();
-    };
-    if (typeof gsap !== 'undefined') {
-      gsap.to('.modal-dialog', {
-        y: 20, opacity: 0, scale: 0.97, duration: 0.3, ease: 'power2.in',
-        onComplete: finish
-      });
-    } else {
-      finish();
-    }
-  }
 
   entries.forEach(entry => entry.addEventListener('click', () => openModal(entry)));
   if (scrim) scrim.addEventListener('click', closeModal);
@@ -588,6 +628,197 @@ function initProjects() {
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && modal && modal.classList.contains('active')) closeModal();
   });
+}
+
+// 8b. 3D Awards-Winning Landmark Carousel (Home Page)
+function init3DCarousel() {
+  const track = document.getElementById('carousel3DTrack');
+  const stage = document.getElementById('carousel3DStage');
+  if (!track || !stage) return;
+
+  const cards = Array.from(track.querySelectorAll('.carousel-card-3d'));
+  const prevBtn = document.getElementById('carouselPrevBtn');
+  const nextBtn = document.getElementById('carouselNextBtn');
+  const currentNumEl = document.getElementById('carouselCurrentNum');
+  const totalNumEl = document.getElementById('carouselTotalNum');
+  const progressBarEl = document.getElementById('carouselProgressBar');
+  const filterTabs = document.querySelectorAll('.projects-carousel-section .portfolio-filters .filter-tab');
+
+  if (!cards.length) return;
+
+  let activeIndex = 0;
+  const total = cards.length;
+  let autoPlayTimer = null;
+
+  function padZero(num) {
+    return num < 10 ? '0' + num : '' + num;
+  }
+
+  if (totalNumEl) totalNumEl.textContent = padZero(total);
+
+  function update3DLayout() {
+    const isMobile = window.innerWidth <= 768;
+    const isSmallPhone = window.innerWidth <= 480;
+    const xStep = isSmallPhone ? 190 : isMobile ? 240 : 360;
+    const zStep = isSmallPhone ? -130 : isMobile ? -160 : -190;
+    const rotStep = isMobile ? 22 : 30;
+
+    cards.forEach((card, idx) => {
+      let offset = idx - activeIndex;
+      // Wrap around offset to shortest path
+      const half = total / 2;
+      while (offset > half) offset -= total;
+      while (offset < -half) offset += total;
+
+      const absOffset = Math.abs(offset);
+
+      if (absOffset === 0) {
+        // Active Center Card
+        card.style.transform = 'translate3d(0, 0, 70px) rotateY(0deg) scale(1.04)';
+        card.style.opacity = '1';
+        card.style.zIndex = '35';
+        card.style.filter = 'none';
+        card.style.pointerEvents = 'auto';
+        card.classList.add('is-active');
+      } else if (absOffset === 1) {
+        // Immediate Neighbors (Left / Right)
+        const dir = offset > 0 ? 1 : -1;
+        card.style.transform = 'translate3d(' + (dir * xStep) + 'px, 0, ' + zStep + 'px) rotateY(' + (-dir * rotStep) + 'deg) scale(0.88)';
+        card.style.opacity = '0.82';
+        card.style.zIndex = '25';
+        card.style.filter = 'brightness(0.82) contrast(0.96)';
+        card.style.pointerEvents = 'auto';
+        card.classList.remove('is-active');
+      } else if (absOffset === 2) {
+        // Second Neighbors
+        const dir = offset > 0 ? 1 : -1;
+        card.style.transform = 'translate3d(' + (dir * (xStep * 1.75)) + 'px, 0, ' + (zStep * 1.9) + 'px) rotateY(' + (-dir * (rotStep * 1.35)) + 'deg) scale(0.74)';
+        card.style.opacity = '0.45';
+        card.style.zIndex = '15';
+        card.style.filter = 'brightness(0.65)';
+        card.style.pointerEvents = 'auto';
+        card.classList.remove('is-active');
+      } else {
+        // Distant Background
+        const dir = offset > 0 ? 1 : -1;
+        card.style.transform = 'translate3d(' + (dir * (xStep * 2.2)) + 'px, 0, -420px) scale(0.6)';
+        card.style.opacity = '0';
+        card.style.zIndex = '1';
+        card.style.pointerEvents = 'none';
+        card.classList.remove('is-active');
+      }
+    });
+
+    if (currentNumEl) currentNumEl.textContent = padZero(activeIndex + 1);
+    if (progressBarEl) progressBarEl.style.width = (((activeIndex + 1) / total) * 100) + '%';
+  }
+
+  function goTo(index) {
+    activeIndex = (index + total) % total;
+    update3DLayout();
+  }
+
+  function next() {
+    goTo(activeIndex + 1);
+  }
+
+  function prev() {
+    goTo(activeIndex - 1);
+  }
+
+  if (nextBtn) nextBtn.addEventListener('click', () => { resetAuto(); next(); });
+  if (prevBtn) prevBtn.addEventListener('click', () => { resetAuto(); prev(); });
+
+  // Click on cards
+  cards.forEach((card, idx) => {
+    card.addEventListener('click', (e) => {
+      resetAuto();
+      if (idx === activeIndex) {
+        if (openProjectModal) openProjectModal(card);
+      } else {
+        goTo(idx);
+      }
+    });
+  });
+
+  // Category filter tabs on carousel
+  filterTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      resetAuto();
+      filterTabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const filter = tab.getAttribute('data-filter');
+
+      if (filter === 'all') {
+        goTo(0);
+      } else {
+        const found = cards.findIndex(c => c.getAttribute('data-category') === filter);
+        if (found !== -1) {
+          goTo(found);
+        }
+      }
+    });
+  });
+
+  // Touch and mouse drag swipe support
+  let isPointerDown = false;
+  let startX = 0;
+  let currentDragX = 0;
+
+  stage.addEventListener('pointerdown', (e) => {
+    isPointerDown = true;
+    startX = e.clientX;
+    currentDragX = e.clientX;
+    resetAuto();
+  });
+
+  window.addEventListener('pointermove', (e) => {
+    if (!isPointerDown) return;
+    currentDragX = e.clientX;
+  });
+
+  window.addEventListener('pointerup', (e) => {
+    if (!isPointerDown) return;
+    isPointerDown = false;
+    const diff = currentDragX - startX;
+    if (Math.abs(diff) > 45) {
+      if (diff < 0) next();
+      else prev();
+    }
+  });
+
+  // Keyboard navigation when stage is in view
+  window.addEventListener('keydown', (e) => {
+    const rect = stage.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      if (e.key === 'ArrowRight') { resetAuto(); next(); }
+      if (e.key === 'ArrowLeft') { resetAuto(); prev(); }
+    }
+  });
+
+  // Autoplay with subtle slow interval
+  function startAuto() {
+    stopAuto();
+    autoPlayTimer = setInterval(next, 5500);
+  }
+
+  function stopAuto() {
+    if (autoPlayTimer) clearInterval(autoPlayTimer);
+  }
+
+  function resetAuto() {
+    stopAuto();
+    startAuto();
+  }
+
+  stage.addEventListener('mouseenter', stopAuto);
+  stage.addEventListener('mouseleave', startAuto);
+
+  window.addEventListener('resize', update3DLayout);
+
+  // Initialize
+  update3DLayout();
+  startAuto();
 }
 
 // 9. PMC Scope Estimator
@@ -760,6 +991,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeader();
   initServicesInteractivity();
   initProjects();
+  init3DCarousel();
   initCalculator();
   initFaq();
   initMobileMenu();
