@@ -2872,23 +2872,29 @@ button, input, select, textarea {
   }
 
   .hero-trust-stack {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     width: 100%;
-    gap: 10px;
+    gap: 8px;
   }
 
   .trust-card {
     width: 100%;
-    min-width: 100%;
-    padding: 14px 18px;
+    min-width: 0;
+    padding: 10px 4px 8px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .trust-num {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    white-space: nowrap;
   }
 
   .trust-label {
-    font-size: 0.65rem;
+    font-size: 0.55rem;
+    text-align: center;
   }
 
   /* Metrics Strip */
@@ -3587,15 +3593,15 @@ button, input, select, textarea {
     padding-bottom: 32px;
   }
   .hero-trust-stack {
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-    gap: 12px;
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    width: 100% !important;
+    gap: 12px !important;
   }
   .trust-card {
-    flex: 1 1 calc(50% - 6px);
-    min-width: 180px;
-    padding: 14px 14px;
+    flex: none !important;
+    min-width: 0 !important;
+    padding: 12px 10px !important;
   }
   .trust-card-1,
   .trust-card-2,
@@ -3750,52 +3756,50 @@ button, input, select, textarea {
     flex-shrink: 0 !important;
   }
 
-  /* Trust cards: luxurious horizontal snap showcase — no cramming */
+  /* Trust cards: 3-column unified luxury stat grid — NO horizontal scrolling */
   .hero-trust-stack {
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
-    gap: 10px !important;
-    width: calc(100% + 32px) !important;
-    margin-left: -16px !important;
-    margin-right: -16px !important;
-    padding: 4px 64px 16px 16px !important; /* 64px right padding prevents WhatsApp FAB collision */
-    overflow-x: auto !important;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 8px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 8px 0 0 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    scroll-snap-type: none !important;
+    -webkit-overflow-scrolling: auto !important;
   }
 
   .hero-trust-stack::-webkit-scrollbar {
-    display: none;
+    display: none !important;
   }
 
   .trust-card {
-    flex: 0 0 215px !important;
-    width: 215px !important;
-    min-width: 215px !important;
-    scroll-snap-align: start;
+    flex: none !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    scroll-snap-align: none !important;
     display: flex !important;
-    flex-direction: row !important;
+    flex-direction: column !important;
     align-items: center !important;
-    text-align: left !important;
-    padding: 10px 14px !important;
-    gap: 12px !important;
+    text-align: center !important;
+    justify-content: center !important;
+    padding: 10px 4px 8px !important;
+    gap: 6px !important;
     border-radius: 8px !important;
-    background: rgba(16, 21, 31, 0.94) !important;
-    backdrop-filter: blur(16px) !important;
-    -webkit-backdrop-filter: blur(16px) !important;
-    border: 1px solid rgba(201, 168, 76, 0.3) !important;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4) !important;
+    background: rgba(16, 21, 31, 0.92) !important;
+    backdrop-filter: blur(14px) !important;
+    -webkit-backdrop-filter: blur(14px) !important;
+    border: 1px solid rgba(201, 168, 76, 0.28) !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35) !important;
   }
 
   .trust-icon {
-    width: 40px !important;
-    height: 40px !important;
-    border-radius: 8px !important;
-    background: rgba(201, 168, 76, 0.15) !important;
-    border: 1px solid rgba(201, 168, 76, 0.35) !important;
+    width: 26px !important;
+    height: 26px !important;
+    border-radius: 6px !important;
+    background: rgba(201, 168, 76, 0.12) !important;
+    border: 1px solid rgba(201, 168, 76, 0.3) !important;
     color: var(--accent-gold) !important;
     display: flex !important;
     align-items: center !important;
@@ -3804,34 +3808,37 @@ button, input, select, textarea {
   }
 
   .trust-icon svg {
-    width: 20px !important;
-    height: 20px !important;
+    width: 13px !important;
+    height: 13px !important;
   }
 
   .trust-content {
     display: flex !important;
     flex-direction: column !important;
-    align-items: flex-start !important;
-    text-align: left !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
   }
 
   .trust-num {
     font-family: var(--font-serif-roman) !important;
-    font-size: 1.25rem !important;
+    font-size: clamp(0.95rem, 3.8vw, 1.18rem) !important;
     font-weight: 700 !important;
     color: #FFFFFF !important;
     line-height: 1.15 !important;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+    white-space: nowrap !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7) !important;
   }
 
   .trust-label {
-    font-size: 0.68rem !important;
-    letter-spacing: 0.05em !important;
+    font-size: clamp(0.5rem, 1.8vw, 0.58rem) !important;
+    letter-spacing: 0.03em !important;
     text-transform: uppercase !important;
     color: #CBD5E1 !important;
-    line-height: 1.35 !important;
-    margin-top: 3px !important;
+    line-height: 1.25 !important;
+    margin-top: 2px !important;
     font-weight: 500 !important;
+    text-align: center !important;
   }
 
   .trust-card-1,
