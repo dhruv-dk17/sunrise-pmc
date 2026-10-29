@@ -18,7 +18,6 @@
   - Static Production: HTML5, CSS3 Custom Properties, Vanilla JavaScript (ES Module).
   - Motion Engine: GSAP 3.12+ (ScrollTrigger), Lenis 1.1+ Smooth Scroll.
   - Bundler: Vite 8.x (`npm run build` -> `dist/`).
-  - WordPress Pipeline: `build_wp_theme.py` transforms `dist/` into `WordPress/sunrise-theme/` and creates `sunrise-theme.zip`.
 
 ---
 
@@ -28,10 +27,6 @@
 d:\sunrise\
 ├── AI_SITEMAP.md         # [THIS FILE] Authoritative AI agent codebase index & token saver
 ├── AGENTS.md             # Direct instructions for AI coding assistants
-├── CLAUDE.md             # Project identity & coding constraints
-├── PRD.md                # Product Requirements Document
-├── TRD.md                # Technical Requirements Document
-├── UIUX.md               # UI/UX Specifications
 │
 ├── index.html            # Primary Homepage (Hero canvas, Trust stack, 8 verticals, 
 │                         #   Turnkey & QS billing highlights, 3D project carousel,
@@ -42,7 +37,7 @@ d:\sunrise\
 ├── contact.html          # Surat Executive Desk, Inquiry Form, Interactive Map & WhatsApp
 │
 ├── style.css             # Unified Stylesheet (60:30:10 Architectural Obsidian-Gold Palette,
-│                         #   Doodle illustrations, Responsive CSS Grid/Flex, Animations)
+│                         #   Responsive CSS Grid/Flex, GSAP animations)
 ├── main.js               # Application Controller (GSAP ScrollTrigger, Lenis init,
 │                         #   Interactive Canvas scrubber, 3D Carousel, Estimator, FAQ accordion)
 │
@@ -50,17 +45,17 @@ d:\sunrise\
 ├── robots.txt            # Search Engine & AI crawler directives (points to sitemap & llms.txt)
 ├── llms.txt              # Standard LLM discovery file for AI search engines
 │
-├── build_wp_theme.py     # Python script converting dist/ into WordPress standalone theme
 ├── package.json          # Vite scripts: "dev", "build", "preview"
 ├── vite.config.js        # Multi-page Vite configuration (builds all 5 HTML entrypoints)
 │
-├── public/               # Public assets bundled by Vite
+├── public/               # Static assets bundled directly by Vite
 │   ├── images/           # WebP/PNG project photos, logos, trust badges
 │   ├── frames_webp/      # 30fps hero canvas frame sequence (001.webp - 300.webp)
-│   └── doodles/          # Architectural PMC SVG vector doodles
+│   ├── robots.txt        # Public robots directive
+│   ├── sitemap.xml       # Public sitemap
+│   └── llms.txt          # Public LLM context file
 │
-└── WordPress/
-    └── sunrise-theme/    # Auto-generated WordPress Theme (header.php, footer.php, style.css, functions.php)
+└── dist/                 # Production-ready static output generated via `npm run build`
 ```
 
 ---
@@ -144,17 +139,14 @@ Target Keywords seamlessly woven into headers, content, meta tags, and JSON-LD s
    npm run build
    ```
    *Vite compiles HTML, CSS, JS, and minifies assets into `dist/`.*
-3. **Synchronize WordPress Theme:**
-   ```bash
-   python build_wp_theme.py
-   ```
-   *Reads `dist/`, replaces asset paths with `get_template_directory_uri()`, outputs ready-to-upload theme to `WordPress/sunrise-theme/` and creates `WordPress/sunrise-theme.zip`.*
+3. **Static Deployment:**
+   - Deploy contents of `dist/` directly to any web host (e.g. Apache `public_html`, Nginx, Vercel, Netlify, Cloudflare Pages).
+   - Zero database overhead, instant 100/100 performance, rock-solid security.
 
 ---
 
 ## 7. Direct Instructions for Future AI Agents
 - **Do not introduce heavy JS frameworks** (React, Vue, Svelte). Keep the site ultra-fast on Vanilla JS + GSAP + Lenis.
 - **Do not revert to sterile white backgrounds**. Preserve the 60:30:10 architectural obsidian-slate-gold aesthetic.
-- **Always update both HTML sources and run the WordPress build script** so both platforms stay 100% in sync.
+- **Do not create WordPress or PHP files** - the website is 100% pure static HTML, CSS, and JavaScript.
 - **Refer to this file** whenever questions arise regarding project scope, services, or typography.
-

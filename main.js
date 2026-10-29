@@ -1,3 +1,15 @@
+// Asset URL Resolver for Dual-Platform (Vite & WordPress) Parity
+function resolveAssetUrl(url) {
+  if (!url) return '';
+  if (url.startsWith('http://') || url.startsWith('https://') || url.startsWith('data:')) return url;
+  const themeBase = (window.sunriseTheme && window.sunriseTheme.themeUri) 
+    ? window.sunriseTheme.themeUri.replace(/\/+$/, '') 
+    : (window.sunriseThemeUri ? window.sunriseThemeUri.replace(/\/+$/, '') : '');
+  let clean = url.replace(/^\.\/public\//, '/').replace(/^\/public\//, '/').replace(/^public\//, '/');
+  if (!clean.startsWith('/')) clean = '/' + clean;
+  return themeBase ? (themeBase + clean) : clean;
+}
+
 // GSAP and Lenis are loaded via CDN in the HTML (globals: gsap, ScrollTrigger, Lenis)
 // This makes the site work both locally (Vite) and on GitHub Pages (static)
 if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
@@ -57,13 +69,40 @@ function initCanvasAnimation() {
 
   window.addEventListener('resize', resizeCanvas);
 
+  const themeBase = (window.sunriseTheme && window.sunriseTheme.themeUri) 
+    ? window.sunriseTheme.themeUri.replace(/\/+$/, '') 
+    : (window.sunriseThemeUri ? window.sunriseThemeUri.replace(/\/+$/, '') : '');
+  const framesFolder = themeBase ? (themeBase + '/frames_webp') : '/frames_webp';
+
   for (let i = 1; i <= TOTAL_FRAMES; i++) {
     const img = new Image();
-    img.src = '/frames_webp/ezgif-frame-' + pad(i, 3) + '.webp';
+    img.src = framesFolder + '/ezgif-frame-' + pad(i, 3) + '.webp';
     frames.push(img);
   }
 
-  frames[0].onload = () => { resizeCanvas(); };
+  function hideHeroFallback() {
+    const fallback = document.getElementById('heroCanvasFallback');
+    if (fallback) {
+      fallback.style.opacity = '0';
+      setTimeout(() => { if (fallback.parentNode) fallback.style.display = 'none'; }, 800);
+    }
+  }
+
+  if (frames[0].complete) {
+    resizeCanvas();
+    hideHeroFallback();
+  } else {
+    frames[0].onload = () => {
+      resizeCanvas();
+      hideHeroFallback();
+    };
+    frames[0].onerror = () => {
+      resizeCanvas();
+    };
+  }
+
+  // Set canvas dimensions immediately
+  resizeCanvas();
 
   function renderFrame(index) {
     if (!frames[index] || !frames[index].complete) return;
@@ -552,7 +591,7 @@ function initProjects() {
     const type = entry.getAttribute('data-type') || '';
     const scale = entry.getAttribute('data-scale') || '';
     const loc = entry.getAttribute('data-location') || '';
-    const img = entry.getAttribute('data-img') || '';
+    const img = resolveAssetUrl(entry.getAttribute('data-img') || '');
     const desc = (entry.querySelector('.entry-desc') || {}).textContent || '';
 
     slot.innerHTML = [

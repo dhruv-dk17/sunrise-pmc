@@ -9,16 +9,16 @@ Welcome, AI Agent! To conserve tokens, avoid whole-repo scans, and immediately u
    - The 10 core services (including **Turnkey Projects** and **QS Billing Audits**)
    - The 20 landmark projects
    - SEO & GEO keyword targets (*PMC in Surat*, *Best PMC in Surat*, *PMC near me*, *Sunrisepmc*)
-   - Build and WordPress deployment workflow
+   - Build and deployment workflow
 
-2. **Dual Platform Sync Requirement:**
-   Whenever modifying HTML, CSS, or JS:
-   - Update the root HTML templates (`index.html`, `about.html`, `services.html`, `projects.html`, `contact.html`).
-   - Run `npm run build` to update `dist/`.
-   - Run `python build_wp_theme.py` to regenerate `WordPress/sunrise-theme/` and `WordPress/sunrise-theme.zip`.
+2. **Clean Pure Static Architecture (HTML + CSS + JS):**
+   - Root HTML templates: `index.html`, `about.html`, `services.html`, `projects.html`, `contact.html`.
+   - Styles: `style.css`.
+   - JavaScript: `main.js`.
+   - Build tool: Vite (`npm run build` generates optimized static production distribution in `dist/`).
+   - Deployment: Deploy `dist/` directly to any web host (e.g. Apache `public_html`, Nginx, Vercel, Netlify, Cloudflare Pages).
 
 3. **Core Design Guidelines:**
-   - Keep the rich, non-empty architectural aesthetic (60% `#0B0E14` base, 30% `#151B26` cards, 10% `#C9A84C` gold).
+   - Keep the rich architectural aesthetic (60% `#0B0E14` base, 30% `#151B26` cards, 10% `#C9A84C` gold).
    - Never use flat blinding white screens that trigger visitor bounce.
    - Retain GSAP animations and Lenis smooth scrolling.
-
